@@ -1,1 +1,29 @@
-<h2>Products</h2>
+<div class='panel panel-primary' *ngIf='products'>
+    <div class='panel-heading'>
+        <span>{{pageTitle + ': ' + productName}}</span>
+        <span style="float: right;cursor: pointer;"><a style="color: white;" (click)="backClicked()">Back</a></span>
+    </div>
+    
+    <div class='panel-body'>
+    	<table class="table table-bordered">
+
+			<tr>
+				<th>#</th>
+				<th>Name
+				</th>
+				<th>Price
+				</th>
+				<th>Description</th>
+			</tr>
+
+			<tr *ngFor="let product of products; let i = index">
+				<td>{{ i }}</td>
+				<td>{{ product.name }}</td>
+				<td>{{ product.price }}</td>
+				<td>{{ product.description }}</td>
+			</tr>
+			<span style="float: right;cursor: pointer;"><a style="color: blue;" (click)="backClicked()">Back</a></span>
+
+		</table>
+	</div>
+</div>
