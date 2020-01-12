@@ -18,9 +18,14 @@
 
 			<tr *ngFor="let product of products; let i = index">
 				<td>{{ i }}</td>
-				<td>{{ product.name }}</td>
+				<td><h3><a [title]="product.name + ' details'">{{ product.name }}</a></h3></td>
 				<td>{{ product.price }}</td>
-				<td>{{ product.description }}</td>
+				<td><p *ngIf="product.description">Description: {{ product.description }}</p></td>
+				<td>
+					<button (click)="share()">
+					    Share
+					</button>		
+				</td>
 			</tr>
 			<span style="float: right;cursor: pointer;"><a style="color: blue;" (click)="backClicked()">Back</a></span>
 

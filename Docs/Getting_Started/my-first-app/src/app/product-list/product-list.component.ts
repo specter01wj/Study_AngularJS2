@@ -14,16 +14,16 @@ import { ProductService } from '../service/product.service';
 })
 export class ProductListComponent implements OnInit {
 
-  /*share() {
+  share() {
     window.alert('The product has been shared!');
-  }*/
+  }
 
   productId: number;
   pageTitle: string = 'Product List';
   productName: string = 'Phones';
   errorMessage: string;
-  // products: any[] = [];
-  products: IProduct | undefined;
+  products: any[] = [];
+  // products: IProduct | undefined;
 
   constructor(private route: ActivatedRoute, 
           private _productService: ProductService,
