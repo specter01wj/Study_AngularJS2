@@ -24,7 +24,8 @@
 				<td>
 					<button (click)="share()">
 					    Share
-					</button>		
+					</button>
+					<app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
 				</td>
 			</tr>
 			<span style="float: right;cursor: pointer;"><a style="color: blue;" (click)="backClicked()">Back</a></span>
