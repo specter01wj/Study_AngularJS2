@@ -17,8 +17,8 @@ export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
   productName: string = 'Phones';
   errorMessage: string;
-  products: any[] = [];
-  // products: IProduct | undefined;
+  // products: any[] = [];
+  products: IProduct | undefined;
 
   constructor(private route: ActivatedRoute, 
           private _productService: ProductService,
