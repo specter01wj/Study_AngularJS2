@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import {Location} from '@angular/common';
 
 // import { products } from '../products';
-import { IProduct } from '../product';
+import { IProduct } from '../common/product';
 
 import { ProductService } from '../service/product.service';
 
