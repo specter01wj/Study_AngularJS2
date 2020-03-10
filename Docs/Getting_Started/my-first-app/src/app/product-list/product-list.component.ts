@@ -22,12 +22,6 @@ export class ProductListComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, 
           private _productService: ProductService,
-
-
-
-
-
-          
           private _location: Location) { }
 
   
