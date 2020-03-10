@@ -16,9 +16,9 @@
 				<th>Description</th>
 			</tr>
 
-			<tr *ngFor="let product of products; let i = index">
+			<tr *ngFor="let product of products; let i = index; index as productId">
 				<td>{{ i }}</td>
-				<td><h3><a [title]="product.name + ' details'">{{ product.name }}</a></h3></td>
+				<td><h3><a [title]="product.name + ' details'" [routerLink]="['/product-list', productId]">{{ product.name }}</a></h3></td>
 				<td>{{ product.price }}</td>
 				<td><p *ngIf="product.description">Description: {{ product.description }}</p></td>
 				<td>
