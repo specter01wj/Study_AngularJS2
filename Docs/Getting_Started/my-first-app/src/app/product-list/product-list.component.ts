@@ -24,6 +24,7 @@ export class ProductListComponent implements OnInit {
           private _productService: ProductService,
 
 
+
           
           private _location: Location) { }
 
