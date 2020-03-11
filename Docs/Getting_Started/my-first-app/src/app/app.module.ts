@@ -12,6 +12,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDashboardComponent } from './product-dashboard/product-dashboard.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ProductListComponent,
     ProductDashboardComponent,
     ProductAlertsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
