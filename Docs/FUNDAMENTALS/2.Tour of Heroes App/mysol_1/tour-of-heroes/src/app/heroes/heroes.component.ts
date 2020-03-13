@@ -11,10 +11,10 @@ import { HEROES } from '../api/mock-heroes';
 export class HeroesComponent implements OnInit {
 
 	// hero = 'Windstorm';
-	hero: Hero = {
+	/*hero: Hero = {
 	  	id: 1,
 	  	name: 'Windstorm'
-	}
+	}*/
 
   	heroes = HEROES;
   	selectedHero: Hero;
