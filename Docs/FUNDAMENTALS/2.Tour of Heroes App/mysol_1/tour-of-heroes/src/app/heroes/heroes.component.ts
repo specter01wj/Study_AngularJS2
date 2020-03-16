@@ -23,6 +23,7 @@ export class HeroesComponent implements OnInit {
 
 
 
+
   	
   	selectedHero: Hero;
 
