@@ -7,6 +7,7 @@ import { Hero } from '../interface/hero';
 import { HEROES } from '../api/mock-heroes';
 
 import { Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +31,11 @@ export class HeroService {
   getHeroes(): Observable<Hero[]> {
   	this.messageService.add('HeroService: fetched heroes');
 		// return of(HEROES);
-    return this.http.get<Hero[]>(this.heroesUrl);
+    // return this.http.get<Hero[]>(this.heroesUrl);
+    return this.http.get<Hero[]>(this.heroesUrl)
+      .pipe(
+        catchError(this.handleError<Hero[]>('getHeroes', []))
+      );
   }
 
   getHero(id: number): Observable<Hero> {
