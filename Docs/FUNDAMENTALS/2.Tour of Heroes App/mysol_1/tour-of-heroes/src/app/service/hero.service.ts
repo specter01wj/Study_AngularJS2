@@ -26,6 +26,7 @@ export class HeroService {
   private log(message: string) {
     this.messageService.add(`HeroService: ${message}`);
 
+
     
   }
 
