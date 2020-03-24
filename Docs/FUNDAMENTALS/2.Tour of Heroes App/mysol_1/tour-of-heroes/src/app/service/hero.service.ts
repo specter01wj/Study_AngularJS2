@@ -12,6 +12,7 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class HeroService {
+  private heroesUrl = 'api/heroes';
 
   constructor(
     private messageService: MessageService,
