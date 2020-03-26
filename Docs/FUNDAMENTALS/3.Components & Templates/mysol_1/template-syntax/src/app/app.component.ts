@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Template Syntax';
-  heroImageUrl = 'assets/images/hero.png';
+  heroImageUrl = 'assets/images/soundwave.png';
 
   getVal(): number { return 2; }
-  
 
-  
+
+
 }

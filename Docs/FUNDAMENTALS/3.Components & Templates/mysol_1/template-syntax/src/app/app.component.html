@@ -44,6 +44,9 @@
 
 </div>
 
+
+<!-- ------------------------------------------------ -->
+
 <!-- Interpolation and expressions -->
 <hr><h2 id="interpolation">Interpolation</h2>
 
@@ -63,20 +66,55 @@
 <a class="to-toc" href="#toc">top</a>
 <hr>
 
+<!-- ------------------------------------------------ -->
+
+<h2 id="expression-context">Expression context</h2>
+
+<p>Component expression context (&#123;&#123;title&#125;&#125;, [hidden]="isUnchanged")</p>
+<div class="context">
+  {{title}}
+  <span [hidden]="isUnchanged">changed</span>
+</div>
+
+
+<p>Template input variable expression context (let hero)</p>
+<!-- template hides the following; plenty of examples later -->
+<ng-template>
+  <div *ngFor="let hero of heroes">{{hero.name}}</div>
+</ng-template>
+
+<p>Template reference variable expression context (#heroInput)</p>
+<div (keyup)="0" class="context">
+  Type something:
+  <input #heroInput> {{heroInput.value}}
+</div>
+
+<a class="to-toc" href="#toc">top</a>
+
+<hr>
+
+<!-- ------------------------------------------------ -->
+
+
+
+<!-- ------------------------------------------------ -->
+
+
+
+<!-- ------------------------------------------------ -->
+
+
+
+<!-- ------------------------------------------------ -->
+
+
+
+<!-- ------------------------------------------------ -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+<!-- ------------------------------------------------ -->
 
 
 
