@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'template-syntax';
+  title = 'Template Syntax';
+  heroImageUrl = 'assets/images/hero.png';
+
+  getVal(): number { return 2; }
+  
+
+  
 }
