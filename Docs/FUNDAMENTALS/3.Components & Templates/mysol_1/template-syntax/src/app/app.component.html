@@ -95,7 +95,33 @@
 
 <!-- ------------------------------------------------ -->
 
+<h2 id="statement-context">Statement context</h2>
 
+<p>Component statement context ( (click)="onSave() )
+<div class="context">
+  <button (click)="deleteHero()">Delete hero</button>
+</div>
+
+<p>Template $event statement context</p>
+<div class="context">
+  <button (click)="onSave($event)">Save</button>
+</div>
+
+<p>Template input variable statement context (let hero)</p>
+<!-- template hides the following; plenty of examples later -->
+<div class="context">
+  <button *ngFor="let hero of heroes" (click)="deleteHero(hero)">{{hero.name}}</button>
+</div>
+
+<p>Template reference variable statement context (#heroForm)</p>
+<div class="context">
+  <form #heroForm (ngSubmit)="onSubmit(heroForm)"> ... </form>
+</div>
+
+<a class="to-toc" href="#toc">top</a>
+
+<!-- New Mental Model -->
+<hr>
 
 <!-- ------------------------------------------------ -->
 
