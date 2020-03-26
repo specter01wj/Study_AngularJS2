@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
-  myHero = 'Windstorm';
+  // myHero = 'Windstorm';
+  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  myHero = this.heroes[0];
 }
