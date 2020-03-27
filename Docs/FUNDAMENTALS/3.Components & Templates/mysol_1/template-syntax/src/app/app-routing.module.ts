@@ -7,7 +7,11 @@ import { TemplateSyntaxComponent } from './template-syntax/template-syntax.compo
 const routes: Routes = [
 	{ path: '', redirectTo: '/template-syntax', pathMatch: 'full' },
 	{ path: 'template-syntax', component: TemplateSyntaxComponent },
-	{ path: 'binding-syntax', component: BindingSyntaxComponent }
+	{ path: 'binding-syntax', component: BindingSyntaxComponent },
+	{
+    path: 'property-binding',
+    loadChildren: './property-binding/property-binding.module#PropertyBindingModule'
+  },
 ];
 
 @NgModule({
