@@ -25,3 +25,10 @@ const routes: Routes = [
   ]
 })
 export class PropertyRoutingModule { }
+
+export const routedComponents = [
+  PropertyBindingComponent,
+  ItemDetailComponent,
+  ItemListComponent,
+  StringInitComponent
+];
