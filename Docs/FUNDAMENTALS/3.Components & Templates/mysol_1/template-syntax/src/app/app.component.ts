@@ -10,7 +10,7 @@ export enum Color {Red, Green, Blue}
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  
+  title: string = "TemplateSyntax";
 
 }
 
