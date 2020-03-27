@@ -54,6 +54,9 @@ export class AppComponent {
     price: 42
   };
 
+  currentClasses: {};
+  currentStyles: {};
+
 
   ngOnInit() {
     this.resetHeroes();
@@ -115,8 +118,6 @@ export class AppComponent {
 
   onSubmit(data: any) {/* referenced but not used */}
 
-  
-
   // updates with fresh set of cloned heroes
   resetHeroes() {
     this.heroes = Hero.heroes.map(hero => hero.clone());
@@ -129,7 +130,6 @@ export class AppComponent {
     this.currentHero.name = name.toUpperCase();
   }
 
-  currentClasses: {};
   setCurrentClasses() {
     // CSS classes: added/removed per current state of component properties
     this.currentClasses =  {
@@ -138,8 +138,7 @@ export class AppComponent {
       special:  this.isSpecial
     };
   }
-
-  currentStyles: {};
+  
   setCurrentStyles() {
     // CSS styles: set per current state of component properties
     this.currentStyles = {
