@@ -16,6 +16,8 @@ export class TemplateSyntaxComponent implements OnInit {
   title = 'Template Syntax';
   heroImageUrl = 'assets/images/soundwave.png';
 
+  toggleSyntaxList = false;
+
   actionName = 'Go for it';
   badCurly = 'bad curly';
   classes = 'special';
