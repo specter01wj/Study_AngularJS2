@@ -1,5 +1,7 @@
 import { Component, AfterViewInit, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { Hero } from '../interface/hero';
 
 export enum Color {Red, Green, Blue};
@@ -11,7 +13,7 @@ export enum Color {Red, Green, Blue};
 })
 export class TemplateSyntaxComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   title = 'Template Syntax';
   heroImageUrl = 'assets/images/soundwave.png';
@@ -157,4 +159,25 @@ export class TemplateSyntaxComponent implements OnInit {
 
   trackById(index: number, item: any): number { return item.id; }
 
+  goTop(): void {
+  	// this.router.navigate(['/template-syntax']);
+  	document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
+
 }
+
+function trackChanges(views: QueryList<ElementRef>, changed: () => void) {
+  let oldRefs = views.toArray();
+  views.changes.subscribe((changes: QueryList<ElementRef>) => {
+      const changedRefs = changes.toArray();
+      // Check if every changed Element is the same as old and in the same position
+      const isSame = oldRefs.every((v, i) => v.nativeElement === changedRefs[i].nativeElement);
+      if (!isSame) {
+        oldRefs = changedRefs;
+        // wait a tick because called after views are constructed
+        setTimeout(changed, 0);
+      }
+  });
+}
+
+
