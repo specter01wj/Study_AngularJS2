@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BindingSyntaxComponent } from './binding-syntax/binding-syntax.component';
+import { TemplateSyntaxComponent } from './template-syntax/template-syntax.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BindingSyntaxComponent
+    BindingSyntaxComponent,
+    TemplateSyntaxComponent
   ],
   imports: [
     BrowserModule,
