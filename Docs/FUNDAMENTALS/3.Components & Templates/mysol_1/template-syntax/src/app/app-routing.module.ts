@@ -10,7 +10,8 @@ const routes: Routes = [
 	{ path: 'binding-syntax', component: BindingSyntaxComponent },
 	{
     path: 'property-binding',
-    loadChildren: './property-binding/property-binding.module#PropertyBindingModule'
+    // loadChildren: './property-binding/property-binding.module#PropertyBindingModule'
+    loadChildren: () => import('./property-binding/property-binding.module').then(m => m.PropertyBindingModule)
   },
 ];
 
