@@ -13,6 +13,48 @@ export class AppComponent {
   title = 'Template Syntax';
   heroImageUrl = 'assets/images/soundwave.png';
 
+  actionName = 'Go for it';
+  badCurly = 'bad curly';
+  classes = 'special';
+  help = '';
+
+	canSave =  true;
+
+	clicked = '';
+  clickMessage = '';
+  clickMessage2 = '';
+
+  Color = Color;
+  color = Color.Red;
+
+  currentHero: Hero;
+
+  evilTitle = 'Template <script>alert("evil never sleeps")</script>Syntax';
+
+  fontSizePx = 16;
+
+  name: string = Hero.heroes[0].name;
+  hero: Hero;
+  heroes: Hero[];
+
+  // trackBy change counting
+  heroesNoTrackByCount   = 0;
+  heroesWithTrackByCount = 0;
+  heroesWithTrackByCountReset = 0;
+
+  heroIdIncrement = 1;
+  villainImageUrl = 'assets/images/villain.png';
+  iconUrl = 'assets/images/ng-logo.png';
+  isActive = false;
+  isSpecial = true;
+  isUnchanged = true;
+
+  product = {
+    name: 'frimfram',
+    price: 42
+  };
+
+
   ngOnInit() {
     this.resetHeroes();
     this.setCurrentClasses();
@@ -28,15 +70,9 @@ export class AppComponent {
   @ViewChildren('noTrackBy')   heroesNoTrackBy: QueryList<ElementRef>;
   @ViewChildren('withTrackBy') heroesWithTrackBy: QueryList<ElementRef>;
 
-  actionName = 'Go for it';
-  badCurly = 'bad curly';
-  classes = 'special';
-  help = '';
-
   alert(msg?: string)      { window.alert(msg); }
   callFax(value: string)   { this.alert(`Faxing ${value} ...`); }
   callPhone(value: string) { this.alert(`Calling ${value} ...`); }
-  canSave =  true;
 
   changeIds() {
     this.resetHeroes();
@@ -52,15 +88,7 @@ export class AppComponent {
     this.heroIdIncrement = 1;
   }
 
-  clicked = '';
-  clickMessage = '';
-  clickMessage2 = '';
-
-  Color = Color;
-  color = Color.Red;
   colorToggle() {this.color = (this.color === Color.Red) ? Color.Blue : Color.Red; }
-
-  currentHero: Hero;
 
   updateCurrentHeroName(event: Event) {
     this.currentHero.name = (event.target as any).value;
@@ -70,36 +98,7 @@ export class AppComponent {
     this.alert(`Delete ${hero ? hero.name : 'the hero'}.`);
   }
 
-  evilTitle = 'Template <script>alert("evil never sleeps")</script>Syntax';
-
-  fontSizePx = 16;
-
-  title = 'Template Syntax';
-
   getVal(): number { return 2; }
-
-  name: string = Hero.heroes[0].name;
-  hero: Hero; // defined to demonstrate template context precedence
-  heroes: Hero[];
-
-  // trackBy change counting
-  heroesNoTrackByCount   = 0;
-  heroesWithTrackByCount = 0;
-  heroesWithTrackByCountReset = 0;
-
-  heroIdIncrement = 1;
-
-  // heroImageUrl = 'http://www.wpclipart.com/cartoon/people/hero/hero_silhoutte_T.png';
-  // Public Domain terms of use: http://www.wpclipart.com/terms.html
-  heroImageUrl = 'assets/images/hero.png';
-  // villainImageUrl = 'http://www.clker.com/cliparts/u/s/y/L/x/9/villain-man-hi.png'
-  // Public Domain terms of use http://www.clker.com/disclaimer.html
-  villainImageUrl = 'assets/images/villain.png';
-
-  iconUrl = 'assets/images/ng-logo.png';
-  isActive = false;
-  isSpecial = true;
-  isUnchanged = true;
 
   get nullHero(): Hero { return null; }
 
@@ -116,10 +115,7 @@ export class AppComponent {
 
   onSubmit(data: any) {/* referenced but not used */}
 
-  product = {
-    name: 'frimfram',
-    price: 42
-  };
+  
 
   // updates with fresh set of cloned heroes
   resetHeroes() {
