@@ -1,5 +1,10 @@
 a.to-toc { margin: 30px 0; }
-button { font-size: 100%; margin: 0 2px; cursor: pointer; }
+button { 
+	font-size: 100%; margin: 0 2px; cursor: pointer; 
+	&[disabled] {
+		cursor: not-allowed;
+	}
+}
 div[clickable] {cursor: pointer; max-width: 200px; margin: 16px 0}
 #noTrackByCnt, #withTrackByCnt {color: darkred; max-width: 450px; margin: 4px;}
 img {height: 100px;}
