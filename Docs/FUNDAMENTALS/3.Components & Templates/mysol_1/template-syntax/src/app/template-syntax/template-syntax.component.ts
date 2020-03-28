@@ -51,7 +51,7 @@ export class TemplateSyntaxComponent implements OnInit {
 
   heroIdIncrement = 1;
   villainImageUrl = 'assets/images/villain.png';
-  iconUrl = 'assets/images/ng-logo.png';
+  iconUrl = 'assets/images/starscream.jpeg';
   isActive = false;
   isSpecial = true;
   isUnchanged = true;

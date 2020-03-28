@@ -187,7 +187,21 @@ button</button>
 
 <!-- ------------------------------------------------ -->
 
+<h2 id="prop-vs-attrib">Property vs. Attribute (img examples)</h2>
+<!-- examine the following <img> tag in the browser tools -->
+<img src="images/starscream.jpeg"
+    [src]="heroImageUrl">
 
+<br><br>
+
+<img [src]="iconUrl"/>
+<img bind-src="heroImageUrl"/>
+<img [attr.src]="villainImageUrl"/>
+
+<button class="to-toc" (click)="goTop()">Go to Top</button>
+
+<!-- buttons -->
+<hr>
 
 <!-- ------------------------------------------------ -->
 
