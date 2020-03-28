@@ -19,16 +19,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
   imports: [
     RouterModule.forChild(routes)
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class PropertyRoutingModule { }
 
-export const routedComponents = [
-  PropertyBindingComponent,
-  ItemDetailComponent,
-  ItemListComponent,
-  StringInitComponent
-];

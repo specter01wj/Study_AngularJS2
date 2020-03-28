@@ -1,9 +1,9 @@
 <h4>{{title}}</h4>
 
 <nav>
-  <a routerLink="/item-detail">Item Detail</a>
-  <a routerLink="/item-list">Item List</a>
-  <a routerLink="/string-init">String Init</a>
+  <a [routerLink]="['item-detail']" routerLinkActive="active">Item Detail</a>
+  <a [routerLink]="['item-list']" routerLinkActive="active">Item List</a>
+  <a [routerLink]="['string-init']" routerLinkActive="active">String Init</a>
 </nav>
 
 <router-outlet></router-outlet>
