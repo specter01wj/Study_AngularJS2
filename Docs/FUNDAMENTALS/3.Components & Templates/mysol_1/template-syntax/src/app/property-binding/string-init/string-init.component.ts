@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-string-init',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./string-init.component.less']
 })
 export class StringInitComponent implements OnInit {
+	@Input() prefix: string;
 
   constructor() { }
 
