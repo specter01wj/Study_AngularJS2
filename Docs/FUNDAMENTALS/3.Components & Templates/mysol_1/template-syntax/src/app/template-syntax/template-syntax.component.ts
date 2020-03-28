@@ -50,7 +50,7 @@ export class TemplateSyntaxComponent implements OnInit {
   heroesWithTrackByCountReset = 0;
 
   heroIdIncrement = 1;
-  villainImageUrl = 'assets/images/villain.png';
+  villainImageUrl = 'assets/images/optimum.jpeg';
   iconUrl = 'assets/images/starscream.jpeg';
   isActive = false;
   isSpecial = true;
