@@ -224,6 +224,61 @@ button</button>
 
 <!-- ------------------------------------------------ -->
 
+<h2 id="property-binding">Property Binding</h2>
+
+<img [src]="heroImageUrl">
+<button [disabled]="isUnchanged">Cancel is disabled</button>
+<div [ngClass]="classes">[ngClass] binding to the classes property</div>
+<app-hero-detail [hero]="currentHero"></app-hero-detail>
+<img bind-src="heroImageUrl">
+
+<!-- ERROR: HeroDetailComponent.hero expects a
+     Hero object, not the string "currentHero" -->
+<div *ngIf="false">
+  <app-hero-detail hero="currentHero"></app-hero-detail>
+</div>
+<app-hero-detail prefix="You are my" [hero]="currentHero"></app-hero-detail>
+
+<p><img src="{{heroImageUrl}}"> is the <i>interpolated</i> image.</p>
+<p><img [src]="heroImageUrl"> is the <i>property bound</i> image.</p>
+
+<p><span>"{{title}}" is the <i>interpolated</i> title.</span></p>
+<p>"<span [innerHTML]="title"></span>" is the <i>property bound</i> title.</p>
+
+<!--
+  Angular generates warnings for these two lines as it sanitizes them
+  WARNING: sanitizing HTML stripped some content (see http://g.co/ng/security#xss).
+ -->
+<p><span>"{{evilTitle}}" is the <i>interpolated</i> evil title.</span></p>
+<p>"<span [innerHTML]="evilTitle"></span>" is the <i>property bound</i> evil title.</p>
+
+<button class="to-toc" (click)="goTop()">Go to Top</button>
+
+<!-- attribute binding -->
+<hr>
+
+<!-- ------------------------------------------------ -->
+
+
+
+
+<!-- ------------------------------------------------ -->
+
+
+
+
+<!-- ------------------------------------------------ -->
+
+
+
+
+<!-- ------------------------------------------------ -->
+
+
+
+
+<!-- ------------------------------------------------ -->
+
 
 
 
