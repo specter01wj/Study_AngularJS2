@@ -1,1 +1,7 @@
-<p>hero-detail works!</p>
+<div>
+    <img src="{{heroImageUrl}}">
+    <span [style.text-decoration]="lineThrough">
+      {{prefix}} {{hero?.name}}
+    </span>
+    <button (click)="delete()">Delete</button>
+</div>
