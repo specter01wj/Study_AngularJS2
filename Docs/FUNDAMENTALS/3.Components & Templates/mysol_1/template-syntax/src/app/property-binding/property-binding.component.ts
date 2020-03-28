@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./property-binding.component.less']
 })
 export class PropertyBindingComponent implements OnInit {
+	title: string = "PropertyBinding";
 
   constructor() { }
 
