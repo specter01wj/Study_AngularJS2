@@ -1,9 +1,9 @@
 <h1>{{title}}</h1>
 
 <nav>
-  <a routerLink="/template-syntax">Template Syntax</a>
-  <a routerLink="/binding-syntax">Binding Syntax</a>
-  <a routerLink="/property-binding">Property Binding</a>
+  <a [routerLink]="['/template-syntax']" routerLinkActive="active">Template Syntax</a>
+  <a [routerLink]="['/binding-syntax']" routerLinkActive="active">Binding Syntax</a>
+  <a [routerLink]="['/property-binding']" routerLinkActive="active">Property Binding</a>
 </nav>
 
 <router-outlet></router-outlet>
