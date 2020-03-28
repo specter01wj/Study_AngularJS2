@@ -205,7 +205,22 @@ button</button>
 
 <!-- ------------------------------------------------ -->
 
+<h2 id="buttons">Buttons</h2>
 
+<button>Enabled (but does nothing)</button>
+<button disabled>Disabled</button>
+<button disabled=false>Still disabled</button>
+<br><br>
+<button disabled>disabled by attribute</button>
+<button [disabled]="isUnchanged">disabled by property binding</button>
+<br><br>
+<button bind-disabled="isUnchanged" on-click="onSave($event)">Disabled Cancel</button>
+<button [disabled]="!canSave" (click)="onSave($event)">Enabled Save</button>
+
+<button class="to-toc" (click)="goTop()">Go to Top</button>
+
+<!-- property binding -->
+<hr>
 
 <!-- ------------------------------------------------ -->
 
