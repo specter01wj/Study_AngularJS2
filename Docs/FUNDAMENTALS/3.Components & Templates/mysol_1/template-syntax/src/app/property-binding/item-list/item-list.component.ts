@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ITEMS } from '../mock-items';
-import { Item } from '../item';
+import { ITEMS } from '../../interface/mock-items';
+import { Item } from '../../interface/item';
 
 @Component({
   selector: 'app-item-list',
