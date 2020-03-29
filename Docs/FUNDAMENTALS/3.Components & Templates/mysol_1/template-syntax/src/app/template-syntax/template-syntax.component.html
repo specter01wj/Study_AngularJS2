@@ -141,7 +141,7 @@
   <!-- Normal HTML -->
   <div class="special">Mental Model</div>
   <!-- Wow! A new element! -->
-  <app-hero-detail></app-hero-detail>
+  <!-- <app-hero-detail></app-hero-detail> -->
 </div>
 <br><br>
 
@@ -153,13 +153,13 @@
 
 <div>
   <img [src]="heroImageUrl">
-  <app-hero-detail [hero]="currentHero"></app-hero-detail>
+  <!-- <app-hero-detail [hero]="currentHero"></app-hero-detail> -->
   <div [ngClass]="{'special': isSpecial}"></div>
 </div>
 <br><br>
 
 <button (click)="onSave()">Save</button>
-<app-hero-detail (deleteRequest)="deleteHero()"></app-hero-detail>
+<!-- <app-hero-detail (deleteRequest)="deleteHero()"></app-hero-detail> -->
 <div (myClick)="clicked=$event" clickable>click me</div>
 {{clicked}}
 <br><br>
@@ -229,15 +229,15 @@ button</button>
 <img [src]="heroImageUrl">
 <button [disabled]="isUnchanged">Cancel is disabled</button>
 <div [ngClass]="classes">[ngClass] binding to the classes property</div>
-<app-hero-detail [hero]="currentHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="currentHero"></app-hero-detail> -->
 <img bind-src="heroImageUrl">
 
 <!-- ERROR: HeroDetailComponent.hero expects a
      Hero object, not the string "currentHero" -->
 <div *ngIf="false">
-  <app-hero-detail hero="currentHero"></app-hero-detail>
+  <!-- <app-hero-detail hero="currentHero"></app-hero-detail> -->
 </div>
-<app-hero-detail prefix="You are my" [hero]="currentHero"></app-hero-detail>
+<!-- <app-hero-detail prefix="You are my" [hero]="currentHero"></app-hero-detail> -->
 
 <p><img src="{{heroImageUrl}}"> is the <i>interpolated</i> image.</p>
 <p><img [src]="heroImageUrl"> is the <i>property bound</i> image.</p>

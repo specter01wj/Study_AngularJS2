@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
+import { TemplateSyntaxComponent } from './template-syntax.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
@@ -8,7 +10,9 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
   	HeroDetailComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule
+  ],
+  exports: []
 })
 export class TemplateSyntaxModule { }
