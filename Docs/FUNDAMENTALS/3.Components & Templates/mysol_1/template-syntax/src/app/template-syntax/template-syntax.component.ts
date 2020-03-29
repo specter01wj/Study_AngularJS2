@@ -56,6 +56,7 @@ export class TemplateSyntaxComponent implements OnInit {
 
 
 
+
   
   iconUrl = 'assets/images/starscream.jpeg';
   isActive = false;
