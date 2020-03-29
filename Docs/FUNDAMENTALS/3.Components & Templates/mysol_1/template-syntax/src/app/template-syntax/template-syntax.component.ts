@@ -52,6 +52,7 @@ export class TemplateSyntaxComponent implements OnInit {
   heroIdIncrement = 1;
   villainImageUrl = 'assets/images/optimum.jpeg';
 
+
   
   iconUrl = 'assets/images/starscream.jpeg';
   isActive = false;
