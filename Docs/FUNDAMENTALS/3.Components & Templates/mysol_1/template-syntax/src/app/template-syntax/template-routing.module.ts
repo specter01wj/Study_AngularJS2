@@ -1,22 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
-import { TemplateRoutingModule } from './template-routing.module';
 
 import { TemplateSyntaxComponent } from './template-syntax.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: TemplateSyntaxComponent,
+    children: [
+      
+    ]
+  }
+];
+
 @NgModule({
-  declarations: [
-  	TemplateSyntaxComponent,
-  	HeroDetailComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     FormsModule,
-    TemplateRoutingModule
+    RouterModule.forChild(routes)
   ],
-  exports: []
+  exports: [RouterModule]
 })
-export class TemplateSyntaxModule { }
+export class TemplateRoutingModule { }
