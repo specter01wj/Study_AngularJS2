@@ -8,7 +8,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'template-syntax',
     component: TemplateSyntaxComponent,
     children: [
       
