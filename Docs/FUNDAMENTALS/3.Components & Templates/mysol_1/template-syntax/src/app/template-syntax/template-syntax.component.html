@@ -149,13 +149,13 @@
 
 <div>
   <img [src]="heroImageUrl">
-  <!-- <app-hero-detail [hero]="currentHero"></app-hero-detail> -->
+  <app-hero-detail [hero]="currentHero"></app-hero-detail>
   <div [ngClass]="{'special': isSpecial}"></div>
 </div>
 <br><br>
 
 <button (click)="onSave()">Save</button>
-<!-- <app-hero-detail (deleteRequest)="deleteHero()"></app-hero-detail> -->
+<app-hero-detail (deleteRequest)="deleteHero($event)"></app-hero-detail>
 <div (myClick)="clicked=$event" clickable>click me</div>
 {{clicked}}
 <br><br>

@@ -16,7 +16,7 @@ export class HeroDetailComponent implements OnInit {
   heroImageUrl = 'assets/images/optimum.jpeg';
   lineThrough = '';
   // @Input('hero') hero: Hero = new Hero(-1, '', 'Zzzzzzzz');
-  hero: Hero = new Hero(-1, '', 'Zzzzzzzz');
+  hero: Hero = new Hero(-1, 'James', 'Zzzzzzzz');
   @Input() prefix = '';
   // @Output() deleteRequest = new EventEmitter<Hero>();
   deleteRequest = new EventEmitter<Hero>();
