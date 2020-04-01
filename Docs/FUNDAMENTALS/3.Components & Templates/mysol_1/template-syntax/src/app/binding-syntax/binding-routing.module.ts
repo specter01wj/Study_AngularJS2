@@ -15,11 +15,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-  	BindingSyntaxComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class BindingRoutingModule { }
