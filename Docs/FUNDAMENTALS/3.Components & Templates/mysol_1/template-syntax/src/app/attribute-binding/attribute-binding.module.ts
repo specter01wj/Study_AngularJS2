@@ -4,10 +4,12 @@ import { CommonModule } from '@angular/common';
 import { AttributeBindingComponent } from './attribute-binding.component';
 
 import { AttributeRoutingModule } from './attribute-routing.module';
+import { CompWithHostBindingComponent } from './comp-with-host-binding/comp-with-host-binding.component';
 
 @NgModule({
   declarations: [
-  	AttributeBindingComponent
+  	AttributeBindingComponent,
+  	CompWithHostBindingComponent
   ],
   imports: [
     CommonModule,
