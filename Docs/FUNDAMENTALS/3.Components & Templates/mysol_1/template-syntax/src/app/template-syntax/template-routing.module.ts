@@ -10,9 +10,7 @@ const routes: Routes = [
   {
     path: 'template-syntax',
     component: TemplateSyntaxComponent,
-    children: [
-      
-    ]
+    children: []
   }
 ];
 
