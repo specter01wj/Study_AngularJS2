@@ -13,6 +13,10 @@ const routes: Routes = [
     // loadChildren: './property-binding/property-binding.module#PropertyBindingModule'
     loadChildren: () => import('./property-binding/property-binding.module').then(m => m.PropertyBindingModule)
   },
+  {
+    path: 'attribute-binding',
+    loadChildren: () => import('./attribute-binding/attribute-binding.module').then(m => m.AttributeBindingModule)
+  },
 ];
 
 @NgModule({
