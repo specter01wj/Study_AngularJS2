@@ -33,11 +33,11 @@
 
 <h3>Source specificity</h3>
 
-<!-- The `class.special` template binding will override any host binding to the `special` class set by `dirWithClassBinding` or `comp-with-host-binding`.-->
-<comp-with-host-binding [class.special]="isSpecial" dirWithClassBinding>Some text.</comp-with-host-binding>
+<!-- The `class.special` template binding will override any host binding to the `special` class set by `dirWithClassBinding` or `app-comp-with-host-binding`.-->
+<app-comp-with-host-binding [class.special]="isSpecial" dirWithClassBinding>Some text.</app-comp-with-host-binding>
 
-<!-- The `style.color` template binding will override any host binding to the `color` property set by `dirWithStyleBinding` or `comp-with-host-binding`. -->
-<comp-with-host-binding [style.color]="color" dirWithStyleBinding>Some text.</comp-with-host-binding>
+<!-- The `style.color` template binding will override any host binding to the `color` property set by `dirWithStyleBinding` or `app-comp-with-host-binding`. -->
+<app-comp-with-host-binding [style.color]="color" dirWithStyleBinding>Some text.</app-comp-with-host-binding>
 
 <h3>Dynamic vs static</h3>
 
@@ -48,6 +48,6 @@
 <div style="color: blue" [style]="styleExpr">Some text.</div>
 
 
-<comp-with-host-binding dirWithHostBinding></comp-with-host-binding>
+<app-comp-with-host-binding dirWithHostBinding></app-comp-with-host-binding>
 
 
