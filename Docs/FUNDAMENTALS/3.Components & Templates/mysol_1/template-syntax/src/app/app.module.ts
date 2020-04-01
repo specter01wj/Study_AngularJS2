@@ -8,14 +8,14 @@ import { TemplateSyntaxModule } from './template-syntax/template-syntax.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { BindingSyntaxComponent } from './binding-syntax/binding-syntax.component';
+// import { BindingSyntaxComponent } from './binding-syntax/binding-syntax.component';
 // import { AttributeBindingComponent } from './attribute-binding/attribute-binding.component';
 // import { TemplateSyntaxComponent } from './template-syntax/template-syntax.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BindingSyntaxComponent,
+    // BindingSyntaxComponent,
     // AttributeBindingComponent,
     // TemplateSyntaxComponent,
   ],
