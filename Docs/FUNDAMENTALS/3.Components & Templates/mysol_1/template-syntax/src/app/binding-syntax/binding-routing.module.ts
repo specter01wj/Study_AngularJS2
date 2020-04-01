@@ -8,8 +8,7 @@ const routes: Routes = [
   {
     path: '',
     component: BindingSyntaxComponent,
-    children: [
-    ]
+    children: []
   }
 ];
 
