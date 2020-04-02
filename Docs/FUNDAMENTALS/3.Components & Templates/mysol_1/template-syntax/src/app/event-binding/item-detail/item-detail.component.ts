@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+
+import { ItemEvent } from '../../interface/item-event';
 
 @Component({
   selector: 'app-item-detail',
@@ -6,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-detail.component.less']
 })
 export class ItemDetailComponent implements OnInit {
+	@Input() item;
+  itemImageUrl = 'assets/teapot.svg';
+  lineThrough = '';
+  displayNone = '';
+  @Input() prefix = '';
 
   constructor() { }
 
