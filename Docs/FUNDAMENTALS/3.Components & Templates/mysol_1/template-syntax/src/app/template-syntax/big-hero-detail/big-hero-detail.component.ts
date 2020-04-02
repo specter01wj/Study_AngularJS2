@@ -9,7 +9,7 @@ import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
   templateUrl: './big-hero-detail.component.html',
   styleUrls: ['./big-hero-detail.component.less']
 })
-export class BigHeroDetailComponent implements OnInit extends HeroDetailComponent {
+export class BigHeroDetailComponent extends HeroDetailComponent implements OnInit {
 	@Input()  hero: Hero;
   @Output() deleteRequest = new EventEmitter<Hero>();
 
