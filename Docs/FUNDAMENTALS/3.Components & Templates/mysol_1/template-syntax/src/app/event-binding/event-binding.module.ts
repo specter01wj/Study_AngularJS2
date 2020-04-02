@@ -5,11 +5,13 @@ import { EventRoutingModule } from './event-routing.module';
 
 import { EventBindingComponent } from './event-binding.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
+import { ClickDirective } from './click.directive';
 
 @NgModule({
   declarations: [
   	EventBindingComponent,
-  	ItemDetailComponent
+  	ItemDetailComponent,
+  	ClickDirective
   ],
   imports: [
     CommonModule,
