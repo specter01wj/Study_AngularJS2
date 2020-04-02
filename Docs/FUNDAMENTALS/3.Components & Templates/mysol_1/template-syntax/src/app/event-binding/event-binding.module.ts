@@ -6,8 +6,8 @@ import { EventBindingComponent } from './event-binding.component';
 
 @NgModule({
   declarations: [
-
-  EventBindingComponent],
+  	EventBindingComponent
+  ],
   imports: [
     CommonModule,
     EventRoutingModule
