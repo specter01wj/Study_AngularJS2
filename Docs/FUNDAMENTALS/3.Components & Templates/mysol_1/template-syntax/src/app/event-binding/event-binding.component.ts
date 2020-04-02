@@ -22,7 +22,7 @@ export class EventBindingComponent implements OnInit {
     if (event) { event.stopPropagation(); }
   }
 
-  deleteItem(item: Item) {
+  deleteItem(item: ItemEvent) {
     alert(`Delete the ${item.name}.`);
   }
 
