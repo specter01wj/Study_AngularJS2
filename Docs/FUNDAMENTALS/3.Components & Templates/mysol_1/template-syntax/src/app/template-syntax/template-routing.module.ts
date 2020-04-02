@@ -12,8 +12,8 @@ const routes: Routes = [
     path: 'template-syntax',
     component: TemplateSyntaxComponent,
     children: [
-      { path: 'item-detail', component: HeroDetailComponent },
-      { path: 'item-detail', component: BigHeroDetailComponent }
+      { path: 'hero-detail', component: HeroDetailComponent },
+      { path: 'big-hero-detail', component: BigHeroDetailComponent }
     ]
   }
 ];
