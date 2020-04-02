@@ -5,12 +5,16 @@ import { FormsModule } from '@angular/forms';
 
 import { TemplateSyntaxComponent } from './template-syntax.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { BigHeroDetailComponent } from './big-hero-detail/big-hero-detail.component';
 
 const routes: Routes = [
   {
     path: 'template-syntax',
     component: TemplateSyntaxComponent,
-    children: []
+    children: [
+      { path: 'item-detail', component: HeroDetailComponent },
+      { path: 'item-detail', component: BigHeroDetailComponent }
+    ]
   }
 ];
 
