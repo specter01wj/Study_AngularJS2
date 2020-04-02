@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'attribute-binding',
     loadChildren: () => import('./attribute-binding/attribute-binding.module').then(m => m.AttributeBindingModule)
   },
+  {
+    path: 'event-binding',
+    loadChildren: () => import('./event-binding/event-binding.module').then(m => m.EventBindingModule)
+  },
 ];
 
 @NgModule({
