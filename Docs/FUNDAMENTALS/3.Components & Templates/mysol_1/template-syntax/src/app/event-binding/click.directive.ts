@@ -4,7 +4,7 @@ import { Directive, ElementRef, EventEmitter, Output } from '@angular/core';
   selector: '[appClick]'
 })
 export class ClickDirective {
-	@Output('myClick') clicks = new EventEmitter<string>();
+	@Output('appClick') clicks = new EventEmitter<string>();
 
 	toggle = false;
 
@@ -12,7 +12,7 @@ export class ClickDirective {
   	el.nativeElement
       .addEventListener('click', (event: Event) => {
         this.toggle = !this.toggle;
-        this.clicks.emit(this.toggle ? 'Click!' : '');
+        this.clicks.emit(this.toggle ? 'Click!' : 'James');
       });
   }
 

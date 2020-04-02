@@ -9,7 +9,7 @@ import { ItemEvent } from '../interface/item-event';
 })
 export class EventBindingComponent implements OnInit {
 	currentItem = { name: 'teapot'} ;
-  clickMessage = '';
+  clickMessage = 'Kim';
 
   constructor() { }
 

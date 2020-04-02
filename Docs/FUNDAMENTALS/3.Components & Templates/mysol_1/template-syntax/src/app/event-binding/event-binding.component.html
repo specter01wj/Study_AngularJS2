@@ -7,7 +7,7 @@
   <button on-click="onSave($event)">on-click Save</button>
 
   <h4>myClick is an event on the custom ClickDirective:</h4>
-  <button (myClick)="clickMessage=$event" clickable>click with myClick</button>
+  <button (appClick)="clickMessage=$event" clickable>click with myClick</button>
   {{clickMessage}}
 
 </div>
