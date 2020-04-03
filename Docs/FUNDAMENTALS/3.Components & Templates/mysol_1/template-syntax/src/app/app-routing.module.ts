@@ -25,6 +25,10 @@ const routes: Routes = [
     path: 'two-way-binding',
     loadChildren: () => import('./two-way-binding/two-way-binding.module').then(m => m.TwoWayBindingModule)
   },
+  {
+    path: 'built-in-directives',
+    loadChildren: () => import('./built-in-directives/built-in-directives.module').then(m => m.BuiltInDirectivesModule)
+  },
 ];
 
 @NgModule({
