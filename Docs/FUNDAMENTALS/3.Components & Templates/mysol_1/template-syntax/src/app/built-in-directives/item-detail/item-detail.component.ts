@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { ItemBuiltIND } from '../../interface/item-builtind';
 
 @Component({
   selector: 'app-item-detail',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-detail.component.less']
 })
 export class ItemDetailComponent implements OnInit {
+	@Input() item: ItemBuiltIND;
 
   constructor() { }
 
