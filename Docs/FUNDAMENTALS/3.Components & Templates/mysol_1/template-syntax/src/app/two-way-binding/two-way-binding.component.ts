@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./two-way-binding.component.less']
 })
 export class TwoWayBindingComponent implements OnInit {
-
+	fontSizePx = 16;
+	
   constructor() { }
 
   ngOnInit(): void {
