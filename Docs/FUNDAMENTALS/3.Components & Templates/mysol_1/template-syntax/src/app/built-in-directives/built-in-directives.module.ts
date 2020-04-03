@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BuiltInDirectivesComponent } from './built-in-directives.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [BuiltInDirectivesComponent],
   imports: [
     CommonModule
   ]
