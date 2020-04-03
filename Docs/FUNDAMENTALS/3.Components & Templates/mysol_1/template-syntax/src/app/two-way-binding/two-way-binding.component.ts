@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayBindingComponent implements OnInit {
 	fontSizePx = 16;
-	
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  sizeChange(event?: number): void {
+  	console.log(event);
   }
 
 }
