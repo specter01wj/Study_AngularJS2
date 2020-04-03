@@ -6,9 +6,14 @@ import { BuiltInDRoutingModule } from './built-in-d-routing.module';
 
 import { BuiltInDirectivesComponent } from './built-in-directives.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
+import { ItemSwitchComponents } from './item-switch.component';
 
 @NgModule({
-  declarations: [BuiltInDirectivesComponent, ItemDetailComponent],
+  declarations: [
+  	BuiltInDirectivesComponent, 
+  	ItemDetailComponent,
+  	ItemSwitchComponents
+  ],
   imports: [
     CommonModule,
     FormsModule,
