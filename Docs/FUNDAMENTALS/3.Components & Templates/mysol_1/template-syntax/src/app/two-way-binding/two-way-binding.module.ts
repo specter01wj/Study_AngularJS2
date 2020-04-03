@@ -7,8 +7,6 @@ import { TwoWayRoutingModule } from './two-way-routing.module';
 import { TwoWayBindingComponent } from './two-way-binding.component';
 import { SizerComponent } from './sizer/sizer.component';
 
-
-
 @NgModule({
   declarations: [TwoWayBindingComponent, SizerComponent],
   imports: [
