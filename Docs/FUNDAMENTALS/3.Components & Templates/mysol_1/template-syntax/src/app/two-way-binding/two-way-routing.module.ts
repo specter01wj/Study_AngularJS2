@@ -11,7 +11,7 @@ const routes: Routes = [
     path: '',
     component: TwoWayBindingComponent,
     children: [
-      { path: 'size', component: SizerComponent }
+      { path: 'sizer', component: SizerComponent }
     ]
   }
 ];
