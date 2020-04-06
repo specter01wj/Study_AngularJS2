@@ -88,7 +88,6 @@ export class BuiltInDirectivesComponent implements OnInit {
   }
 
   changeIds() {
-
     this.items.forEach(i => i.id += 1 * this.itemIdIncrement);
     this.itemsWithTrackByCountReset = -1;
     this.itemsNoTrackByCount = ++this.itemsNoTrackByCount;
