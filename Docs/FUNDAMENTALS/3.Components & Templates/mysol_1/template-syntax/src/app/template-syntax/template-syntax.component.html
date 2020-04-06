@@ -404,10 +404,33 @@ bindon-ngModel
 <button class="to-toc" (click)="goTop()">Go to Top</button>
 
 <!-- ------------------------------------------------ -->
+<hr>
+<!-- NgClass binding -->
+<h2 id="ngClass">NgClass Binding</h2>
 
-Built-in directives
+<p>currentClasses is {{currentClasses | json}}</p>
+<div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special</div>
 
-369
+<!-- not used in chapter -->
+<br>
+<label>saveable   <input type="checkbox" [(ngModel)]="canSave"></label> |
+<label>modified:  <input type="checkbox" [value]="!isUnchanged" (change)="isUnchanged=!isUnchanged"></label> |
+<label>special:   <input type="checkbox" [(ngModel)]="isSpecial"></label>
+<button (click)="setCurrentClasses()">Refresh currentClasses</button>
+<br><br>
+<div [ngClass]="currentClasses">
+  This div should be {{ canSave ? "": "not"}} saveable,
+                  {{ isUnchanged ? "unchanged" : "modified" }} and,
+                  {{ isSpecial ? "": "not"}} special after clicking "Refresh".</div>
+<br><br>
+
+<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+
+<div class="bad curly special">Bad curly special</div>
+<div [ngClass]="{'bad':false, 'curly':true, 'special':true}">Curly special</div>
+
+<a class="to-toc" href="#toc">top</a>
+
 
 <!-- ------------------------------------------------ -->
 
