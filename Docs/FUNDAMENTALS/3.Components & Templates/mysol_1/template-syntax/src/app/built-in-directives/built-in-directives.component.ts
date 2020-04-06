@@ -100,6 +100,7 @@ export class BuiltInDirectivesComponent implements OnInit {
     this.itemsWithTrackByCount = 0;
     this.itemIdIncrement = 1;
   }
+  
   trackByItems(index: number, item: ItemBuiltIND): number { return item.id; }
 
   trackById(index: number, item: any): number { return item['id']; }
