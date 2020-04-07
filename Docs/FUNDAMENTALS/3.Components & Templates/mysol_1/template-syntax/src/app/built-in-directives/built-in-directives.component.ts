@@ -96,13 +96,6 @@ export class BuiltInDirectivesComponent implements OnInit {
   clearTrackByCounts() {
     this.resetItems();
     this.itemsNoTrackByCount = 0;
-
-
-
-
-
-
-    
     this.itemsWithTrackByCount = 0;
     this.itemIdIncrement = 1;
   }
