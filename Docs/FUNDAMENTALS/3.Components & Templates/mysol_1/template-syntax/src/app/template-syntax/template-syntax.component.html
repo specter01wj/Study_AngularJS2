@@ -462,6 +462,49 @@ bindon-ngModel
 
 <!-- ------------------------------------------------ -->
 
+<!-- NgIf binding -->
+<hr><h2 id="ngIf">NgIf Binding</h2>
+
+<app-hero-detail *ngIf="isActive"></app-hero-detail>
+
+<div *ngIf="currentHero">Hello, {{currentHero.name}}</div>
+<div *ngIf="nullHero">Hello, {{nullHero.name}}</div>
+
+<!-- NgIf binding with template (no *) -->
+
+<ng-template [ngIf]="currentHero">Add {{currentHero.name}} with template</ng-template>
+
+<!-- Does not show because isActive is false! -->
+<div>Hero Detail removed from DOM (via template) because isActive is false</div>
+<ng-template [ngIf]="isActive">
+  <app-hero-detail></app-hero-detail>
+</ng-template>
+
+<!-- isSpecial is true -->
+<div [class.hidden]="!isSpecial">Show with class</div>
+<div [class.hidden]="isSpecial">Hide with class</div>
+
+<!-- HeroDetail is in the DOM but hidden -->
+<app-hero-detail [class.hidden]="isSpecial"></app-hero-detail>
+
+<div [style.display]="isSpecial ? 'block' : 'none'">Show with style</div>
+<div [style.display]="isSpecial ? 'none'  : 'block'">Hide with style</div>
+
+<a class="to-toc" href="#toc">top</a>
+
+
+<!-- ------------------------------------------------ -->
+
+
+
+
+<!-- ------------------------------------------------ -->
+
+
+<!-- ------------------------------------------------ -->
+
+
+*ngFor with trackBy
 
 
 <!-- ------------------------------------------------ -->
