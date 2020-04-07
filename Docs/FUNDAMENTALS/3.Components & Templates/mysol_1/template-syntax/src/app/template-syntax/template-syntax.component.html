@@ -493,9 +493,9 @@ bindon-ngModel
 <button class="to-toc" (click)="goTop()">Go to Top</button>
 
 <!-- ------------------------------------------------ -->
-
+<hr>
 <!-- NgFor binding -->
-<hr><h2 id="ngFor">NgFor Binding</h2>
+<h2 id="ngFor">NgFor Binding</h2>
 
 <div class="box">
   <div *ngFor="let hero of heroes">{{hero.name}}</div>
@@ -570,7 +570,7 @@ bindon-ngModel
   <div *ngFor="let hero of heroes, trackBy: trackById">({{hero.id}}) {{hero.name}}</div>
 </div>
 
-<a class="to-toc" href="#toc">top</a>
+<button class="to-toc" (click)="goTop()">Go to Top</button>
 
 <!-- ------------------------------------------------ -->
 
