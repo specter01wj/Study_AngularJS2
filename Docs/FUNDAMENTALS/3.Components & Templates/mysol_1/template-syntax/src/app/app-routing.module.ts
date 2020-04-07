@@ -29,6 +29,10 @@ const routes: Routes = [
     path: 'built-in-directives',
     loadChildren: () => import('./built-in-directives/built-in-directives.module').then(m => m.BuiltInDirectivesModule)
   },
+  {
+    path: 'template-reference-variables',
+    loadChildren: () => import('./template-reference-variables/template-reference-variables.module').then(m => m.TemplateReferenceVariablesModule)
+  },
 ];
 
 @NgModule({
