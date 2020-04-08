@@ -6,11 +6,12 @@ import { InputsOutputsRoutingModule } from './inputs-outputs-routing.module';
 
 import { InputsOutputsComponent } from './inputs-outputs.component';
 import { AliasingComponent } from './aliasing/aliasing.component';
+import { InTheMetadataComponent } from './in-the-metadata/in-the-metadata.component';
 
 
 
 @NgModule({
-  declarations: [InputsOutputsComponent, AliasingComponent],
+  declarations: [InputsOutputsComponent, AliasingComponent, InTheMetadataComponent],
   imports: [
     CommonModule,
     FormsModule,
