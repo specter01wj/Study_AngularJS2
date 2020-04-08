@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-svg',
-  templateUrl: './svg.component.html',
+  templateUrl: './svg.component.svg',
   styleUrls: ['./svg.component.less']
 })
 export class SvgComponent implements OnInit {
@@ -12,7 +12,7 @@ export class SvgComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
 
   changeColor() {
     const r = Math.floor(Math.random() * 256);
