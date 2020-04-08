@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item-detail',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-detail.component.less']
 })
 export class ItemDetailComponent implements OnInit {
+	@Input() item: string; // decorate the property with @Input()
 
   constructor() { }
 
