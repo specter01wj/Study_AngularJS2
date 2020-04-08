@@ -33,6 +33,10 @@ const routes: Routes = [
     path: 'template-reference-variables',
     loadChildren: () => import('./template-reference-variables/template-reference-variables.module').then(m => m.TemplateReferenceVariablesModule)
   },
+  {
+    path: 'inputs-outputs',
+    loadChildren: () => import('./inputs-outputs/inputs-outputs.module').then(m => m.InputsOutputsModule)
+  },
 ];
 
 @NgModule({
