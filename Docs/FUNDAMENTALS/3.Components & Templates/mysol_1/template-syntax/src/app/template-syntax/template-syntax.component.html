@@ -634,10 +634,32 @@ bindon-ngModel
 <button class="to-toc" (click)="goTop()">Go to Top</button>
 
 <!-- ------------------------------------------------ -->
+<hr>
+<!-- Pipes -->
+<h2 id="pipes">Pipes</h2>
 
-How to use @Output()
+<div>Title through uppercase pipe: {{title | uppercase}}</div>
 
-585
+<!-- Pipe chaining: convert title to uppercase, then to lowercase -->
+<div>
+  Title through a pipe chain:
+  {{title | uppercase | lowercase}}
+</div>
+
+<!-- pipe with configuration argument => "February 25, 1970" -->
+<div>Birthdate: {{currentHero?.birthdate | date:'longDate'}}</div>
+
+<div>{{currentHero | json}}</div>
+
+<div>Birthdate: {{(currentHero?.birthdate | date:'longDate') | uppercase}}</div>
+
+<div>
+  <!-- pipe price to USD and display the $ symbol -->
+  <label>Price: </label>{{product.price | currency:'USD':'symbol'}}
+</div>
+
+<a class="to-toc" href="#toc">top</a>
+
 
 <!-- ------------------------------------------------ -->
 
