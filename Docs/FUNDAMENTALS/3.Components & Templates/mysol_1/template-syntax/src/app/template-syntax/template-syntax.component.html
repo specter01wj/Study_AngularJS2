@@ -661,8 +661,44 @@ bindon-ngModel
 <button class="to-toc" (click)="goTop()">Go to Top</button>
 
 <!-- ------------------------------------------------ -->
+<hr>
+<!-- Null values and the safe navigation operator -->
+<h2 id="safe-navigation-operator">Safe navigation operator <i>?.</i></h2>
+
+<div>
+  The title is {{title}}
+</div>
+
+<div>
+  The current hero's name is {{currentHero?.name}}
+</div>
+
+<div>
+  The current hero's name is {{currentHero.name}}
+</div>
 
 
+<!--
+The null hero's name is {{nullHero.name}}
+
+See console log:
+  TypeError: Cannot read property 'name' of null in [null]
+-->
+
+<!--No hero, div not displayed, no error -->
+<div *ngIf="nullHero">The null hero's name is {{nullHero.name}}</div>
+
+<div>
+The null hero's name is {{nullHero && nullHero.name}}
+</div>
+
+<div>
+  <!-- No hero, no problem! -->
+  The null hero's name is {{nullHero?.name}}
+</div>
+
+
+<a class="to-toc" href="#toc">top</a>
 
 
 
