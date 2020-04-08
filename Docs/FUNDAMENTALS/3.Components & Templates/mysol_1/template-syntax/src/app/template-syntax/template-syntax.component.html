@@ -701,8 +701,18 @@ The null hero's name is {{nullHero && nullHero.name}}
 <button class="to-toc" (click)="goTop()">Go to Top</button>
 
 <!-- ------------------------------------------------ -->
+<hr>
+<!-- non-null assertion operator -->
+<h2 id="non-null-assertion-operator">Non-null assertion operator <i>!.</i></h2>
 
+<div>
+  <!--No hero, no text -->
+  <div *ngIf="hero">
+    The hero's name is {{hero!.name}}
+  </div>
+</div>
 
+<a class="to-toc" href="#toc">top</a>
 
 
 
