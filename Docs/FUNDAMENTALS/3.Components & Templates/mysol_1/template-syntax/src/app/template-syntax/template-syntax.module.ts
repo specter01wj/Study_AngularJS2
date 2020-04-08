@@ -10,6 +10,7 @@ import { BigHeroDetailComponent } from './big-hero-detail/big-hero-detail.compon
 import { SizerComponent } from './sizer/sizer.component';
 import { heroSwitchComponents } from './hero-switch.components';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { SvgComponent } from './svg/svg.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
   	BigHeroDetailComponent,
   	SizerComponent,
     heroSwitchComponents,
-    HeroFormComponent
+    HeroFormComponent,
+    SvgComponent
   ],
   imports: [
     CommonModule,
