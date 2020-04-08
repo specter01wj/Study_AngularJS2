@@ -715,6 +715,29 @@ The null hero's name is {{nullHero && nullHero.name}}
 <button class="to-toc" (click)="goTop()">Go to Top</button>
 
 <!-- ------------------------------------------------ -->
+<hr>
+<!-- The $any() type cast function -->
+<h2 id="any-type-cast-function">$any type cast function <i>$any( )</i>.</h2>
+
+<div>
+  <!-- Accessing an undeclared member -->
+  <div>
+    The hero's marker is {{$any(hero).marker}}
+  </div>
+</div>
+
+<div>
+  <!-- Accessing an undeclared member -->
+  <div>
+    Undeclared members is {{$any(this).member}}
+  </div>
+</div>
+
+<a class="to-toc" href="#toc">top</a>
+
+<!-- ------------------------------------------------ -->
+
+<!-- ------------------------------------------------ -->
 
 
 
