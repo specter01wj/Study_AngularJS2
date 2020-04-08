@@ -618,9 +618,20 @@ bindon-ngModel
 <button class="to-toc" (click)="goTop()">Go to Top</button>
 
 <!-- ------------------------------------------------ -->
+<hr>
+<!-- inputs and output -->
+<h2 id="inputs-and-outputs">Inputs and Outputs</h2>
 
+<img [src]="iconUrl"/>
+<button (click)="onSave()">Save</button>
 
+<app-hero-detail [hero]="currentHero" (deleteRequest)="deleteHero($event)">
+</app-hero-detail>
 
+<div (myClick)="clickMessage2=$event" clickable>myClick2</div>
+{{clickMessage2}}
+
+<button class="to-toc" (click)="goTop()">Go to Top</button>
 
 <!-- ------------------------------------------------ -->
 
