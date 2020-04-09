@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ClickMeComponent } from './click-me/click-me.component';
 import { ClickMe2Component } from './click-me2/click-me2.component';
 import { KeyupComponent } from './keyup/keyup.component';
+import { LittleTourComponent } from './little-tour/little-tour.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClickMeComponent,
     ClickMe2Component,
-    KeyupComponent
+    KeyupComponent,
+    LittleTourComponent
   ],
   imports: [
     BrowserModule,
