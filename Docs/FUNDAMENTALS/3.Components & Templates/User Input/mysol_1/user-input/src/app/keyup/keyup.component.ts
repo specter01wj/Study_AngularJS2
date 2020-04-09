@@ -67,6 +67,8 @@ export class KeyUpComponent_v3 {
 })
 export class KeyUpComponent_v4 {
   value = '';
-  update(value: string) { this.value = value; }
+  update(value: string) { 
+  	this.value = value; 
+  }
 }
 
