@@ -48,7 +48,9 @@ export class KeyUpComponent_v2 {
 })
 export class KeyUpComponent_v3 {
   value = '';
-  onEnter(value: string) { this.value = value; }
+  onEnter(value: string) { 
+  	this.value = value; 
+  }
 }
 
 //////////////////////////////////////////
