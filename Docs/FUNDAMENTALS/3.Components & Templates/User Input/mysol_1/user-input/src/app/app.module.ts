@@ -7,6 +7,7 @@ import { ClickMeComponent } from './click-me/click-me.component';
 import { ClickMe2Component } from './click-me2/click-me2.component';
 import { KeyupComponent } from './keyup/keyup.component';
 import { LittleTourComponent } from './little-tour/little-tour.component';
+import { LoopBackComponent } from './loop-back/loop-back.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LittleTourComponent } from './little-tour/little-tour.component';
     ClickMeComponent,
     ClickMe2Component,
     KeyupComponent,
-    LittleTourComponent
+    LittleTourComponent,
+    LoopBackComponent
   ],
   imports: [
     BrowserModule,
