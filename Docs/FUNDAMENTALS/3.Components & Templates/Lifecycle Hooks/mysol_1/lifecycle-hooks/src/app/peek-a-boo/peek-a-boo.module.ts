@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { PeekABooRoutingModule } from './peek-a-boo-routing.module';
 
 import { PeekABooComponent } from './peek-a-boo.component';
+import { PeekABooChildComponent } from './peek-a-boo-child/peek-a-boo-child.component';
 
 
 @NgModule({
   declarations: [
-  	PeekABooComponent
+  	PeekABooComponent,
+  	PeekABooChildComponent
   ],
   imports: [
     CommonModule,
