@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { PeekABooModule } from './peek-a-boo/peek-a-boo.module';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -12,7 +15,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    FormsModule,
+    AppRoutingModule,
+    PeekABooModule
   ],
   providers: [],
   bootstrap: [AppComponent]
