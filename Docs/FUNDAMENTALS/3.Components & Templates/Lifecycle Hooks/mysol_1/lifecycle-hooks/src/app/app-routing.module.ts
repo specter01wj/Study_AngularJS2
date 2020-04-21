@@ -3,12 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/template-syntax', pathMatch: 'full' },
-	// { path: 'template-syntax', component: TemplateSyntaxComponent },
-  {
+	{ path: '', redirectTo: '/peek-a-boo', pathMatch: 'full' },
+  /*{
     path: 'binding-syntax',
     loadChildren: () => import('./binding-syntax/binding-syntax.module').then(m => m.BindingSyntaxModule)
-  },
+  },*/
 
 ];
 
