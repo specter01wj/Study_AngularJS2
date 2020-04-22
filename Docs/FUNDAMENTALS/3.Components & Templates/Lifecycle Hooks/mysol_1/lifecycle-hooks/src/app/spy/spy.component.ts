@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LoggerService }  from '../services/logger.service';
+
 @Component({
   selector: 'app-spy',
   templateUrl: './spy.component.html',
@@ -8,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class SpyComponent implements OnInit {
 	newName = 'Herbie';
   heroes: string[] = ['Windstorm', 'Magneta'];
-  
-  constructor() { }
+
+  constructor(public logger: LoggerService) { }
 
   ngOnInit() {
   }
