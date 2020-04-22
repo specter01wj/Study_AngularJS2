@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges,
+  SimpleChanges, ViewChild } from '@angular/core';
+
+import { OnChangesChildComponent } from './on-changes-child/on-changes-child.component';
+
+import { Hero } from './hero';
 
 @Component({
   selector: 'app-on-changes',
@@ -9,7 +14,7 @@ export class OnChangesComponent implements OnInit {
 	hero: Hero;
   power: string;
   title = 'OnChanges';
-  @ViewChild(OnChangesComponent) childView: OnChangesComponent;
+  @ViewChild(OnChangesChildComponent) childView: OnChangesChildComponent;
 
   constructor() { 
   	this.reset();
