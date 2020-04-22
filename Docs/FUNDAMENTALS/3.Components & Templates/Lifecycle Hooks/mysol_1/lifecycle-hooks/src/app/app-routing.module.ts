@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'spy',
     loadChildren: () => import('./spy/spy.module').then(m => m.SpyModule)
   },
+  {
+    path: 'on-changes',
+    loadChildren: () => import('./on-changes/on-changes.module').then(m => m.OnChangesModule)
+  },
 
 ];
 
