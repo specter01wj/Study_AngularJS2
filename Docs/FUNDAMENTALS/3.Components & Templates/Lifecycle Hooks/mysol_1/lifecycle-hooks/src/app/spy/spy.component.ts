@@ -5,7 +5,8 @@ import { LoggerService }  from '../services/logger.service';
 @Component({
   selector: 'app-spy',
   templateUrl: './spy.component.html',
-  styleUrls: ['./spy.component.less']
+  styleUrls: ['./spy.component.less'],
+  providers:  [LoggerService]
 })
 export class SpyComponent implements OnInit {
 	newName = 'Herbie';

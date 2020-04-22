@@ -7,10 +7,9 @@ import { SpyComponent } from './spy.component';
 
 const routes: Routes = [
   {
-    path: 'spy',
+    path: '',
     component: SpyComponent,
     children: [
-      
     ]
   }
 ];
