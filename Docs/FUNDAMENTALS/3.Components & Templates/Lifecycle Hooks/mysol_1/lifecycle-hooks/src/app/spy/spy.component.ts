@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./spy.component.less']
 })
 export class SpyComponent implements OnInit {
-
+	newName = 'Herbie';
+  heroes: string[] = ['Windstorm', 'Magneta'];
+  
   constructor() { }
 
   ngOnInit() {
