@@ -5,8 +5,8 @@ import { LoggerService } from '../services/logger.service';
 @Directive({
   selector: '[appSpy]'
 })
-export class SpyDirective {
+export class SpyDirective implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor(private logger: LoggerService) { }
 
 }
