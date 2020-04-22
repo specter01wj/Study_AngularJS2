@@ -13,7 +13,10 @@ import { SpyDirective } from './spy.directive';
   	SpyDirective
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule,
+    SpyRoutingModule
+  ],
+  exports: []
 })
 export class SpyModule { }
