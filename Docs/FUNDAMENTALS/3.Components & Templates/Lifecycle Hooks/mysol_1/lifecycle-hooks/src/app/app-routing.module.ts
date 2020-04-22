@@ -4,10 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/peek-a-boo', pathMatch: 'full' },
-  /*{
-    path: 'binding-syntax',
-    loadChildren: () => import('./binding-syntax/binding-syntax.module').then(m => m.BindingSyntaxModule)
-  },*/
+  {
+    path: 'spy',
+    loadChildren: () => import('./spy/spy.module').then(m => m.SpyModule)
+  },
 
 ];
 
