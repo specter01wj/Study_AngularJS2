@@ -8,7 +8,7 @@ import { LoggerService } from '../services/logger.service';
   styleUrls: ['./peek-a-boo.component.less']
 })
 export class PeekABooComponent implements OnInit {
-	hasChild = false;
+	hasChild = true;
   hookLog: string[];
 
   heroName = 'Windstorm';

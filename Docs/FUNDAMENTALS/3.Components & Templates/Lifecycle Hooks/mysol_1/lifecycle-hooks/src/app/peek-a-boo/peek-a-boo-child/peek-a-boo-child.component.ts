@@ -35,7 +35,7 @@ export class PeekABooChildComponent extends PeekABoo implements
              AfterViewInit, AfterViewChecked,
              OnDestroy {
 
-  @Input()  name: string;
+  @Input() name: string;
 
   private verb = 'initialized';
 
@@ -50,7 +50,7 @@ export class PeekABooChildComponent extends PeekABoo implements
   }
 
   // only called for/if there is an @input variable set by parent.
-  ngOnChanges(changes: SimpleChanges) {
+  /*ngOnChanges(changes: SimpleChanges) {
     let changesMsgs: string[] = [];
     for (let propName in changes) {
       if (propName === 'name') {
@@ -62,25 +62,25 @@ export class PeekABooChildComponent extends PeekABoo implements
     }
     this.logIt(`OnChanges: ${changesMsgs.join('; ')}`);
     this.verb = 'changed'; // next time it will be a change
-  }
+  }*/
 
   // Beware! Called frequently!
   // Called in every change detection cycle anywhere on the page
-  ngDoCheck() { this.logIt(`DoCheck`); }
+  /*ngDoCheck() { this.logIt(`DoCheck`); }*/
 
-  ngAfterContentInit() { this.logIt(`AfterContentInit`);  }
-
-  // Beware! Called frequently!
-  // Called in every change detection cycle anywhere on the page
-  ngAfterContentChecked() { this.logIt(`AfterContentChecked`); }
-
-  ngAfterViewInit() { this.logIt(`AfterViewInit`); }
+  /*ngAfterContentInit() { this.logIt(`AfterContentInit`);  }*/
 
   // Beware! Called frequently!
   // Called in every change detection cycle anywhere on the page
-  ngAfterViewChecked() { this.logIt(`AfterViewChecked`); }
+  /*ngAfterContentChecked() { this.logIt(`AfterContentChecked`); }*/
 
-  ngOnDestroy() { this.logIt(`OnDestroy`); }
+  /*ngAfterViewInit() { this.logIt(`AfterViewInit`); }*/
+
+  // Beware! Called frequently!
+  // Called in every change detection cycle anywhere on the page
+  /*ngAfterViewChecked() { this.logIt(`AfterViewChecked`); }*/
+
+  /*ngOnDestroy() { this.logIt(`OnDestroy`); }*/
 
 }
 
