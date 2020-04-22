@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { SpyRoutingModule } from './spy-routing.module';
 
 import { SpyComponent } from './spy.component';
+import { SpyDirective } from './spy.directive';
 
 @NgModule({
   declarations: [
-  	SpyComponent
+  	SpyComponent,
+  	SpyDirective
   ],
   imports: [
     CommonModule
