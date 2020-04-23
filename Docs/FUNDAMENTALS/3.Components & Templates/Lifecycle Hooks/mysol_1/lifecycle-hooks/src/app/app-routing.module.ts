@@ -13,7 +13,7 @@ const routes: Routes = [
     loadChildren: () => import('./on-changes/on-changes.module').then(m => m.OnChangesModule)
   },
   {
-    path: 'on-check',
+    path: 'do-check',
     loadChildren: () => import('./do-check/do-check.module').then(m => m.DoCheckModule)
   },
 

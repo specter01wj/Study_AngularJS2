@@ -1,5 +1,7 @@
 import { Component, OnInit, DoCheck, Input, ViewChild } from '@angular/core';
 
+import { Hero } from '../../services/hero';
+
 @Component({
   selector: 'app-do-check-child',
   templateUrl: './do-check-child.component.html',
