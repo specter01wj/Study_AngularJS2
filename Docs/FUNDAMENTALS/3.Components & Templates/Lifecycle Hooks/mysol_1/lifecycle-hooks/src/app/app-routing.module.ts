@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'after-view',
     loadChildren: () => import('./after-view/after-view.module').then(m => m.AfterViewModule)
   },
+  {
+    path: 'after-content',
+    loadChildren: () => import('./after-content/after-content.module').then(m => m.AfterContentModule)
+  },
 
 ];
 
