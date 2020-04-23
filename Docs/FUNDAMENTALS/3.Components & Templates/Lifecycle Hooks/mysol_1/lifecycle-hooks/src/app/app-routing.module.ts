@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'on-changes',
     loadChildren: () => import('./on-changes/on-changes.module').then(m => m.OnChangesModule)
   },
+  {
+    path: 'on-check',
+    loadChildren: () => import('./on-check/on-check.module').then(m => m.DoCheckModule)
+  },
 
 ];
 
