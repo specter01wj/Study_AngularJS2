@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'do-check',
     loadChildren: () => import('./do-check/do-check.module').then(m => m.DoCheckModule)
   },
+  {
+    path: 'after-view',
+    loadChildren: () => import('./after-view/after-view.module').then(m => m.AfterViewModule)
+  },
 
 ];
 
