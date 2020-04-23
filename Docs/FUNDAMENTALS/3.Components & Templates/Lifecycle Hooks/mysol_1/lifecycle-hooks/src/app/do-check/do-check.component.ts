@@ -13,7 +13,7 @@ export class DoCheckComponent implements OnInit {
 	hero: Hero;
   power: string;
   title = 'DoCheck';
-  // @ViewChild(DoCheckChildComponent) childView: DoCheckChildComponent;
+  @ViewChild(DoCheckChildComponent, {static: false}) childView: DoCheckChildComponent;
 
   constructor() { this.reset(); }
 
@@ -23,7 +23,7 @@ export class DoCheckComponent implements OnInit {
   reset() {
     this.hero = new Hero('Windstorm');
     this.power = 'sing';
-    // if (this.childView) { this.childView.reset(); }
+    if (this.childView) { this.childView.reset(); }
   }
 
 }
