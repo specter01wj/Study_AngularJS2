@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./after-view-grandchild.component.less']
 })
 export class AfterViewGrandchildComponent implements OnInit {
-
+	hero = 'Magneta';
+	
   constructor() { }
 
   ngOnInit() {
+  	this.hero = 'James';
   }
 
 }

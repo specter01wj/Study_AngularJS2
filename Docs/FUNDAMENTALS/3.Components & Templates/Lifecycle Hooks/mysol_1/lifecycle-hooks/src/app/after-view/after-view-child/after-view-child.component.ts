@@ -13,7 +13,7 @@ export class AfterViewChildComponent implements OnInit, AfterViewChecked, AfterV
 	private prevHero = '';
 
   // Query for a VIEW child of type `AfterViewGrandchildComponent`
-  @ViewChild(AfterViewGrandchildComponent, {static: false}) viewChild: AfterViewGrandchildComponent;
+  @ViewChild(AfterViewGrandchildComponent, {static: true}) viewChild: AfterViewGrandchildComponent;
 
   constructor(private logger: LoggerService) { 
   	this.logIt('AfterView constructor');
