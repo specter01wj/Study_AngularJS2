@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked, AfterContentInit, ContentChild } from '@angular/core';
+
+import { LoggerService }  from '../../services/logger.service';
 
 @Component({
   selector: 'app-after-content-grandchild',
@@ -6,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./after-content-grandchild.component.less']
 })
 export class AfterContentGrandchildComponent implements OnInit {
-
+	hero = 'Magneta';
+	
   constructor() { }
 
   ngOnInit() {
