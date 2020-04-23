@@ -9,7 +9,7 @@ import { AfterViewGrandchildComponent } from '../after-view-grandchild/after-vie
   templateUrl: './after-view-child.component.html',
   styleUrls: ['./after-view-child.component.less']
 })
-export class AfterViewChildComponent implements OnInit {
+export class AfterViewChildComponent implements OnInit, AfterViewChecked, AfterViewInit {
 	private prevHero = '';
 
   // Query for a VIEW child of type `AfterViewGrandchildComponent`
