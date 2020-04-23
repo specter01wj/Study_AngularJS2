@@ -1,5 +1,7 @@
 import { Component, OnInit, DoCheck, Input, ViewChild } from '@angular/core';
 
+import { DoCheckChildComponent } from './do-check-child/do-check-child.component';
+
 import { Hero } from '../services/hero';
 
 @Component({
@@ -11,9 +13,9 @@ export class DoCheckComponent implements OnInit {
 	hero: Hero;
   power: string;
   title = 'DoCheck';
-  // @ViewChild(DoCheckComponent) childView: DoCheckComponent;
+  // @ViewChild(DoCheckChildComponent) childView: DoCheckChildComponent;
 
-  constructor() { }
+  constructor() { this.reset(); }
 
   ngOnInit() {
   }
