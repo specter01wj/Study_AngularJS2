@@ -24,7 +24,10 @@ const routes: Routes = [
     path: 'after-content',
     loadChildren: () => import('./after-content/after-content.module').then(m => m.AfterContentModule)
   },
-
+  {
+    path: 'counter',
+    loadChildren: () => import('./counter/counter.module').then(m => m.CounterModule)
+  }
 ];
 
 @NgModule({
