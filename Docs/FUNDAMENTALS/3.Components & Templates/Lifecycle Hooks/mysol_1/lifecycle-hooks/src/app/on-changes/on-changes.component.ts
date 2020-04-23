@@ -14,7 +14,7 @@ export class OnChangesComponent implements OnInit {
 	hero: Hero;
   power: string;
   title = 'OnChanges';
-  // @ViewChild(OnChangesChildComponent) childView: OnChangesChildComponent;
+  @ViewChild(OnChangesChildComponent, {static: false}) childView: OnChangesChildComponent;
 
   constructor() { 
   	this.reset();
@@ -28,7 +28,7 @@ export class OnChangesComponent implements OnInit {
     this.hero = new Hero('Windstorm');
     // setting power only triggers onChanges if this value is different
     this.power = 'sing';
-    // if (this.childView) { this.childView.reset(); }
+    if (this.childView) { this.childView.reset(); }
   }
 
 }
