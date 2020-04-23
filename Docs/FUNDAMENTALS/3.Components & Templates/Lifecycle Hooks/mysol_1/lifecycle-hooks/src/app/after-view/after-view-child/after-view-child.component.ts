@@ -30,30 +30,30 @@ export class AfterViewChildComponent implements OnInit {
 
   ngAfterViewChecked() {
     // viewChild is updated after the view has been checked
-    if (this.prevHero === this.viewChild.hero) {
+    /*if (this.prevHero === this.viewChild.hero) {
       this.logIt('AfterViewChecked (no change)');
     } else {
       this.prevHero = this.viewChild.hero;
       this.logIt('AfterViewChecked');
       this.doSomething();
-    }
+    }*/
   }
 
   comment = '';
 
   // This surrogate for real business logic sets the `comment`
   private doSomething() {
-    let c = this.viewChild.hero.length > 10 ? `That's a long name` : '';
+    /*let c = this.viewChild.hero.length > 10 ? `That's a long name` : '';
     if (c !== this.comment) {
       // Wait a tick because the component's view has already been checked
       this.logger.tick_then(() => this.comment = c);
-    }
+    }*/
   }
 
   private logIt(method: string) {
-    let child = this.viewChild;
+    /*let child = this.viewChild;
     let message = `${method}: ${child ? child.hero : 'no'} child view`;
-    this.logger.log(message);
+    this.logger.log(message);*/
   }
 
 }
