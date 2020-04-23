@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'on-check',
-    loadChildren: () => import('./on-check/on-check.module').then(m => m.DoCheckModule)
+    loadChildren: () => import('./do-check/do-check.module').then(m => m.DoCheckModule)
   },
 
 ];
