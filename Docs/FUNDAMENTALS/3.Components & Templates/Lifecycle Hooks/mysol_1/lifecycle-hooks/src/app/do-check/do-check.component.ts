@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-do-check',

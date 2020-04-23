@@ -3,7 +3,7 @@ import { Component, OnInit, Input, OnChanges,
 
 import { OnChangesChildComponent } from './on-changes-child/on-changes-child.component';
 
-import { Hero } from './hero';
+import { Hero } from '../services/hero';
 
 @Component({
   selector: 'app-on-changes',

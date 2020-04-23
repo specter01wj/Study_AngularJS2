@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges,
   SimpleChanges, ViewChild } from '@angular/core';
 
-import { Hero } from '../hero';
+import { Hero } from '../../services/hero';
 
 @Component({
   selector: 'app-on-changes-child',
