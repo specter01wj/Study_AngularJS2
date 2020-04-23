@@ -15,7 +15,7 @@ import { DoCheckChildComponent } from './do-check-child/do-check-child.component
   imports: [
     CommonModule,
     FormsModule,
-
+    DoCheckRoutingModule
   ],
   exports: []
 })
