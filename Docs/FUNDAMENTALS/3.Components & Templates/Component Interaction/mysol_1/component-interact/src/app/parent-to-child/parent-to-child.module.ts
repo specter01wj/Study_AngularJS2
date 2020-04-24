@@ -5,8 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { ParentToChildRoutingModule } from './parent-to-child-routing.module';
 
 import { ParentToChildComponent } from './parent-to-child.component';
-import { ParentToChildChildComponent } from './parent-to-child-child.component';
-
+import { ParentToChildChildComponent } from './parent-to-child-child/parent-to-child-child.component';
 
 @NgModule({
   declarations: [

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Hero } from '../../services/hero';
 
 @Component({
   selector: 'app-parent-to-child-child',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent-to-child-child.component.less']
 })
 export class ParentToChildChildComponent implements OnInit {
+	@Input() hero: Hero;
+  @Input('master') masterName: string;
 
   constructor() { }
 
