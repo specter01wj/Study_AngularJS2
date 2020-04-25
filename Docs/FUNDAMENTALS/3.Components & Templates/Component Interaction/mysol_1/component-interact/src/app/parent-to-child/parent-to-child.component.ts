@@ -15,6 +15,7 @@ export class ParentToChildComponent implements OnInit {
 
 
 
+
 	
   master = 'Master';
 
