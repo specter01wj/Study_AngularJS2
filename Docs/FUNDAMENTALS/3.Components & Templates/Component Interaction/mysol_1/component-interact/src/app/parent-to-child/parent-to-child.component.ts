@@ -9,21 +9,6 @@ import { HEROES } from '../services/hero';
 })
 export class ParentToChildComponent implements OnInit {
 	heroes = HEROES;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
   master = 'Master';
 
   constructor() { }
