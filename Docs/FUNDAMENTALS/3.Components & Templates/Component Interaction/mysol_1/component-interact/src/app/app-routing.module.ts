@@ -6,6 +6,7 @@ const routes: Routes = [
 
 
 
+
 	
 	{ path: '', redirectTo: '/parent-to-child', pathMatch: 'full' },
   /*{
