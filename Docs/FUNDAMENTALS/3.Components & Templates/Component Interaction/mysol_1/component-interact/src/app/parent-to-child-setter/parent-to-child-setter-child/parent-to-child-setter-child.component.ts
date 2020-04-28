@@ -13,4 +13,11 @@ export class ParentToChildSetterChildComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Input()
+  set name(name: string) {
+    this._name = (name && name.trim()) || '<no name set>';
+  }
+
+  get name(): string { return this._name; }
+
 }
