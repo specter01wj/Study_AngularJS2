@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ParentToChildSetterComponent } from './parent-to-child-setter.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ParentToChildSetterComponent],
   imports: [
     CommonModule
   ]
