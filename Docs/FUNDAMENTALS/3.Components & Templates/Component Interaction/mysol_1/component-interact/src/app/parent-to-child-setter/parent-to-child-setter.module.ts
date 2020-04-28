@@ -7,12 +7,16 @@ import { ParentToChildSetterRoutingModule } from './parent-to-child-setter-routi
 import { ParentToChildSetterComponent } from './parent-to-child-setter.component';
 import { ParentToChildSetterChildComponent } from './parent-to-child-setter-child/parent-to-child-setter-child.component';
 
-
-
 @NgModule({
-  declarations: [ParentToChildSetterComponent, ParentToChildSetterChildComponent],
+  declarations: [
+  	ParentToChildSetterComponent, 
+  	ParentToChildSetterChildComponent
+  ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule,
+    ParentToChildSetterRoutingModule
+  ],
+  exports: []
 })
 export class ParentToChildSetterModule { }
