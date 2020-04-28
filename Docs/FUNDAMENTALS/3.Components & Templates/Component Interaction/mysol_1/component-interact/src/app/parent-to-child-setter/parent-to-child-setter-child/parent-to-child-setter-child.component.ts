@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-parent-to-child-setter-child',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent-to-child-setter-child.component.less']
 })
 export class ParentToChildSetterChildComponent implements OnInit {
+	private _name = '';
 
   constructor() { }
 
