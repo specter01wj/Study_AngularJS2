@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/parent-to-child', pathMatch: 'full' },
-  /*{
-    path: 'binding-syntax',
-    loadChildren: () => import('./binding-syntax/binding-syntax.module').then(m => m.BindingSyntaxModule)
-  },*/
+  {
+    path: 'parent-to-child-setter',
+    loadChildren: () => import('./parent-to-child-setter/parent-to-child-setter.module').then(m => m.ParentToChildSetterModule)
+  },
 
 ];
 
