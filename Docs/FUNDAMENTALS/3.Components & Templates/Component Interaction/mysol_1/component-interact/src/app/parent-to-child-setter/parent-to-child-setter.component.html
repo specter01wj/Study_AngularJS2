@@ -1,1 +1,2 @@
-<p>parent-to-child-setter works!</p>
+<h2>Master controls {{names.length}} names</h2>
+<app-parent-to-child-setter-child *ngFor="let name of names" [name]="name"></app-parent-to-child-setter-child>
