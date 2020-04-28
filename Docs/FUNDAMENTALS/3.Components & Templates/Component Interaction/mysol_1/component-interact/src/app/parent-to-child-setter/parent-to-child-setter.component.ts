@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent-to-child-setter.component.less']
 })
 export class ParentToChildSetterComponent implements OnInit {
-
+	names = ['Dr IQ', '   ', '  Bombasto  '];
+	
   constructor() { }
 
   ngOnInit() {
