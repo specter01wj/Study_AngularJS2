@@ -12,6 +12,7 @@ const routes: Routes = [
     component: ParentToChildSetterComponent,
 
 
+
     
     children: [
       { path: 'parent-to-child-setter-child', component: ParentToChildSetterChildComponent }
