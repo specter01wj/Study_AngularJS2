@@ -10,6 +10,7 @@ const routes: Routes = [
   {
     path: '',
     component: ParentToChildSetterComponent,
+    
     children: [
       { path: 'parent-to-child-setter-child', component: ParentToChildSetterChildComponent }
     ]
