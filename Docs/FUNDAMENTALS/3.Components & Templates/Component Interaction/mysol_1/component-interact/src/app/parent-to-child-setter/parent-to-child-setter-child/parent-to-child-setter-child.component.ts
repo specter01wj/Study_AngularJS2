@@ -15,6 +15,7 @@ export class ParentToChildSetterChildComponent implements OnInit {
 
   @Input()
   set name(name: string) {
+  	
     this._name = (name && name.trim()) || '<no name set>';
   }
 
