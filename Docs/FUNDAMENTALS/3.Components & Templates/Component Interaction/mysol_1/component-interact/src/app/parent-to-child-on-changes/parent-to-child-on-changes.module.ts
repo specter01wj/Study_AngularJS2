@@ -4,16 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { ParentToChildOnChangesRoutingModule } from './parent-to-child-on-changes-routing.module';
 
-
 import { ParentToChildOnChangesComponent } from './parent-to-child-on-changes.component';
 import { ParentToChildOnChangesChildComponent } from './parent-to-child-on-changes-child/parent-to-child-on-changes-child.component';
 
-
-
 @NgModule({
-  declarations: [ParentToChildOnChangesComponent, ParentToChildOnChangesChildComponent],
+  declarations: [
+  	ParentToChildOnChangesComponent, 
+  	ParentToChildOnChangesChildComponent
+  ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule,
+    ParentToChildOnChangesRoutingModule
+  ],
+  exports: []
 })
 export class ParentToChildOnChangesModule { }
