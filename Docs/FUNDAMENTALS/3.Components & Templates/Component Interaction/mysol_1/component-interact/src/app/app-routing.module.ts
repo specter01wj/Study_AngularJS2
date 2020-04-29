@@ -7,6 +7,10 @@ const routes: Routes = [
     path: 'parent-to-child-setter',
     loadChildren: () => import('./parent-to-child-setter/parent-to-child-setter.module').then(m => m.ParentToChildSetterModule)
   },
+  {
+    path: 'parent-to-child-on-changes',
+    loadChildren: () => import('./parent-to-child-on-changes/parent-to-child-on-changes.module').then(m => m.ParentToChildOnChangesModule)
+  },
 
 ];
 
