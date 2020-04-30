@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'child-to-parent',
     loadChildren: () => import('./child-to-parent/child-to-parent.module').then(m => m.ChildToParentModule)
   },
+  {
+    path: 'parent-to-child-local-var',
+    loadChildren: () => import('./parent-to-child-local-var/parent-to-child-local-var.module').then(m => m.ParentToChildLocalVarModule)
+  },
 
 ];
 
