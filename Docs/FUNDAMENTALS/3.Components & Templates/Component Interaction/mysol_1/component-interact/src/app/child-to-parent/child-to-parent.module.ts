@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChildToParentComponent } from './child-to-parent.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ChildToParentComponent],
   imports: [
     CommonModule
   ]
