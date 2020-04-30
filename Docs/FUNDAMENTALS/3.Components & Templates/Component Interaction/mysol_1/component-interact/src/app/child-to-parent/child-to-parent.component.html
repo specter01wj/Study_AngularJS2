@@ -4,3 +4,8 @@
   [name]="voter"
   (voted)="onVoted($event)">
 </app-child-to-parent-child>
+<h3 *ngIf="totalCnt === 3">
+	<p>The result is: {{ voteResult }}</p>
+	<p *ngIf="agreer.length !== 0">Agreer: {{ agreer }}</p>
+	<p *ngIf="disagreer.length !== 0">Disagreer: {{ disagreer }}</p>
+</h3>

@@ -6,8 +6,8 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./child-to-parent-child.component.less']
 })
 export class ChildToParentChildComponent implements OnInit {
-	@Input()  name: string;
-  @Output() voted = new EventEmitter<boolean>();
+	@Input('name')  name: string;
+  @Output('voted') voted = new EventEmitter<Object>();
   didVote = false;
 
   constructor() { }
@@ -15,8 +15,8 @@ export class ChildToParentChildComponent implements OnInit {
   ngOnInit() {
   }
 
-  vote(agreed: boolean) {
-    this.voted.emit(agreed);
+  vote(agreed: boolean, name: string) {
+    this.voted.emit({agreed, name});
     this.didVote = true;
   }
 

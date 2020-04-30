@@ -9,14 +9,21 @@ export class ChildToParentComponent implements OnInit {
 	agreed = 0;
   disagreed = 0;
   voters = ['Narco', 'Celeritas', 'Bombasto'];
+  totalCnt = 0;
+  voteResult = '';
+  agreer = [];
+  disagreer = [];
 
   constructor() { }
 
   ngOnInit() {
   }
-  
-  onVoted(agreed: boolean) {
-    agreed ? this.agreed++ : this.disagreed++;
+
+  onVoted(event: Object) {
+    event.agreed ? this.agreed++ : this.disagreed++;
+    this.totalCnt++;
+    this.voteResult = this.agreed > this.disagreed ? 'Agreed!' : 'Disagreed?';
+    event.agreed ? this.agreer.push(event.name) : this.disagreer.push(event.name);
   }
 
 }
