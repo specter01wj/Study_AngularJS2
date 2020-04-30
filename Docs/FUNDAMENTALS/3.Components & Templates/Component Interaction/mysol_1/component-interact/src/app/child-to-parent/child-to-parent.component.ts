@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child-to-parent.component.less']
 })
 export class ChildToParentComponent implements OnInit {
+	agreed = 0;
+  disagreed = 0;
+  voters = ['Narco', 'Celeritas', 'Bombasto'];
 
   constructor() { }
 
   ngOnInit() {
+  }
+  
+  onVoted(agreed: boolean) {
+    agreed ? this.agreed++ : this.disagreed++;
   }
 
 }
