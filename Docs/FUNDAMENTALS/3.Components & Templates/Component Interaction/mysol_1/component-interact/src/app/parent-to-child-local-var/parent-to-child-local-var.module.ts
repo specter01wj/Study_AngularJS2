@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ParentToChildLocalVarComponent } from './parent-to-child-local-var.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ParentToChildLocalVarComponent],
   imports: [
     CommonModule
   ]
