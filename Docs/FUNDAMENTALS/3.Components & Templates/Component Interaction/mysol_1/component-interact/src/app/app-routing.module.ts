@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'parent-to-child-on-changes',
     loadChildren: () => import('./parent-to-child-on-changes/parent-to-child-on-changes.module').then(m => m.ParentToChildOnChangesModule)
   },
+  {
+    path: 'child-to-parent',
+    loadChildren: () => import('./child-to-parent/child-to-parent.module').then(m => m.ChildToParentModule)
+  },
 
 ];
 
