@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { User } from './user';
+
 @Component({
   selector: 'app-child-to-parent',
   templateUrl: './child-to-parent.component.html',
@@ -19,7 +21,7 @@ export class ChildToParentComponent implements OnInit {
   ngOnInit() {
   }
 
-  onVoted(event: Object) {
+  onVoted(event: User) {
     event.agreed ? this.agreed++ : this.disagreed++;
     this.totalCnt++;
     this.voteResult = this.agreed > this.disagreed ? 'Agreed!' : 'Disagreed?';
