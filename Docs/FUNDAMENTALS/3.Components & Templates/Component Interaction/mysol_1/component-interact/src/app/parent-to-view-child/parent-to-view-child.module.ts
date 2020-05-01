@@ -13,7 +13,9 @@ import { ParentToViewChildTimerComponent } from './parent-to-view-child-timer/pa
   	ParentToViewChildTimerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ParentToViewChildRoutingModule
   ],
   exports: []
 })
