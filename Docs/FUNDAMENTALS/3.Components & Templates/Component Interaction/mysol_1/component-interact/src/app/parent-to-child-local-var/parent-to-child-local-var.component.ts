@@ -12,4 +12,8 @@ export class ParentToChildLocalVarComponent implements OnInit {
   ngOnInit() {
   }
 
+  show(timer: HTMLInputElement){
+    console.log(timer);
+	}
+
 }

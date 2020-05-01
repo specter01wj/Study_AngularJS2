@@ -3,3 +3,5 @@
 <button (click)="timer.stop()">Stop</button>
 <div class="seconds">{{timer.seconds}}</div>
 <app-parent-to-child-local-var-child #timer></app-parent-to-child-local-var-child>
+{{ timer.seconds }}
+<button (click)="show(timer)">Show #timer</button>
