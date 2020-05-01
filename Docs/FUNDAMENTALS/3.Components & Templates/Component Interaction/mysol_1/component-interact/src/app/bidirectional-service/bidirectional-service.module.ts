@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BidirectionalServiceComponent } from './bidirectional-service.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [BidirectionalServiceComponent],
   imports: [
     CommonModule
   ]
