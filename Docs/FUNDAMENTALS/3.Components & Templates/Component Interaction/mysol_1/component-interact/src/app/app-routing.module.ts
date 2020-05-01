@@ -23,7 +23,10 @@ const routes: Routes = [
     path: 'parent-to-view-child',
     loadChildren: () => import('./parent-to-view-child/parent-to-view-child.module').then(m => m.ParentToViewChildModule)
   },
-
+  {
+    path: 'bidirectional-service',
+    loadChildren: () => import('./bidirectional-service/bidirectional-service.module').then(m => m.BidirectionalServiceModule)
+  }
 ];
 
 @NgModule({
