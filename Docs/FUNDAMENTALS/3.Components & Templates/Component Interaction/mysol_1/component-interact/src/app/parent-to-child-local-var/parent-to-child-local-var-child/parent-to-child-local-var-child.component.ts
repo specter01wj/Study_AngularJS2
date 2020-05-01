@@ -16,7 +16,9 @@ export class ParentToChildLocalVarChildComponent implements OnInit, OnDestroy {
   	this.start();
   }
 
-  clearTimer() { clearInterval(this.intervalId); }
+  clearTimer() { 
+  	clearInterval(this.intervalId); 
+  }
 
   ngOnDestroy() { 
   	this.clearTimer(); 
@@ -25,7 +27,7 @@ export class ParentToChildLocalVarChildComponent implements OnInit, OnDestroy {
   start() { 
   	this.countDown(); 
   }
-  
+
   stop()  {
     this.clearTimer();
     this.message = `Holding at T-${this.seconds} seconds`;
