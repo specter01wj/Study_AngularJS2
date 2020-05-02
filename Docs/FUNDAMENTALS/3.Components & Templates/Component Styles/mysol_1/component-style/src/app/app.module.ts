@@ -7,6 +7,7 @@ import { HeroAppMainComponent } from './hero-app-main/hero-app-main.component';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { HeroControlsComponent } from './hero-controls/hero-controls.component';
 import { QuestSummaryComponent } from './quest-summary/quest-summary.component';
+import { HeroTeamComponent } from './hero-team/hero-team.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { QuestSummaryComponent } from './quest-summary/quest-summary.component';
     HeroAppMainComponent,
     HeroDetailsComponent,
     HeroControlsComponent,
-    QuestSummaryComponent
+    QuestSummaryComponent,
+    HeroTeamComponent
   ],
   imports: [
     BrowserModule,
