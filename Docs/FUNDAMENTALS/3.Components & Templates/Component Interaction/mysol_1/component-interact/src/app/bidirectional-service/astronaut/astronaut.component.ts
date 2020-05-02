@@ -9,7 +9,7 @@ import { Subscription }   from 'rxjs';
   styleUrls: ['./astronaut.component.less']
 })
 export class AstronautComponent implements OnInit, OnDestroy {
-	@Input() astronaut: string;
+	@Input('astronaut') astronaut: string;
   mission = '<no mission announced>';
   confirmed = false;
   announced = false;
