@@ -27,11 +27,11 @@ export class AstronautComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
 
-  confirm() {
+  confirm($event) {
     this.confirmed = true;
     console.log(this.mission);
     this.mission.concat(' Done!');
-    this.missionService.confirmMission(this.astronaut);
+    this.missionService.confirmMission(this.astronaut, this.mission);
   }
 
   ngOnDestroy() {

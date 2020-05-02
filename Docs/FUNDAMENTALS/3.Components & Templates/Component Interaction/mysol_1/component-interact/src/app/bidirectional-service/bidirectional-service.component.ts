@@ -20,6 +20,11 @@ export class BidirectionalServiceComponent implements OnInit {
         this.history.push(`${astronaut} confirmed the mission`);
       }
     );
+    missionService.missionConfirmed_2$.subscribe(
+      mission => {
+        this.history.push(`${mission} is Done!`);
+      }
+    );
   }
 
   ngOnInit() {
