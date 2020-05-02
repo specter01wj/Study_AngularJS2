@@ -30,6 +30,7 @@ export class AstronautComponent implements OnInit, OnDestroy {
   confirm() {
     this.confirmed = true;
     console.log(this.mission);
+    this.mission.concat(' Done!');
     this.missionService.confirmMission(this.astronaut);
   }
 
