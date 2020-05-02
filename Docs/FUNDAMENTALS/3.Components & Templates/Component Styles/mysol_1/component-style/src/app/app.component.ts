@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+
+import { Hero } from './services/hero';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'component-style';
+  title = 'ComponentStyle';
+  hero = new Hero(
+    'Human Torch',
+    ['Mister Fantastic', 'Invisible Woman', 'Thing']
+  );
+
+  @HostBinding('class') get themeClass() {
+    return 'theme-light';
+  }
+
 }
