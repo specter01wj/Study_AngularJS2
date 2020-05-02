@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Hero } from '../services/hero';
 
 @Component({
   selector: 'app-hero-details',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero-details.component.less']
 })
 export class HeroDetailsComponent implements OnInit {
+	@Input() hero: Hero;
 
   constructor() { }
 
