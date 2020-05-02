@@ -22,7 +22,7 @@ export class BidirectionalServiceComponent implements OnInit {
     );
     missionService.missionConfirmed_2$.subscribe(
       mission => {
-        this.history[this.history.length - 1] = this.history[this.history.length - 1].concat(` --- ${mission} Done!`);
+        this.history[this.history.length - 1] = this.history[this.history.length - 1].concat(` --- ${mission}`);
       }
     );
   }
