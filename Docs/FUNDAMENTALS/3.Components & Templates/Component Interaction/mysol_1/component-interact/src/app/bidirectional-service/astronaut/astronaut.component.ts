@@ -27,4 +27,14 @@ export class AstronautComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
 
+  confirm() {
+    this.confirmed = true;
+    this.missionService.confirmMission(this.astronaut);
+  }
+
+  ngOnDestroy() {
+    // prevent memory leak when component destroyed
+    this.subscription.unsubscribe();
+  }
+
 }
