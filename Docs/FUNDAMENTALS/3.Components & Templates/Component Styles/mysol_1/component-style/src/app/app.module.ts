@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeroAppMainComponent } from './hero-app-main/hero-app-main.component';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { HeroControlsComponent } from './hero-controls/hero-controls.component';
+import { QuestSummaryComponent } from './quest-summary/quest-summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroAppMainComponent,
     HeroDetailsComponent,
-    HeroControlsComponent
+    HeroControlsComponent,
+    QuestSummaryComponent
   ],
   imports: [
     BrowserModule,
