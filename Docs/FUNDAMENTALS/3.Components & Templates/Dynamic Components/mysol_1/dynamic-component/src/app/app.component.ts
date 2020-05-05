@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
-export class AppComponent {
-  title = 'dynamic-component';
+export class AppComponent implements OnInit {
+  title = 'DynamicComponent';
+
+  ads: AdItem[];
+
+
 }
