@@ -18,6 +18,7 @@ import { AdDirective } from './ad/ad.directive';
     AdBannerComponent,
     AdDirective
   ],
+  // entryComponents: [ HeroJobAdComponent, HeroProfileComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule
