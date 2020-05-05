@@ -7,7 +7,7 @@ import { AdComponent } from '../services/ad';
   templateUrl: './hero-job-ad.component.html',
   styleUrls: ['./hero-job-ad.component.less']
 })
-export class HeroJobAdComponent implements OnInit {
+export class HeroJobAdComponent implements OnInit, AdComponent {
 	@Input() data: any;
 
   constructor() { }
