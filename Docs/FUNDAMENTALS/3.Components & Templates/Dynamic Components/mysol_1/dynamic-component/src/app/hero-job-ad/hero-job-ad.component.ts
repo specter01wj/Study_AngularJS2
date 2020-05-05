@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { AdComponent } from '../services/ad';
 
 @Component({
   selector: 'app-hero-job-ad',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero-job-ad.component.less']
 })
 export class HeroJobAdComponent implements OnInit {
+	@Input() data: any;
 
   constructor() { }
 
