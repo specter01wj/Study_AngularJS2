@@ -14,5 +14,8 @@ export class AppComponent implements OnInit {
 
   constructor(private adService: AdService) {}
 
+  ngOnInit() {
+    this.ads = this.adService.getAds();
+  }
 
 }
