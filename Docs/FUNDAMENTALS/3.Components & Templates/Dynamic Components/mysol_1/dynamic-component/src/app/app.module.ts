@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeroJobAdComponent } from './hero-job-ad/hero-job-ad.component';
 import { HeroProfileComponent } from './hero-profile/hero-profile.component';
 import { AdBannerComponent } from './ad-banner/ad-banner.component';
+import { AdDirective } from './ad/ad.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroJobAdComponent,
     HeroProfileComponent,
-    AdBannerComponent
+    AdBannerComponent,
+    AdDirective
   ],
   imports: [
     BrowserModule,
