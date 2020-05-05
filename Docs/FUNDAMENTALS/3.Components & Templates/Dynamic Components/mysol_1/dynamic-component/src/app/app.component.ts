@@ -10,8 +10,9 @@ import { AdItem } from './services/ad-item';
 })
 export class AppComponent implements OnInit {
   title = 'DynamicComponent';
-
   ads: AdItem[];
+
+  constructor(private adService: AdService) {}
 
 
 }
