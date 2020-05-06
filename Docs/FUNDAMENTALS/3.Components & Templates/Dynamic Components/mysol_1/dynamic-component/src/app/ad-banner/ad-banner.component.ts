@@ -33,6 +33,7 @@ export class AdBannerComponent implements OnInit, OnDestroy {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(adItem.component);
 
     const viewContainerRef = this.adHost.viewContainerRef;
+    
     viewContainerRef.clear();
 
     const componentRef = viewContainerRef.createComponent(componentFactory);
