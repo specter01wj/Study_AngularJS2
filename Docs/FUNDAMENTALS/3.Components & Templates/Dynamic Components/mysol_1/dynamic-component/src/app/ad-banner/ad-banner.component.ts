@@ -35,6 +35,7 @@ export class AdBannerComponent implements OnInit, OnDestroy {
     const viewContainerRef = this.adHost.viewContainerRef;
 
 
+
     
     viewContainerRef.clear();
 
