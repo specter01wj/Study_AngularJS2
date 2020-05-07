@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "attribute-directive"
+    }
+  },
+  "defaultProject": "attribute-directive",
+  "cli": {
+    "analytics": false
+  }
 }
