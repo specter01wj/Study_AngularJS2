@@ -18,6 +18,7 @@ export class AppComponent {
   status = 'ready';
 
   trackById(index: number, hero: Hero): number { 
+
   	
   	return hero.id; 
   }
