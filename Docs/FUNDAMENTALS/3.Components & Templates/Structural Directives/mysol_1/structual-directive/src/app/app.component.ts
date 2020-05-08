@@ -17,9 +17,7 @@ export class AppComponent {
   showSad = true;
   status = 'ready';
 
-  trackById(index: number, hero: Hero): number { 
-
-  	
+  trackById(index: number, hero: Hero): number {
   	return hero.id; 
   }
 
