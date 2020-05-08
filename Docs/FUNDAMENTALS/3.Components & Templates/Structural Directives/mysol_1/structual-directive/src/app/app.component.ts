@@ -16,4 +16,9 @@ export class AppComponent {
   logs: string[] = [];
   showSad = true;
   status = 'ready';
+
+  trackById(index: number, hero: Hero): number { 
+  	return hero.id; 
+  }
+
 }
