@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'structual-directive';
+  title = 'StructualDirective';
+  heroes = heroes;
+  hero = this.heroes[0];
+
+  condition = false;
+  logs: string[] = [];
+  showSad = true;
+  status = 'ready';
 }
