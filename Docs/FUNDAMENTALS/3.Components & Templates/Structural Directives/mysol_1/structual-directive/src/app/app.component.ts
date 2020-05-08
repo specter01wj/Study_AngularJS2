@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Hero, heroes } from './services/hero';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
