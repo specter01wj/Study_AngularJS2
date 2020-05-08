@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'AttributeDirective';
   color: string;
+
+  clickColor(color): void {
+  	this.color = color;
+  }
+
 }
