@@ -25,6 +25,7 @@ export class AppComponent {
 
 
 
+
   
   showSad = true;
   status = 'ready';
