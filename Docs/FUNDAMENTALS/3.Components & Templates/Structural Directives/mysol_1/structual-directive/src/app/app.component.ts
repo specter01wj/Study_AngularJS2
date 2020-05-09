@@ -16,6 +16,7 @@ export class AppComponent {
   logs: string[] = [];
 
 
+
   
   showSad = true;
   status = 'ready';
