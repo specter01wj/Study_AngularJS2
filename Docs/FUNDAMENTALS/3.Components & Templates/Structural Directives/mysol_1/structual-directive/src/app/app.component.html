@@ -166,7 +166,7 @@
     Toggle condition to {{condition ? 'false' : 'true'}}
   </button>
 </p>
-<p appUnless="condition" class="unless a">
+<p *appUnless="condition" class="unless a">
   (A) This paragraph is displayed because the condition is false.
 </p>
 
