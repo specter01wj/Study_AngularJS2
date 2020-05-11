@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./birthday-date-pipe.component.less']
 })
 export class BirthdayDatePipeComponent implements OnInit {
-
+	birthday = new Date(1988, 3, 15); // April 15, 1988
+	
   constructor() { }
 
   ngOnInit(): void {

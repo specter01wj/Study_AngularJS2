@@ -4,10 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/happy-birthday1', pathMatch: 'full' },
-  /*{
-    path: 'binding-syntax',
-    loadChildren: () => import('./binding-syntax/binding-syntax.module').then(m => m.BindingSyntaxModule)
-  },*/
+  {
+    path: 'birthday-date-pipe',
+    loadChildren: () => import('./birthday-date-pipe/birthday-date-pipe.module').then(m => m.BirthdayDatePipeModule)
+  },
 
 ];
 
