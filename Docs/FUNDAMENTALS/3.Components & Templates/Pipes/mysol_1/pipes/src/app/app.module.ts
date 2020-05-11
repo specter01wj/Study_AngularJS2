@@ -1,7 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { HeroBirthdayModule } from './hero-birthday/hero-birthday.module';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -10,7 +15,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    FormsModule,
+    AppRoutingModule,
+    HeroBirthdayModule
   ],
   providers: [],
   bootstrap: [AppComponent]
