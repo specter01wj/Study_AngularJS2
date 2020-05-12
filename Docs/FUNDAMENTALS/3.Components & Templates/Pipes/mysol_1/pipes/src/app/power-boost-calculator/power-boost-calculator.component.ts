@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./power-boost-calculator.component.less']
 })
 export class PowerBoostCalculatorComponent implements OnInit {
-	power = 5;
-  factor = 1;
-  
+	power: number = 5;
+  factor: number = 1;
+
   constructor() { }
 
   ngOnInit(): void {
