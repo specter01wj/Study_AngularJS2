@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'birthday-date-pipe',
     loadChildren: () => import('./birthday-date-pipe/birthday-date-pipe.module').then(m => m.BirthdayDatePipeModule)
   },
+  {
+    path: 'happy-birthday2',
+    loadChildren: () => import('./hero-birthday2/hero-birthday2.module').then(m => m.HeroBirthday2Module)
+  },
 
 ];
 
