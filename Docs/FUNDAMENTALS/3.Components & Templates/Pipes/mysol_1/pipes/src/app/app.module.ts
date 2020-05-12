@@ -8,10 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeroBirthdayModule } from './hero-birthday/hero-birthday.module';
 
 import { AppComponent } from './app.component';
+import { ExponentialStrengthPipe } from './common/exponential-strength.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExponentialStrengthPipe
   ],
   imports: [
     BrowserModule,
