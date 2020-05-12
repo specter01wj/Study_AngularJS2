@@ -6,11 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero-birthday2.component.less']
 })
 export class HeroBirthday2Component implements OnInit {
-	// birthday = new Date(1988, 3, 15); // April 15, 1988
-	
+	birthday = new Date(1988, 3, 15); // April 15, 1988
+	toggle = true; // start with true == shortDate
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get format()   { 
+  	return this.toggle ? 'shortDate' : 'fullDate'; 
+  }
+
+  toggleFormat() { 
+  	this.toggle = !this.toggle; 
   }
 
 }
