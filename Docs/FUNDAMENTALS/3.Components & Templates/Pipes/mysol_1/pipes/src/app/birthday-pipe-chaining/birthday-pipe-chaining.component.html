@@ -1,1 +1,14 @@
-<p>birthday-pipe-chaining works!</p>
+<h2>Birthday Pipe Chaining</h2>
+<p>
+  The chained hero's birthday is
+  {{ birthday | date | uppercase}}
+</p>
+
+<p>
+  The chained hero's birthday is
+  {{  birthday | date:'fullDate' | uppercase}}
+</p>
+<p>
+  The chained hero's birthday is
+  {{ ( birthday | date:'fullDate' ) | uppercase}}
+</p>
