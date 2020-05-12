@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'power-booster',
     loadChildren: () => import('./power-booster/power-booster.module').then(m => m.PowerBoosterModule)
   },
+  {
+    path: 'power-boost-calc',
+    loadChildren: () => import('./power-boost-calculator/power-boost-calculator.module').then(m => m.PowerBoostCalculatorModule)
+  },
 
 ];
 
