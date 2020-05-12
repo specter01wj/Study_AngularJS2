@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { PowerBoosterRoutingModule } from './power-booster-routing.module';
 
 import { PowerBoosterComponent } from './power-booster.component';
+import { ExponentialStrengthPipe } from '../common/exponential-strength.pipe';
 
 @NgModule({
   declarations: [
-  	PowerBoosterComponent
+  	PowerBoosterComponent,
+  	ExponentialStrengthPipe
   ],
   imports: [
     CommonModule,
