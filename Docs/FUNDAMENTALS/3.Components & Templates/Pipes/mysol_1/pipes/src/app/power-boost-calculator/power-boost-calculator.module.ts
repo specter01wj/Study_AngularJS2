@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { PipesModuleModule } from '../common/pipes-module.module';
 
 import { PowerBoostCalculatorRoutingModule } from './power-boost-calculator-routing.module';
 
 import { PowerBoostCalculatorComponent } from './power-boost-calculator.component';
-import { ExponentialStrengthPipe } from '../common/exponential-strength.pipe';
 
 @NgModule({
   declarations: [
-  	PowerBoostCalculatorComponent,
-  	ExponentialStrengthPipe
+  	PowerBoostCalculatorComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    PowerBoostCalculatorRoutingModule
+    PowerBoostCalculatorRoutingModule,
+    PipesModuleModule
   ],
   exports: []
 })
