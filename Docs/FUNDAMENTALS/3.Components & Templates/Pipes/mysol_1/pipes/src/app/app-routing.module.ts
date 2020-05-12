@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'birthday-pipe-chaining',
     loadChildren: () => import('./birthday-pipe-chaining/birthday-pipe-chaining.module').then(m => m.BirthdayPipeChainingModule)
   },
+  {
+    path: 'power-booster',
+    loadChildren: () => import('./power-booster/power-booster.module').then(m => m.PowerBoosterModule)
+  },
 
 ];
 
