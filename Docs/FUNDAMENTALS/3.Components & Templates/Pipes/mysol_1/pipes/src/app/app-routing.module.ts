@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'happy-birthday2',
     loadChildren: () => import('./hero-birthday2/hero-birthday2.module').then(m => m.HeroBirthday2Module)
   },
+  {
+    path: 'birthday-pipe-chaining',
+    loadChildren: () => import('./birthday-pipe-chaining/birthday-pipe-chaining.module').then(m => m.BirthdayPipeChainingModule)
+  },
 
 ];
 
