@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { PowerBoostCalculatorRoutingModule } from './power-boost-calculator-routing.module';
 
 import { PowerBoostCalculatorComponent } from './power-boost-calculator.component';
+import { ExponentialStrengthPipe } from '../common/exponential-strength.pipe';
 
 @NgModule({
   declarations: [
-  	PowerBoostCalculatorComponent
+  	PowerBoostCalculatorComponent,
+  	ExponentialStrengthPipe
   ],
   imports: [
     CommonModule,
