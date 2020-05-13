@@ -13,7 +13,8 @@ import { FlyingHeroesPipe } from './flying-heroes.pipe';
     CommonModule
   ],
   exports: [
-    ExponentialStrengthPipe
+    ExponentialStrengthPipe,
+    FlyingHeroesPipe
   ]
 })
 export class PipesModuleModule { }
