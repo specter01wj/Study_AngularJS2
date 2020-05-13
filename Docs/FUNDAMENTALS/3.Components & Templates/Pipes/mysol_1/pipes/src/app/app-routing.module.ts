@@ -24,6 +24,10 @@ const routes: Routes = [
     path: 'power-boost-calc',
     loadChildren: () => import('./power-boost-calculator/power-boost-calculator.module').then(m => m.PowerBoostCalculatorModule)
   },
+  {
+    path: 'flying-heroes',
+    loadChildren: () => import('./flying-heroes/flying-heroes.module').then(m => m.FlyingHeroesModule)
+  },
 
 ];
 
