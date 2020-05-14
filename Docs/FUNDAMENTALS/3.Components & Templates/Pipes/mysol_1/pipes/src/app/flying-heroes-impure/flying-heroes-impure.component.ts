@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flying-heroes-impure.component.less']
 })
 export class FlyingHeroesImpureComponent implements OnInit {
-
+	title = 'Flying Heroes (impure pipe)';
+	
   constructor() { }
 
   ngOnInit(): void {
