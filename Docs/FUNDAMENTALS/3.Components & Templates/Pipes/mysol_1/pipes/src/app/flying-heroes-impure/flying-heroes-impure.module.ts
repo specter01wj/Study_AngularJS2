@@ -9,9 +9,14 @@ import { FlyingHeroesImpureComponent } from './flying-heroes-impure.component';
 
 
 @NgModule({
-  declarations: [FlyingHeroesImpureComponent],
+  declarations: [
+  	FlyingHeroesImpureComponent
+  ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule,
+    FlyingHeroesImpureRoutingModule
+  ],
+  exports: []
 })
 export class FlyingHeroesImpureModule { }
