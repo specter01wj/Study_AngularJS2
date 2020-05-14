@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'flying-heroes-impure',
     loadChildren: () => import('./flying-heroes-impure/flying-heroes-impure.module').then(m => m.FlyingHeroesImpureModule)
   },
+  {
+    path: 'hero-message',
+    loadChildren: () => import('./hero-message/hero-message.module').then(m => m.HeroMessageModule)
+  },
 
 ];
 
