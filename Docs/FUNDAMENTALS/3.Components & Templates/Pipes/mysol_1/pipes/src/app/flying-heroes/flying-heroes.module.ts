@@ -17,6 +17,6 @@ import { FlyingHeroesComponent } from './flying-heroes.component';
     FlyingHeroesRoutingModule,
     PipesModuleModule
   ],
-  exports: []
+  exports: [FlyingHeroesComponent]
 })
 export class FlyingHeroesModule { }
