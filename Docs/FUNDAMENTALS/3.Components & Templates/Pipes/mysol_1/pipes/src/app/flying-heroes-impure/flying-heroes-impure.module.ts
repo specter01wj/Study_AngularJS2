@@ -6,8 +6,6 @@ import { FlyingHeroesImpureRoutingModule } from './flying-heroes-impure-routing.
 
 import { FlyingHeroesImpureComponent } from './flying-heroes-impure.component';
 
-
-
 @NgModule({
   declarations: [
   	FlyingHeroesImpureComponent
