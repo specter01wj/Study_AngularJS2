@@ -36,7 +36,10 @@ const routes: Routes = [
     path: 'hero-message',
     loadChildren: () => import('./hero-message/hero-message.module').then(m => m.HeroMessageModule)
   },
-
+  {
+    path: 'hero-list',
+    loadChildren: () => import('./hero-list/hero-list.module').then(m => m.HeroListModule)
+  }
 ];
 
 @NgModule({
