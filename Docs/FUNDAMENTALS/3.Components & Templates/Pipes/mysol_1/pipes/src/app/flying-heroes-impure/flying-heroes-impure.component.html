@@ -4,6 +4,7 @@ New hero:
   <input type="text" #box
           (keyup.enter)="addHero(box.value); box.value=''"
           placeholder="hero name">
+  <button (click)="addHero(box.value); box.value=''">Add new hero!</button>
   <input id="can-fly" type="checkbox" [(ngModel)]="canFly"> can fly
 </p>
 <p>
