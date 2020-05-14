@@ -25,15 +25,15 @@ export class HeroMessageComponent implements OnInit {
   }
 
   resend() {
-    /*this.message$ = interval(500).pipe(
+    this.message$ = interval(500).pipe(
       map(i => this.messages[i]),
       take(this.messages.length)
-    );*/
-    this.message$ = fromArray(this.messages).pipe(
+    );
+    /*this.message$ = fromArray(this.messages).pipe(
 		  map(message => timer(500),
 		  map(() => message)),
 		  concatAll()
-		);
+		);*/
   }
 
 }
