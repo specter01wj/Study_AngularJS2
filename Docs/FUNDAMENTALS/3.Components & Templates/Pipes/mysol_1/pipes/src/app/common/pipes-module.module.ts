@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 import { FlyingHeroesPipe } from './flying-heroes.pipe';
 import { FlyingHeroesPipeImpure } from './flying-heroes-impure.pipe';
+import { FetchJsonPipe } from './fetch-josn.pipe';
 
 @NgModule({
   declarations: [
   	ExponentialStrengthPipe,
   	FlyingHeroesPipe,
-    FlyingHeroesPipeImpure
+    FlyingHeroesPipeImpure,
+    FetchJsonPipe
   ],
   imports: [
     CommonModule
@@ -17,7 +19,8 @@ import { FlyingHeroesPipeImpure } from './flying-heroes-impure.pipe';
   exports: [
     ExponentialStrengthPipe,
     FlyingHeroesPipe,
-    FlyingHeroesPipeImpure
+    FlyingHeroesPipeImpure,
+    FetchJsonPipe
   ]
 })
 export class PipesModuleModule { }
