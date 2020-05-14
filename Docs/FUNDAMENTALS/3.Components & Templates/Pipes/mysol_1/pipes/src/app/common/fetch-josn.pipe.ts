@@ -1,14 +1,24 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
-import { Flyer } from '../interfaces/heroes';
+import { HttpClient }          from '@angular/common/http';
 
 @Pipe({
-  name: 'flyingHeroes'
+  name: 'fetch'
 })
-export class FlyingHeroesPipe implements PipeTransform {
+export class FetchJsonPipe implements PipeTransform {
 
-  transform(allHeroes: Flyer[]): Flyer[] {
-    return allHeroes.filter(hero => hero.canFly);
+  private cachedData: any = null;
+  private cachedUrl = '';
+
+  constructor(private http: HttpClient) { }
+
+  transform(url: string): any {
+    if (url !== this.cachedUrl) {
+      this.cachedData = null;
+      this.cachedUrl = url;
+      this.http.get(url).subscribe(result => this.cachedData = result);
+    }
+
+    return this.cachedData;
   }
 
 }
