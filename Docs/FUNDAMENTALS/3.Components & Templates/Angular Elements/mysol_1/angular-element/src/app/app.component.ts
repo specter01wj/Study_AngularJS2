@@ -2,6 +2,8 @@ import { Component, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { PopupService } from './services/popup.service';
 
+import { PopupComponent } from './popup/popup.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
