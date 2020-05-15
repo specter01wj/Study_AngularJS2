@@ -2,14 +2,21 @@ import { Component, OnInit } from '@angular/core';
 
 import { HEROES } from '../interfaces/heroes';
 
+import { FlyingHeroesComponent } from '../flying-heroes/flying-heroes.component';
+
 @Component({
   selector: 'app-flying-heroes-impure',
   templateUrl: './flying-heroes-impure.component.html',
   styleUrls: ['./flying-heroes-impure.component.less']
 })
-export class FlyingHeroesImpureComponent implements OnInit {
+export class FlyingHeroesImpureComponent extends FlyingHeroesComponent implements OnInit {
 	title = 'Flying Heroes (impure pipe)';
-	heroes: any[] = [];
+
+  constructor() {
+    super();
+  }
+
+	/*heroes: any[] = [];
   canFly = true;
   mutate = true;
 
@@ -38,6 +45,6 @@ export class FlyingHeroesImpureComponent implements OnInit {
 
   reset() { 
   	this.heroes = HEROES.slice(); 
-  }
+  }*/
 
 }
