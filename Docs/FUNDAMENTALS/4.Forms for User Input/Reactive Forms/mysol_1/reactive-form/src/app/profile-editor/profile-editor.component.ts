@@ -27,7 +27,7 @@ export class ProfileEditorComponent implements OnInit {
     return this.profileForm.get('aliases') as FormArray;
   }
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
