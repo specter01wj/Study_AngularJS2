@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { NameEditorComponent } from './name-editor/name-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileEditorComponent
+    ProfileEditorComponent,
+    NameEditorComponent
   ],
   imports: [
     BrowserModule,
