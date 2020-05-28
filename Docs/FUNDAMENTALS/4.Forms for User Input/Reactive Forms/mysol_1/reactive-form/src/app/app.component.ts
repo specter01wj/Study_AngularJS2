@@ -9,7 +9,6 @@ export type EditorType = 'name' | 'profile';
 })
 export class AppComponent {
   title = 'reactive-form';
-  
   editor: EditorType = 'name';
 
   get showNameEditor() {
