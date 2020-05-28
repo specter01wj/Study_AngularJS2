@@ -32,4 +32,22 @@ export class ProfileEditorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  updateProfile() {
+    this.profileForm.patchValue({
+      firstName: 'Nancy',
+      address: {
+        street: '123 Drew Street'
+      }
+    });
+  }
+
+  addAlias() {
+    this.aliases.push(this.fb.control(''));
+  }
+
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.profileForm.value);
+  }
+
 }
