@@ -9,6 +9,7 @@ export type EditorType = 'name' | 'profile';
 })
 export class AppComponent {
   title = 'reactive-form';
+  
   editor: EditorType = 'name';
 
   get showNameEditor() {
@@ -22,5 +23,5 @@ export class AppComponent {
   toggleEditor(type: EditorType) {
     this.editor = type;
   }
-  
+
 }
