@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./name-editor.component.less']
 })
 export class NameEditorComponent implements OnInit {
-
+	name = new FormControl('');
+	
   constructor() { }
 
   ngOnInit(): void {
