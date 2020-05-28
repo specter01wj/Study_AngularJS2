@@ -22,7 +22,11 @@ export class ProfileEditorComponent implements OnInit {
       this.fb.control('')
     ])
   });
-  
+
+  get aliases() {
+    return this.profileForm.get('aliases') as FormArray;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
