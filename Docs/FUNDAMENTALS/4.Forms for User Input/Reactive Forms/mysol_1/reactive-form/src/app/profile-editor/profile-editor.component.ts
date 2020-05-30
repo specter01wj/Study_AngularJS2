@@ -37,16 +37,6 @@ export class ProfileEditorComponent implements OnInit {
       firstName: 'Nancy',
       address: {
         street: '123 Drew Street'
-
-
-
-
-
-
-
-
-
-        
       }
     });
   }
