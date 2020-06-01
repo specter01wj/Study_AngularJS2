@@ -13,24 +13,6 @@ export class AppComponent {
 
   get showNameEditor() {
     return this.editor === 'name';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   }
 
   get showProfileEditor() {
