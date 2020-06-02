@@ -10,7 +10,7 @@ import { FormArray } from '@angular/forms';
   styleUrls: ['./profile-editor.component.less']
 })
 export class ProfileEditorComponent implements OnInit {
-	profileForm = new FormGroup({
+	/*profileForm = new FormGroup({
 		firstName: new FormControl(''),
 		lastName: new FormControl(''),
 		address: new FormGroup({
@@ -19,8 +19,8 @@ export class ProfileEditorComponent implements OnInit {
       state: new FormControl(''),
       zip: new FormControl('')
     })
-	});
-	/*profileForm = this.fb.group({
+	});*/
+	profileForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: [''],
     address: this.fb.group({
@@ -32,7 +32,7 @@ export class ProfileEditorComponent implements OnInit {
     aliases: this.fb.array([
       this.fb.control('')
     ])
-  });*/
+  });
 
   get aliases() {
     return this.profileForm.get('aliases') as FormArray;
