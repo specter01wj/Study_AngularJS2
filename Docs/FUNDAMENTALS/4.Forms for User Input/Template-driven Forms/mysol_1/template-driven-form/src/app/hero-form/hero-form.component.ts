@@ -43,8 +43,7 @@ export class HeroFormComponent implements OnInit {
   // Reveal in html:
   //   Name via form.controls = {{showFormControls(heroForm)}}
   showFormControls(form: any) {
-    return form && form.controls['name'] &&
-    form.controls['name'].value; // Dr. IQ
+    return form && form.controls['name'] && form.controls['name'].value; // Dr. IQ
   }
 
 }
