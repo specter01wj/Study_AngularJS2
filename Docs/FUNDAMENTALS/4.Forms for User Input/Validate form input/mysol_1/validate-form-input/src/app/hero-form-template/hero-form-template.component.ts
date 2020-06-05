@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero-form-template.component.less']
 })
 export class HeroFormTemplateComponent implements OnInit {
+	powers = ['Really Smart', 'Super Flexible', 'Weather Changer'];
 
+  hero = {name: 'Dr.', alterEgo: 'Dr. What', power: this.powers[0]};
+  
   constructor() { }
 
   ngOnInit(): void {
