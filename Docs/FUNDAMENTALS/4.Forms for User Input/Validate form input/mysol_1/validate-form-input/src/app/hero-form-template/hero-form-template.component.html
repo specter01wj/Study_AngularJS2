@@ -52,19 +52,6 @@
         <select id="power" name="power" class="form-control"
                 required [(ngModel)]="hero.power" #power="ngModel" >
           <option *ngFor="let p of powers" [value]="p">{{p}}</option>
-
-
-
-
-
-
-
-
-
-
-
-
-          
         </select>
 
         <div *ngIf="power.errors && power.touched" class="alert alert-danger">
