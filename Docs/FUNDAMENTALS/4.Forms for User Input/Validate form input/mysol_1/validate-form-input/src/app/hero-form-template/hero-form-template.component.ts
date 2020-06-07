@@ -9,6 +9,7 @@ export class HeroFormTemplateComponent implements OnInit {
 	powers = ['Really Smart', 'Super Flexible', 'Weather Changer'];
 
 
+
 	
 
   hero = {name: 'Dr.', alterEgo: 'Dr. What', power: this.powers[0]};
