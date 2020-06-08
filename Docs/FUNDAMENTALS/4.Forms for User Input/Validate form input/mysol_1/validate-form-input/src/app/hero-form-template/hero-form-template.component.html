@@ -32,7 +32,7 @@
                 #alterEgo="ngModel"
                 [(ngModel)]="hero.alterEgo"
                 [ngModelOptions]="{ updateOn: 'blur' }"
-                appUniqueAlterEgo>
+                appAlterEgo>
 
           <div *ngIf="alterEgo.pending">Validating...</div>
           <div *ngIf="alterEgo.invalid" class="alert alert-danger alter-ego-errors">
