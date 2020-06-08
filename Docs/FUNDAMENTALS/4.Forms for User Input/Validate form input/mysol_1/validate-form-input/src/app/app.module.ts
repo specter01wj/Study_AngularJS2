@@ -7,12 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroFormTemplateComponent } from './hero-form-template/hero-form-template.component';
 import { HeroFormReactiveComponent } from './hero-form-reactive/hero-form-reactive.component';
+import { AlterEgoDirective } from './shared/alter-ego.directive';
+import { ForbiddenNameDirective } from './shared/forbidden-name.directive';
+import { IdentityRevealedDirective } from './shared/identity-revealed.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroFormTemplateComponent,
-    HeroFormReactiveComponent
+    HeroFormReactiveComponent,
+    AlterEgoDirective,
+    ForbiddenNameDirective,
+    IdentityRevealedDirective
   ],
   imports: [
     BrowserModule,
