@@ -24,8 +24,8 @@ export class ForbiddenNameDirective implements Validator {
   constructor() { }
   
   validate(control: AbstractControl): {[key: string]: any} | null {
-    return this.forbiddenName ? forbiddenNameValidator(new RegExp(this.forbiddenName, 'i'))(control)
-                              : null;
+    return this.forbiddenName ? 
+      forbiddenNameValidator(new RegExp(this.forbiddenName, 'i'))(control) : null;
   }
 
 }
