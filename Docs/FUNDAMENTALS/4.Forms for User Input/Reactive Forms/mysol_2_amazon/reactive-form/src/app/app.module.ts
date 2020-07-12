@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
+import { AmazonComponent } from './amazon/amazon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileEditorComponent,
-    NameEditorComponent
+    NameEditorComponent,
+    AmazonComponent
   ],
   imports: [
     BrowserModule,

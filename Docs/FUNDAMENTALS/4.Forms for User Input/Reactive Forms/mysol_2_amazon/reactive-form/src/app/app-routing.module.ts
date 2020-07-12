@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AmazonComponent } from './amazon/amazon.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+	{ path: 'amazon', component: AmazonComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

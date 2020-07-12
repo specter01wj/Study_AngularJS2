@@ -3,6 +3,7 @@
 <nav>
   <a (click)="toggleEditor('name')">Name Editor</a>
   <a (click)="toggleEditor('profile')">Profile Editor</a>
+  <a class="nav-link" [routerLink]="['/amazon']">Amazon SignUp</a>
 </nav>
 
 <app-name-editor *ngIf="showNameEditor"></app-name-editor>
