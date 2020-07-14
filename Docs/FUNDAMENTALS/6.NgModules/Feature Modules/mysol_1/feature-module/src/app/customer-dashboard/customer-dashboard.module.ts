@@ -9,6 +9,9 @@ import { CustomerDashboardComponent } from './customer-dashboard.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CustomerDashboardComponent
   ]
 })
 export class CustomerDashboardModule { }
