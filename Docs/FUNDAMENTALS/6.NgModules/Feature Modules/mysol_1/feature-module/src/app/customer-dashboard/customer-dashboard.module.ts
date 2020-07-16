@@ -7,6 +7,7 @@ import { CustomerDashboardComponent } from './customer-dashboard.component';
   declarations: [
   	CustomerDashboardComponent
 
+
   	
   ],
   imports: [
