@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
 
 
 
+
     
     this.userService.getUsers().then(users => this.users = users);
   }
