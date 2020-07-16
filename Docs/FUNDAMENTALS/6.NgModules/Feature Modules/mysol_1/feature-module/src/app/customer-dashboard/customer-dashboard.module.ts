@@ -6,10 +6,6 @@ import { CustomerDashboardComponent } from './customer-dashboard.component';
 @NgModule({
   declarations: [
   	CustomerDashboardComponent
-
-
-
-  	
   ],
   imports: [
     CommonModule
