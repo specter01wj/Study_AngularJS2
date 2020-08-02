@@ -4,23 +4,6 @@ import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 })
 export class UserService {
 
