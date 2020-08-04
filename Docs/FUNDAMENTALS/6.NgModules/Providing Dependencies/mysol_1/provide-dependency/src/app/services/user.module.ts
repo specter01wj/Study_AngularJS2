@@ -7,6 +7,7 @@ import { UserService } from './user.service';
   declarations: [],
   imports: [
     CommonModule
+
     
   ],
   providers: [UserService]
