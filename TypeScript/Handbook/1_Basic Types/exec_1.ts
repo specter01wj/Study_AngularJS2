@@ -48,12 +48,28 @@ namespace demo_01_01 {
 	  let x: [string, number];
 	  x = ["hello", 10];
 	  console.log(x);
+	  console.log(x[0].substring(1));
 
 
 
+	  // Enum
+	  enum Color {
+	  	Red, Green, Blue
+	  }
+	  let c: Color = Color.Blue;
+	  console.log(c);
 
+	  enum Color_2 {
+	  	Red = 1, Green, Blue
+	  }
+	  let c2: Color_2 = Color_2.Blue;
+	  console.log(c2);
 
-
+	  enum Color_3 {
+	  	Red = 5, Green = 2, Blue = 22
+	  }
+	  let c3: Color_3 = Color_3.Blue;
+	  console.log(c3);
 
 
 
