@@ -59,4 +59,23 @@ var demo_01_01;
     })(Color_3 || (Color_3 = {}));
     let c3 = Color_3.Blue;
     console.log(c3);
+    let colorName = Color[2];
+    console.log(colorName);
+    // Unknown
+    let notSure = 4;
+    notSure = "maybe a string instead";
+    console.log(notSure);
+    notSure = false;
+    console.log(notSure);
+    /*declare const maybe: unknown;
+    // const aNumber: number = maybe;
+    if (maybe === true) {
+        const aBoolean: boolean = maybe;
+        // const aString: string = maybe;
+      }
+
+      if (typeof maybe === "string") {
+        const aString: string = maybe;
+        // const aBoolean: boolean = maybe;
+      }*/
 })(demo_01_01 || (demo_01_01 = {}));
