@@ -102,6 +102,9 @@ var demo_01_01;
     unusable = null;
     console.log(unusable);
     // Null and Undefined
+    let u = undefined;
+    let n = null;
+    let n2 = null;
     // Never
     // Object
     // Type assertions

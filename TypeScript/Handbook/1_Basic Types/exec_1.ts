@@ -129,20 +129,28 @@ namespace demo_01_01 {
 		console.log(unusable);
 
 
-		
+
 		// Null and Undefined
-
-
+		let u: undefined = undefined;
+		let n: null = null;
+		let n2: object = null;
 
 
 
 		// Never
+		function error(message: string): never {
+		  throw new Error(message);
+		}
 
+		function fail() {
+		  return error("Something failed");
+		}
 
+		function infiniteLoop(): never {
+		  while (true) {}
+		}
 
-
-
-
+		
 
 		// Object
 
