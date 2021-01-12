@@ -1,23 +1,33 @@
 ﻿
 
-namespace demo_02_01 {
+namespace demo_01_01 {
 
-	var x = 1;
-	var y;
+	let isDone: boolean = false;
+	console.log(isDone);
 
-	var firstName = 'John';
-	var lastName: string = 'Wang';
 
-	var num1 = 100;
-	var num2: number = 20;
+	let decimal: number = 6;
+	let hex: number = 0xf00d;
+	let binary: number = 0b1010;
+	let octal: number = 0o744;
+	// let big: bigint = 100n;
+	// console.log(big);
+	// -t es2020
 
-	function addNumbers(n1: number, n2: number, n3: number) {
-		var result = n1 + n2 + n3;
-		var msg = 'Sum is = ' + result;
-		alert(msg);
-	}
 
-	addNumbers(num1, num2, 30);
+	let color: string = 'blue';
+	color = 'red';
+
+	let fullName: string = `Bob Bobbington`;
+	let age: number = 37;
+	let sentence: string = `Hellow, my name is ${fullName}.
+
+	I'll be ${age + 1} years old next month.`
+	console.log(sentence);
+
+
+
+
 
 
 }
