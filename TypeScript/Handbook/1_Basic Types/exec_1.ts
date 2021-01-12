@@ -83,7 +83,8 @@ namespace demo_01_01 {
 	  notSure = false;
 	  console.log(notSure);
 
-	  /*declare const maybe: unknown;
+	  //declare const maybe: unknown;
+	  let maybe: unknown;
 	  // const aNumber: number = maybe;
 	  if (maybe === true) {
 		  const aBoolean: boolean = maybe;
@@ -93,9 +94,66 @@ namespace demo_01_01 {
 		if (typeof maybe === "string") {
 		  const aString: string = maybe;
 		  // const aBoolean: boolean = maybe;
-		}*/
+		}
 
 
+
+		// Any
+		//declare function getValue(key: string): any;
+		function getValue(key: string): any {
+			return key;
+		};
+		const str: string = getValue('myString');
+		console.log(str);
+
+		let looselyTyped: any = 4;
+		// looselyTyped.ifItExists();
+		looselyTyped.toFixed();
+
+		let strictlyTyped: unknown = 4;
+		// strictlyTyped.toFixed();
+
+		let looselyTyped2: any = {};
+		// let d = looselyTyped2.a.b.c.d;
+		// console.log(d);
+
+
+
+		// Void
+		function warnUser(): void {
+		  console.log("This is my warning message");
+		}
+
+		let unusable: void = undefined;
+		unusable = null;
+		console.log(unusable);
+
+
+		
+		// Null and Undefined
+
+
+
+
+
+		// Never
+
+
+
+
+
+
+
+		// Object
+
+
+
+
+
+
+
+
+		// Type assertions
 
 
 

@@ -67,15 +67,42 @@ var demo_01_01;
     console.log(notSure);
     notSure = false;
     console.log(notSure);
-    /*declare const maybe: unknown;
+    //declare const maybe: unknown;
+    let maybe;
     // const aNumber: number = maybe;
     if (maybe === true) {
-        const aBoolean: boolean = maybe;
+        const aBoolean = maybe;
         // const aString: string = maybe;
-      }
-
-      if (typeof maybe === "string") {
-        const aString: string = maybe;
+    }
+    if (typeof maybe === "string") {
+        const aString = maybe;
         // const aBoolean: boolean = maybe;
-      }*/
+    }
+    // Any
+    //declare function getValue(key: string): any;
+    function getValue(key) {
+        return key;
+    }
+    ;
+    const str = getValue('myString');
+    console.log(str);
+    let looselyTyped = 4;
+    // looselyTyped.ifItExists();
+    looselyTyped.toFixed();
+    let strictlyTyped = 4;
+    // strictlyTyped.toFixed();
+    let looselyTyped2 = {};
+    // let d = looselyTyped2.a.b.c.d;
+    // console.log(d);
+    // Void
+    function warnUser() {
+        console.log("This is my warning message");
+    }
+    let unusable = undefined;
+    unusable = null;
+    console.log(unusable);
+    // Null and Undefined
+    // Never
+    // Object
+    // Type assertions
 })(demo_01_01 || (demo_01_01 = {}));
