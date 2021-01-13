@@ -298,7 +298,25 @@ namespace demo_02_01 {
 	console.log(square);
 
 
+	interface Shape2 {
+	  color: string;
+	}
 
+	interface PenStroke2 {
+	  penWidth: number;
+	}
+
+	interface Square2 extends Shape2, PenStroke2 {
+	  sideLength: number;
+	}
+
+	let square2 = {} as Square2;
+	square2.color = "blue";
+	square2.sideLength = 10;
+	square2.penWidth = 5.0;
+	console.log(square2);
+
+	
 
 	// Hybrid Types
 

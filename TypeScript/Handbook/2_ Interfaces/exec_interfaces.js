@@ -118,6 +118,11 @@ var demo_02_01;
     square.color = 'blue';
     square.sideLength = 10;
     console.log(square);
+    var square2 = {};
+    square2.color = "blue";
+    square2.sideLength = 10;
+    square2.penWidth = 5.0;
+    console.log(square2);
     // Hybrid Types
     // Interfaces Extending Classes
 })(demo_02_01 || (demo_02_01 = {}));
