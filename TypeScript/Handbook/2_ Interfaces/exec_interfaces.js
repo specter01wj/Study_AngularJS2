@@ -123,6 +123,16 @@ var demo_02_01;
     square2.sideLength = 10;
     square2.penWidth = 5.0;
     console.log(square2);
-    // Hybrid Types
+    function getCounter() {
+        var counter = function (start) { };
+        counter.interval = 123;
+        counter.reset = function () { };
+        return counter;
+    }
+    var c = getCounter();
+    c(10);
+    c.reset();
+    c.interval = 5.0;
+    console.log(c[11]);
     // Interfaces Extending Classes
 })(demo_02_01 || (demo_02_01 = {}));
