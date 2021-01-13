@@ -45,7 +45,17 @@ var demo_02_01;
     var squareOptions = { colour: "purple", width: 300 };
     var mySquare4 = createSquare2(squareOptions);
     console.log(mySquare4);
-    // Function Types
+    var mySearch;
+    mySearch = function (source, subString) {
+        var result = source.search(subString);
+        return result > -1;
+    };
+    console.log(mySearch('abcdefg', 'xxz'));
+    var mySearch2;
+    mySearch2 = function (src, sub) {
+        var result = src.search(sub);
+        return result > -1;
+    };
     // Indexable Types
     // Class Types
     // Extending Interfaces

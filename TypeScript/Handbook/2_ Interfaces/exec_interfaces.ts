@@ -97,11 +97,30 @@ namespace demo_02_01 {
 	let mySquare4 = createSquare2(squareOptions);
 	console.log(mySquare4);
 
-	
+	// let squareOptions = { colour: "red" };
+	// let mySquare = createSquare(squareOptions);
+
+
 
 	// Function Types
+	interface SearchFunc {
+	  (source: string, subString: string): boolean;
+	}
 
+	let mySearch: SearchFunc;
 
+	mySearch = function(source: string, subString: string) {
+		let result = source.search(subString);
+		return result > -1;
+	}
+	console.log(mySearch('abcdefg', 'de'));
+
+	let mySearch2: SearchFunc;
+
+	mySearch2 = function (src: string, sub: string): boolean {
+	  let result = src.search(sub);
+	  return result > -1;
+	};
 
 
 	// Indexable Types
