@@ -87,8 +87,18 @@ namespace demo_02_01 {
 	let mySquare3 = createSquare2({ width: 200, opacity: 0.5 } as SquareConfig2);
 	console.log(mySquare3);
 
+	interface SquareConfig3 {
+	  color?: string;
+	  width?: number;
+	  [propName: string]: any;
+	}
+
+	let squareOptions = { colour: "purple", width: 300 };
+	let mySquare4 = createSquare2(squareOptions);
+	console.log(mySquare4);
 
 	
+
 	// Function Types
 
 
