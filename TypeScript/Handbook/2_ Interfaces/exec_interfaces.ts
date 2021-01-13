@@ -19,7 +19,7 @@ namespace demo_02_01 {
 	  console.log(labeledObj.label);
 	}
 
-	let myObj2 = { size: 10, label: "Size 10 Object" };
+	let myObj2 = { size: 10, label: "Size 10 Object 222" };
 	printLabel(myObj2);
 
 
