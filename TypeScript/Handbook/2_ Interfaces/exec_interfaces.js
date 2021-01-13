@@ -50,13 +50,21 @@ var demo_02_01;
         var result = source.search(subString);
         return result > -1;
     };
-    console.log(mySearch('abcdefg', 'xxz'));
+    console.log(mySearch('abcdefg', 'de'));
     var mySearch2;
     mySearch2 = function (src, sub) {
         var result = src.search(sub);
         return result > -1;
     };
-    // Indexable Types
+    var mySearch3;
+    mySearch3 = function (src, sub) {
+        var result = src.search(sub);
+        return result > -1;
+    };
+    var myArray;
+    myArray = ["Bob", "Fred"];
+    var myStr1 = myArray[0];
+    console.log(myStr1);
     // Class Types
     // Extending Interfaces
     // Hybrid Types

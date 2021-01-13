@@ -139,11 +139,18 @@ namespace demo_02_01 {
 	//   return "string";
 	// };
 
-	
+
 
 	// Indexable Types
+	interface StringArray {
+	  [index: number]: string;
+	}
 
+	let myArray: StringArray;
+	myArray = ["Bob", "Fred"];
 
+	let myStr1: string = myArray[0];
+	console.log(myStr1);
 
 
 
