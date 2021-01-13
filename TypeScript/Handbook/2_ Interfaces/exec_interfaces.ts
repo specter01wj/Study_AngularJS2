@@ -31,7 +31,7 @@ namespace demo_02_01 {
 	}
 
 	function createSquare(config: SquareConfig): {color: string; area: number} {
-		let newSquare = { color: 'white'; area: 100 };
+		let newSquare = { color: 'white', area: 100 };
 
 		if (config.color) {
 	    newSquare.color = config.color;
@@ -43,12 +43,19 @@ namespace demo_02_01 {
 		return newSquare;
 	}
 
+	let mySquare1 = createSquare({ color: 'Black' });
+	console.log(mySquare1);
+
 
 
 	// Readonly properties
+	interface Point {
+		readonly x: number;
+		readonly y: number;
+	}
 
-
-
+	let p1: Point = { x: 10, y: 20};
+	// p1.x = 5;
 
 	// Excess Property Checks
 
