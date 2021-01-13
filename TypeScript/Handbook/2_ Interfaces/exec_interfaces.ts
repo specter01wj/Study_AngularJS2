@@ -182,11 +182,106 @@ namespace demo_02_01 {
 	}
 
 
+	interface ReadonlyStringArray {
+	  readonly [index: number]: string;
+	}
+
+	let myArray2: ReadonlyStringArray = ["Alice", "Bob"];
+	// myArray2[2] = "Mallory"; 
+
+
+
 	// Class Types
+	interface ClockInterface {
+		currentTime: Date;
+	}
+
+	class Clock implements ClockInterface {
+		currentTime: Date = new Date();
+
+		constructor(h: number, m: number) {}
+	}
 
 
+	interface ClockInterface2 {
+	  currentTime: Date;
+	  setTime(d: Date): void;
+	}
+
+	class Clock2 implements ClockInterface2 {
+	  currentTime: Date = new Date();
+	  setTime(d: Date) {
+	    this.currentTime = d;
+	  }
+	  constructor(h: number, m: number) {}
+	}
 
 
+	/*interface ClockConstructor {
+	  new (hour: number, minute: number);
+	}
+
+	class Clock implements ClockConstructor {
+		currentTime: Date;
+	  constructor(h: number, m: number) {}
+	}*/
+
+
+	interface ClockConstructor {
+	  new (hour: number, minute: number): ClockInterface3;
+	}
+
+	interface ClockInterface3 {
+	  tick(): void;
+	}
+
+	function createClock(
+	  ctor: ClockConstructor,
+	  hour: number,
+	  minute: number
+	): ClockInterface3 {
+	  return new ctor(hour, minute);
+	}
+
+	class DigitalClock implements ClockInterface3 {
+	  constructor(h: number, m: number) {}
+	  tick() {
+	    console.log("beep beep");
+	  }
+	}
+
+	class AnalogClock implements ClockInterface3 {
+	  constructor(h: number, m: number) {}
+	  tick() {
+	    console.log("tick tock");
+	  }
+	}
+
+	let digital = createClock(DigitalClock, 12, 17);
+	let analog = createClock(AnalogClock, 7, 32);
+	console.log(digital.tick());
+	console.log(analog.tick());
+
+
+	interface ClockConstructor4 {
+	  new (hour: number, minute: number): ClockInterface4;
+	}
+
+	interface ClockInterface4 {
+	  tick(): void;
+	}
+
+	const Clock4: ClockConstructor4 = class Clock4 implements ClockInterface4 {
+	  constructor(h: number, m: number) {}
+	  tick() {
+	    console.log("beep beep! clock4");
+	  }
+	};
+
+	let clock4 = new Clock4(12, 17);
+	clock4.tick();
+
+	
 
 	// Extending Interfaces
 

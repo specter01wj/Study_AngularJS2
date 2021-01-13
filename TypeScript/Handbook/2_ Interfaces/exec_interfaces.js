@@ -65,7 +65,55 @@ var demo_02_01;
     myArray = ["Bob", "Fred"];
     var myStr1 = myArray[0];
     console.log(myStr1);
-    // Class Types
+    var myArray2 = ["Alice", "Bob"];
+    var Clock = /** @class */ (function () {
+        function Clock(h, m) {
+            this.currentTime = new Date();
+        }
+        return Clock;
+    }());
+    var Clock2 = /** @class */ (function () {
+        function Clock2(h, m) {
+            this.currentTime = new Date();
+        }
+        Clock2.prototype.setTime = function (d) {
+            this.currentTime = d;
+        };
+        return Clock2;
+    }());
+    function createClock(ctor, hour, minute) {
+        return new ctor(hour, minute);
+    }
+    var DigitalClock = /** @class */ (function () {
+        function DigitalClock(h, m) {
+        }
+        DigitalClock.prototype.tick = function () {
+            console.log("beep beep");
+        };
+        return DigitalClock;
+    }());
+    var AnalogClock = /** @class */ (function () {
+        function AnalogClock(h, m) {
+        }
+        AnalogClock.prototype.tick = function () {
+            console.log("tick tock");
+        };
+        return AnalogClock;
+    }());
+    var digital = createClock(DigitalClock, 12, 17);
+    var analog = createClock(AnalogClock, 7, 32);
+    console.log(digital.tick());
+    console.log(analog.tick());
+    var Clock4 = /** @class */ (function () {
+        function Clock4(h, m) {
+        }
+        Clock4.prototype.tick = function () {
+            console.log("beep beep! clock4");
+        };
+        return Clock4;
+    }());
+    var clock4 = new Clock4(12, 17);
+    clock4.tick();
     // Extending Interfaces
     // Hybrid Types
     // Interfaces Extending Classes
