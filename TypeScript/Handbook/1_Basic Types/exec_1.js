@@ -132,4 +132,14 @@ var demo_01_01;
     let someValue2 = "this is a string!!!";
     let strLength2 = someValue2.length;
     console.log(strLength2);
+    function reverse(s) {
+        return s.split("").reverse().join("");
+    }
+    let rev1 = reverse("hello world");
+    console.log(rev1);
+    function reverse2(s) {
+        return s.split("").reverse().join("");
+    }
+    let rev2 = reverse2("hello world! james");
+    console.log(rev2);
 })(demo_01_01 || (demo_01_01 = {}));

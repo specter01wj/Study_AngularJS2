@@ -187,6 +187,15 @@ namespace demo_01_01 {
 
 
 
+		function reverse2(s: string): string {
+		  return s.split("").reverse().join("");
+		}
+
+		let rev2 = reverse2("hello world! james");
+		console.log(rev2);
+
+
+
 }
 
 
