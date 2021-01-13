@@ -84,7 +84,11 @@ namespace demo_02_01 {
 	let mySquare2 = createSquare2({ color: "blue", width: 100 });
 	console.log(mySquare2);
 
+	let mySquare3 = createSquare2({ width: 200, opacity: 0.5 } as SquareConfig2);
+	console.log(mySquare3);
 
+
+	
 	// Function Types
 
 

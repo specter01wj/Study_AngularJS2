@@ -40,6 +40,8 @@ var demo_02_01;
     }
     var mySquare2 = createSquare2({ color: "blue", width: 100 });
     console.log(mySquare2);
+    var mySquare3 = createSquare2({ width: 200, opacity: 0.5 });
+    console.log(mySquare3);
     // Function Types
     // Indexable Types
     // Class Types
