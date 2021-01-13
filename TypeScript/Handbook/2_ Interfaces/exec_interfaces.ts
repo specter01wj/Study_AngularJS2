@@ -69,8 +69,20 @@ namespace demo_02_01 {
 
 
 	// Excess Property Checks
+	interface SquareConfig2 {
+	  color?: string;
+	  width?: number;
+	}
 
+	function createSquare2(config: SquareConfig2): { color: string; area: number } {
+	  return {
+	    color: config.color || "red",
+	    area: config.width ? config.width * config.width : 20,
+	  };
+	}
 
+	let mySquare2 = createSquare2({ color: "blue", width: 100 });
+	console.log(mySquare2);
 
 
 	// Function Types

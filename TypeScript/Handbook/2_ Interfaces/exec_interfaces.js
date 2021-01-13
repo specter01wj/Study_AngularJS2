@@ -23,8 +23,23 @@ var demo_02_01;
     }
     var mySquare1 = createSquare({ color: 'Black' });
     console.log(mySquare1);
-    // Readonly properties
-    // Excess Property Checks
+    var p1 = { x: 10, y: 20 };
+    // p1.x = 5;
+    var a = [1, 2, 3, 4];
+    var ro = a;
+    // ro[0] = 12;
+    // ro.push(5);
+    // ro.length = 100;
+    // a = ro;
+    a = ro;
+    function createSquare2(config) {
+        return {
+            color: config.color || "red",
+            area: config.width ? config.width * config.width : 20
+        };
+    }
+    var mySquare2 = createSquare2({ color: "blue", width: 100 });
+    console.log(mySquare2);
     // Function Types
     // Indexable Types
     // Class Types
