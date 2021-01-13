@@ -114,7 +114,10 @@ var demo_02_01;
     }());
     var clock4 = new Clock4(12, 17);
     clock4.tick();
-    // Extending Interfaces
+    var square = {};
+    square.color = 'blue';
+    square.sideLength = 10;
+    console.log(square);
     // Hybrid Types
     // Interfaces Extending Classes
 })(demo_02_01 || (demo_02_01 = {}));

@@ -281,11 +281,21 @@ namespace demo_02_01 {
 	let clock4 = new Clock4(12, 17);
 	clock4.tick();
 
-	
+
 
 	// Extending Interfaces
+	interface Shape {
+		color: string;
+	}
 
+	interface Square extends Shape {
+		sideLength: number;
+	}
 
+	let square = {} as Square;
+	square.color = 'blue';
+	square.sideLength = 10;
+	console.log(square);
 
 
 
