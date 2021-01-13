@@ -171,7 +171,7 @@ namespace demo_01_01 {
 		console.log(strLength);
 
 		let someValue2: unknown = "this is a string!!!";
-		let strLength2: number = (<string>someValue).length;
+		let strLength2: number = (<string>someValue2).length;
 		console.log(strLength2);
 
 
