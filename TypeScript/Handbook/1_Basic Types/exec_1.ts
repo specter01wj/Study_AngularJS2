@@ -168,7 +168,7 @@ namespace demo_01_01 {
 		// Type assertions
 		let someValue: unknown = "this is a string";
 		let strLength: number = (someValue as string).length;
-
+		console.log(strLength);
 
 
 }
