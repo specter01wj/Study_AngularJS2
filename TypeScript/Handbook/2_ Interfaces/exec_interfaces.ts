@@ -153,6 +153,34 @@ namespace demo_02_01 {
 	console.log(myStr1);
 
 
+	interface Animal {
+	  name: string;
+	}
+
+	interface Dog extends Animal {
+	  breed: string;
+	}
+
+	interface NotOkay {
+	  // [x: number]: Animal;
+	  [x: string]: Animal;
+	  // [y: string]: Dog;
+	  x_name: Animal;
+	}
+
+	interface NumberDictionary {
+	  [index: string]: number;
+	  length: number;
+	  // name: string;
+	  name: number;
+	}
+
+	interface NumberOrStringDictionary {
+	  [index: string]: number | string;
+	  length: number; // ok, length is a number
+	  name: string; // ok, name is a string
+	}
+
 
 	// Class Types
 
