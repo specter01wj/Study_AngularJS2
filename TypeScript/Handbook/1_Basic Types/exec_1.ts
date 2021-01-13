@@ -153,7 +153,8 @@ namespace demo_01_01 {
 
 
 		// Object
-		declare function create(o: object | null): void;
+		// declare function create(o: object | null): void;
+		function create(o: object | null): void {};
 
 		create({ prop: 0 });
 		create(null);
@@ -165,7 +166,8 @@ namespace demo_01_01 {
 
 
 		// Type assertions
-
+		let someValue: unknown = "this is a string";
+		let strLength: number = (someValue as string).length;
 
 
 

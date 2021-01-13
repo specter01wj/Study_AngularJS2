@@ -106,6 +106,24 @@ var demo_01_01;
     let n = null;
     let n2 = null;
     // Never
+    function error(message) {
+        throw new Error(message);
+    }
+    function fail() {
+        return error("Something failed");
+    }
+    function infiniteLoop() {
+        while (true) { }
+    }
     // Object
+    // declare function create(o: object | null): void;
+    function create(o) { }
+    ;
+    create({ prop: 0 });
+    create(null);
+    // create(42);
+    // create("string");
+    // create(false);
+    create(undefined);
     // Type assertions
 })(demo_01_01 || (demo_01_01 = {}));
