@@ -115,6 +115,7 @@ namespace demo_02_01 {
 	}
 	console.log(mySearch('abcdefg', 'de'));
 
+
 	let mySearch2: SearchFunc;
 
 	mySearch2 = function (src: string, sub: string): boolean {
@@ -122,6 +123,23 @@ namespace demo_02_01 {
 	  return result > -1;
 	};
 
+
+	let mySearch3: SearchFunc;
+
+	mySearch3 = function (src, sub) {
+	  let result = src.search(sub);
+	  return result > -1;
+	};
+
+
+	// let mySearch4: SearchFunc;
+
+	// mySearch4 = function (src, sub) {
+	//   let result = src.search(sub);
+	//   return "string";
+	// };
+
+	
 
 	// Indexable Types
 
