@@ -23,6 +23,57 @@ namespace demo_02_01 {
 	printLabel(myObj2);
 
 
+
+	// Optional Properties
+
+
+
+
+
+	// Readonly properties
+
+
+
+
+	// Excess Property Checks
+
+
+
+
+	// Function Types
+
+
+
+
+	// Indexable Types
+
+
+
+
+
+	// Class Types
+
+
+
+
+
+	// Extending Interfaces
+
+
+
+
+
+
+	// Hybrid Types
+
+
+
+
+
+	// Interfaces Extending Classes
+
+
+
 }
 
 
