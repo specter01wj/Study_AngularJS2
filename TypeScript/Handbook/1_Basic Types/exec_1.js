@@ -126,4 +126,10 @@ var demo_01_01;
     // create(false);
     create(undefined);
     // Type assertions
+    let someValue = "this is a string";
+    let strLength = someValue.length;
+    console.log(strLength);
+    let someValue2 = "this is a string";
+    let strLength2 = someValue.length;
+    console.log(strLength2);
 })(demo_01_01 || (demo_01_01 = {}));
