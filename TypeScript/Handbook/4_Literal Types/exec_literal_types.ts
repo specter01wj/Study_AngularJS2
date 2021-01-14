@@ -1,6 +1,6 @@
 ﻿
 
-namespace demo_03_01 {
+namespace demo_04_01 {
 
 	// Literal Narrowing
 	const helloWorld = "Hello World";
