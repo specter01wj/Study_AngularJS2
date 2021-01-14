@@ -49,13 +49,21 @@ namespace demo_03_01 {
 	setupMap({ lng: -73.935242, lat: 40.73061, tileSize: 16 });
 
 
+
 	// Boolean Literal Types
+	interface ValidationSuccess {
+	  isValid: true;
+	  reason: null;
+	}
 
+	interface ValidationFailure {
+	  isValid: false;
+	  reason: string;
+	}
 
+	type ValidationResult = ValidationSuccess | ValidationFailure;
 
-
-
-	// 
+	
 
 
 }
