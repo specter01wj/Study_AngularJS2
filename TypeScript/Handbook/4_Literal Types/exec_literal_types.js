@@ -31,6 +31,7 @@ var demo_03_01;
     }
     var result = rollDice();
     console.log(result);
-    // Boolean Literal Types
-    // 
+    function setupMap(obj) { }
+    ;
+    setupMap({ lng: -73.935242, lat: 40.73061, tileSize: 16 });
 })(demo_03_01 || (demo_03_01 = {}));
