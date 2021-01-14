@@ -22,7 +22,10 @@ namespace demo_03_01 {
 
 
 	// Typing the function
-
+	function add2(x: number, y: number): number {
+		return x + y;
+	}
+	console.log(add(12, 23));
 
 
 

@@ -14,4 +14,16 @@ var demo_03_01;
         return x + y + z;
     }
     console.log(addToZ(2, 4));
+    // Typing the function
+    function add2(x, y) {
+        return x + y;
+    }
+    console.log(add(12, 23));
+    // Writing the function type
+    // Inferring the types
+    // Optional and Default Parameters
+    // Rest Parameters
+    // this and arrow functions
+    // this parameters
+    // Overloads
 })(demo_03_01 || (demo_03_01 = {}));
