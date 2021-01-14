@@ -19,7 +19,19 @@ var demo_03_01;
         return x + y;
     }
     console.log(add(12, 23));
+    var myAdd2 = function (x, y) {
+        return x + y;
+    };
+    console.log(myAdd(20, 30));
     // Writing the function type
+    var myAdd3 = function (x, y) {
+        return x + y;
+    };
+    console.log(myAdd(200, 300));
+    var myAdd4 = function (x, y) {
+        return x + y;
+    };
+    console.log(myAdd(100, 200));
     // Inferring the types
     // Optional and Default Parameters
     // Rest Parameters

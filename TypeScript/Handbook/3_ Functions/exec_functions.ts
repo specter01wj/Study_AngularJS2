@@ -27,12 +27,31 @@ namespace demo_03_01 {
 	}
 	console.log(add(12, 23));
 
+	let myAdd2 = function(x: number, y: number): number {
+		return x + y;
+	}
+	console.log(myAdd(20, 30));
+
 
 
 	// Writing the function type
+	let myAdd3: (x: number, y: number) => number = function (
+	  x: number,
+	  y: number
+	): number {
+	  return x + y;
+	};
+	console.log(myAdd(200, 300));
 
+	let myAdd4: (baseValue: number, increment: number) => number = function (
+	  x: number,
+	  y: number
+	): number {
+	  return x + y;
+	};
+	console.log(myAdd(100, 200));
 
-
+	
 
 	// Inferring the types
 
