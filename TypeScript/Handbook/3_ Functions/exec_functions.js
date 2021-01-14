@@ -47,6 +47,34 @@ var demo_03_01;
     // let result2 = buildName("Bob", "Adams", "Sr.");
     var result3 = buildName("Bob", "Adams");
     console.log(result3);
+    function buildName2(firstName, lastName) {
+        if (lastName)
+            return firstName + " " + lastName;
+        else
+            return firstName;
+    }
+    var result4 = buildName2("Bob");
+    // let result5 = buildName("Bob", "Adams", "Sr.");
+    var result6 = buildName2("Bob", "Adams");
+    console.log(result4);
+    function buildName3(firstName, lastName) {
+        if (lastName === void 0) { lastName = "Smith"; }
+        return firstName + " " + lastName;
+    }
+    var result7 = buildName3("Bob");
+    var result8 = buildName3("Bob", undefined);
+    // let result9 = buildName3("Bob", "Adams", "Sr.");
+    var result10 = buildName3("Bob", "Adams");
+    console.log(result8);
+    function buildName4(firstName, lastName) {
+        if (firstName === void 0) { firstName = "Will"; }
+        return firstName + " " + lastName;
+    }
+    // let result11 = buildName4("Bob");
+    // let result12 = buildName4("Bob", "Adams", "Sr.");
+    var result13 = buildName4("Bob", "Adams");
+    var result14 = buildName4(undefined, "Adams");
+    console.log(result14);
     // Rest Parameters
     // this and arrow functions
     // this parameters

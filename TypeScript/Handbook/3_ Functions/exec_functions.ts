@@ -74,6 +74,37 @@ namespace demo_03_01 {
 	let result3 = buildName("Bob", "Adams");
 	console.log(result3);
 
+	function buildName2(firstName: string, lastName?: string) {
+	  if (lastName) return firstName + " " + lastName;
+	  else return firstName;
+	}
+
+	let result4 = buildName2("Bob");
+	// let result5 = buildName("Bob", "Adams", "Sr.");
+	let result6 = buildName2("Bob", "Adams");
+	console.log(result4);
+
+	function buildName3(firstName: string, lastName = "Smith") {
+	  return firstName + " " + lastName;
+	}
+
+	let result7 = buildName3("Bob");
+	let result8 = buildName3("Bob", undefined);
+	// let result9 = buildName3("Bob", "Adams", "Sr.");
+	let result10 = buildName3("Bob", "Adams");
+	console.log(result8);
+
+	function buildName4(firstName = "Will", lastName: string) {
+	  return firstName + " " + lastName;
+	}
+
+	// let result11 = buildName4("Bob");
+	// let result12 = buildName4("Bob", "Adams", "Sr.");
+	let result13 = buildName4("Bob", "Adams");
+	let result14 = buildName4(undefined, "Adams");
+	console.log(result14);
+
+
 	// Rest Parameters
 
 
