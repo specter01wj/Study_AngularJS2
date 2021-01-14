@@ -172,13 +172,10 @@ var demo_03_01;
     // Overloads
     var suits = ["hearts", "spades", "clubs", "diamonds"];
     function pickCard(x) {
-        // Check to see if we're working with an object/array
-        // if so, they gave us the deck and we'll pick the card
         if (typeof x == "object") {
             var pickedCard_1 = Math.floor(Math.random() * x.length);
             return pickedCard_1;
         }
-        // Otherwise just let them pick the card
         else if (typeof x == "number") {
             var pickedSuit = Math.floor(x / 13);
             return { suit: suits[pickedSuit], card: x % 13 };
@@ -193,4 +190,24 @@ var demo_03_01;
     console.log("card: " + pickedCard3.card + " of " + pickedCard3.suit);
     var pickedCard4 = pickCard(15);
     console.log("card: " + pickedCard4.card + " of " + pickedCard4.suit);
+    var suits2 = ["hearts", "spades", "clubs", "diamonds"];
+    function pickCard2(x) {
+        if (typeof x == "object") {
+            var pickedCard_2 = Math.floor(Math.random() * x.length);
+            return pickedCard_2;
+        }
+        else if (typeof x == "number") {
+            var pickedSuit = Math.floor(x / 13);
+            return { suit: suits[pickedSuit], card: x % 13 };
+        }
+    }
+    var myDeck2 = [
+        { suit: "diamonds", card: 2 },
+        { suit: "spades", card: 10 },
+        { suit: "hearts", card: 4 },
+    ];
+    var pickedCard5 = myDeck[pickCard2(myDeck)];
+    console.log("card: " + pickedCard5.card + " of " + pickedCard5.suit);
+    var pickedCard6 = pickCard2(15);
+    console.log("card: " + pickedCard6.card + " of " + pickedCard6.suit);
 })(demo_03_01 || (demo_03_01 = {}));

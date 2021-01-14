@@ -256,7 +256,32 @@ namespace demo_03_01 {
 
 
 
-	
+
+	let suits2 = ["hearts", "spades", "clubs", "diamonds"];
+
+	function pickCard2(x: { suit: string; card: number }[]): number;
+	function pickCard2(x: number): { suit: string; card: number };
+	function pickCard2(x: any): any {
+	  if (typeof x == "object") {
+	    let pickedCard = Math.floor(Math.random() * x.length);
+	    return pickedCard;
+	  } else if (typeof x == "number") {
+	    let pickedSuit = Math.floor(x / 13);
+	    return { suit: suits[pickedSuit], card: x % 13 };
+	  }
+	}
+
+	let myDeck2 = [
+	  { suit: "diamonds", card: 2 },
+	  { suit: "spades", card: 10 },
+	  { suit: "hearts", card: 4 },
+	];
+
+	let pickedCard5 = myDeck[pickCard2(myDeck)];
+	console.log("card: " + pickedCard5.card + " of " + pickedCard5.suit);
+
+	let pickedCard6 = pickCard2(15);
+	console.log("card: " + pickedCard6.card + " of " + pickedCard6.suit);
 
 
 
