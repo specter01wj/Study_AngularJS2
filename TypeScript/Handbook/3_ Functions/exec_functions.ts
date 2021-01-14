@@ -105,11 +105,21 @@ namespace demo_03_01 {
 	console.log(result14);
 
 
+
 	// Rest Parameters
+	function buildName5(firstName: string, ...restOfName: string[]) {
+		return firstName + ' ' + restOfName.join(' ');
+	}
 
+	let employeeName = buildName5("Joseph", "Samuel", "Lucas", "MacKinzie");
+	console.log(employeeName);
 
+	function buildName6(firstName: string, ...restOfName: string[]) {
+	  return firstName + " " + restOfName.join(" ");
+	}
 
-
+	let buildNameFun: (fname: string, ...rest: string[]) => string = buildName6;
+	console.log(buildNameFun("Joseph", "Samuel", "Lucas", "MacKinzie"));
 
 
 	// this and arrow functions

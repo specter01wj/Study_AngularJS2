@@ -76,6 +76,24 @@ var demo_03_01;
     var result14 = buildName4(undefined, "Adams");
     console.log(result14);
     // Rest Parameters
+    function buildName5(firstName) {
+        var restOfName = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            restOfName[_i - 1] = arguments[_i];
+        }
+        return firstName + ' ' + restOfName.join(' ');
+    }
+    var employeeName = buildName5("Joseph", "Samuel", "Lucas", "MacKinzie");
+    console.log(employeeName);
+    function buildName6(firstName) {
+        var restOfName = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            restOfName[_i - 1] = arguments[_i];
+        }
+        return firstName + " " + restOfName.join(" ");
+    }
+    var buildNameFun = buildName6;
+    console.log(buildNameFun("Joseph", "Samuel", "Lucas", "MacKinzie"));
     // this and arrow functions
     // this parameters
     // Overloads
