@@ -51,20 +51,28 @@ namespace demo_03_01 {
 	};
 	console.log(myAdd(100, 200));
 
-	
+
 
 	// Inferring the types
+	let myAdd5 = function (x: number, y: number): number {
+	  return x + y;
+	};
 
-
-
+	let myAdd6: (baseValue: number, increment: number) => number = function (x, y) {
+	  return x + y;
+	};
 
 
 
 	// Optional and Default Parameters
+	function buildName(firstName: string, lastName: string) {
+		return firstName + ' ' + lastName;
+	}
 
-
-
-
+	// let result1 = buildName('Bob');
+	// let result2 = buildName("Bob", "Adams", "Sr.");
+	let result3 = buildName("Bob", "Adams");
+	console.log(result3);
 
 	// Rest Parameters
 

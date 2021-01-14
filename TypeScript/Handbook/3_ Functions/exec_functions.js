@@ -33,7 +33,20 @@ var demo_03_01;
     };
     console.log(myAdd(100, 200));
     // Inferring the types
+    var myAdd5 = function (x, y) {
+        return x + y;
+    };
+    var myAdd6 = function (x, y) {
+        return x + y;
+    };
     // Optional and Default Parameters
+    function buildName(firstName, lastName) {
+        return firstName + ' ' + lastName;
+    }
+    // let result1 = buildName('Bob');
+    // let result2 = buildName("Bob", "Adams", "Sr.");
+    var result3 = buildName("Bob", "Adams");
+    console.log(result3);
     // Rest Parameters
     // this and arrow functions
     // this parameters
