@@ -95,6 +95,54 @@ var demo_03_01;
     var buildNameFun = buildName6;
     console.log(buildNameFun("Joseph", "Samuel", "Lucas", "MacKinzie"));
     // this and arrow functions
+    /*let deck = {
+      suits: ["hearts", "spades", "clubs", "diamonds"],
+      cards: Array(52),
+      createCardPicker: function () {
+        return function () {
+          let pickedCard = Math.floor(Math.random() * 52);
+          let pickedSuit = Math.floor(pickedCard / 13);
+
+          return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
+        };
+      },
+    };
+
+    let cardPicker = deck.createCardPicker();
+    let pickedCard = cardPicker();
+
+    console.log("card: " + pickedCard.card + " of " + pickedCard.suit);*/
+    var deck = {
+        suits: ["hearts", "spades", "clubs", "diamonds"],
+        cards: Array(52),
+        createCardPicker: function () {
+            var _this = this;
+            // NOTE: the line below is now an arrow function, allowing us to capture 'this' right here
+            return function () {
+                var pickedCard = Math.floor(Math.random() * 52);
+                var pickedSuit = Math.floor(pickedCard / 13);
+                return { suit: _this.suits[pickedSuit], card: pickedCard % 13 };
+            };
+        }
+    };
+    var cardPicker = deck.createCardPicker();
+    var pickedCard = cardPicker();
+    console.log("card: " + pickedCard.card + " of " + pickedCard.suit);
+    var deck2 = {
+        suits: ["hearts", "spades", "clubs", "diamonds"],
+        cards: Array(52),
+        createCardPicker: function () {
+            var _this = this;
+            return function () {
+                var pickedCard = Math.floor(Math.random() * 52);
+                var pickedSuit = Math.floor(pickedCard / 13);
+                return { suit: _this.suits[pickedSuit], card: pickedCard % 13 };
+            };
+        }
+    };
+    var cardPicker2 = deck2.createCardPicker();
+    var pickedCard2 = cardPicker2();
+    console.log("card: " + pickedCard2.card + " of " + pickedCard2.suit);
     // this parameters
     // Overloads
 })(demo_03_01 || (demo_03_01 = {}));

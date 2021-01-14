@@ -122,12 +122,74 @@ namespace demo_03_01 {
 	console.log(buildNameFun("Joseph", "Samuel", "Lucas", "MacKinzie"));
 
 
+
 	// this and arrow functions
+	/*let deck = {
+	  suits: ["hearts", "spades", "clubs", "diamonds"],
+	  cards: Array(52),
+	  createCardPicker: function () {
+	    return function () {
+	      let pickedCard = Math.floor(Math.random() * 52);
+	      let pickedSuit = Math.floor(pickedCard / 13);
+
+	      return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
+	    };
+	  },
+	};
+
+	let cardPicker = deck.createCardPicker();
+	let pickedCard = cardPicker();
+
+	console.log("card: " + pickedCard.card + " of " + pickedCard.suit);*/
+
+	let deck = {
+	  suits: ["hearts", "spades", "clubs", "diamonds"],
+	  cards: Array(52),
+	  createCardPicker: function () {
+	    // NOTE: the line below is now an arrow function, allowing us to capture 'this' right here
+	    return () => {
+	      let pickedCard = Math.floor(Math.random() * 52);
+	      let pickedSuit = Math.floor(pickedCard / 13);
+
+	      return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
+	    };
+	  },
+	};
+
+	let cardPicker = deck.createCardPicker();
+	let pickedCard = cardPicker();
+
+	console.log("card: " + pickedCard.card + " of " + pickedCard.suit);
 
 
+	interface Card {
+	  suit: string;
+	  card: number;
+	}
 
+	interface Deck {
+	  suits: string[];
+	  cards: number[];
+	  createCardPicker(this: Deck): () => Card;
+	}
 
+	let deck2: Deck = {
+		suits: ["hearts", "spades", "clubs", "diamonds"],
+		cards: Array(52),
+		createCardPicker: function(this: Deck) {
+			return () => {
+				let pickedCard = Math.floor(Math.random() * 52);
+      	let pickedSuit = Math.floor(pickedCard / 13);
 
+      	return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
+			}
+		}
+	};
+
+	let cardPicker2 = deck2.createCardPicker();
+	let pickedCard2 = cardPicker2();
+
+	console.log("card: " + pickedCard2.card + " of " + pickedCard2.suit);
 
 	// this parameters
 
