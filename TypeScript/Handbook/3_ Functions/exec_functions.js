@@ -143,6 +143,31 @@ var demo_03_01;
     var cardPicker2 = deck2.createCardPicker();
     var pickedCard2 = cardPicker2();
     console.log("card: " + pickedCard2.card + " of " + pickedCard2.suit);
-    // this parameters
+    /*class Handler {
+      info: string;
+      onClickBad(this: Handler, e: Event) {
+        this.info = e.message;
+      }
+    }
+
+    let h = new Handler();
+    uiElement.addClickListener(h.onClickBad);*/
+    var Handler = /** @class */ (function () {
+        function Handler() {
+        }
+        Handler.prototype.onClickGood = function (e) {
+            console.log("clicked!");
+        };
+        return Handler;
+    }());
+    var h = new Handler();
+    // uiElement.addClickListener(h.onClickGood);
+    console.log(h.onClickGood);
+    /*class Handler {
+      info: string;
+      onClickGood = (e: Event) => {
+        this.info = e.message;
+      };
+    }*/
     // Overloads
 })(demo_03_01 || (demo_03_01 = {}));

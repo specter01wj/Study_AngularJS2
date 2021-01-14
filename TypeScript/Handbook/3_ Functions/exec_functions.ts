@@ -162,6 +162,8 @@ namespace demo_03_01 {
 	console.log("card: " + pickedCard.card + " of " + pickedCard.suit);
 
 
+
+	// this parameters
 	interface Card {
 	  suit: string;
 	  card: number;
@@ -191,11 +193,40 @@ namespace demo_03_01 {
 
 	console.log("card: " + pickedCard2.card + " of " + pickedCard2.suit);
 
-	// this parameters
 
 
+	interface UIElement {
+	  addClickListener(onclick: (this: void, e: Event) => void): void;
+	}
+	/*class Handler {
+	  info: string;
+	  onClickBad(this: Handler, e: Event) {
+	  	this.info = e.message;
+	  }
+	}
+
+	let h = new Handler();
+	uiElement.addClickListener(h.onClickBad);*/
 
 
+	class Handler {
+	  info: string;
+	  onClickGood(this: void, e: Event) {
+	    console.log("clicked!");
+	  }
+	}
+
+	let h = new Handler();
+	// uiElement.addClickListener(h.onClickGood);
+	console.log(h.onClickGood);
+
+
+	/*class Handler {
+	  info: string;
+	  onClickGood = (e: Event) => {
+	    this.info = e.message;
+	  };
+	}*/
 
 
 	// Overloads
