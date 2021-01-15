@@ -106,7 +106,28 @@ namespace demo_05_01 {
 	console.log(logger(net1));
 
 	// Union Exhaustiveness checking
+	type NetworkFromCachedState = {
+	  state: "from_cache";
+	  id: string;
+	  response: NetworkSuccessState["response"];
+	};
 
+	type NetworkState2 =
+	  | NetworkLoadingState
+	  | NetworkFailedState
+	  | NetworkSuccessState
+	  | NetworkFromCachedState;
+
+	function logger2(s: NetworkState2) {
+	  switch (s.state) {
+	    case "loading":
+	      return "loading request";
+	    case "failed":
+	      return `failed with code ${s.code}`;
+	    case "success":
+	      return "got response";
+	  }
+	}
 
 
 
