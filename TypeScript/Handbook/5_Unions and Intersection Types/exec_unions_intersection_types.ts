@@ -37,15 +37,47 @@ namespace demo_05_01 {
 
 
 	// Unions with Common Fields
+	interface Bird {
+	  fly(): void;
+	  layEggs(): void;
+	}
 
+	interface Fish {
+	  swim(): void;
+	  layEggs(): void;
+	}
 
+	// declare function getSmallPet(): Fish | Bird;
+
+	// let pet = getSmallPet();
+	// pet.layEggs();
+	// pet.swim();
 
 
 
 	// Discriminating Unions
+	type NetworkLoadingState = {
+	  state: "loading";
+	};
 
+	type NetworkFailedState = {
+	  state: "failed";
+	  code: number;
+	};
 
+	type NetworkSuccessState = {
+	  state: "success";
+	  response: {
+	    title: string;
+	    duration: number;
+	    summary: string;
+	  };
+	};
 
+	type NetworkState =
+	  | NetworkLoadingState
+	  | NetworkFailedState
+	  | NetworkSuccessState;
 
 
 

@@ -17,8 +17,15 @@ var demo_05_01;
     console.log(res2);
     // let indentedString = padLeft("Hello world", true);
     // console.log(indentedString);
-    // Unions with Common Fields
-    // Discriminating Unions
+    function padLeft2(value, padding) {
+        if (typeof padding === "number") {
+            return Array(padding + 1).join(" ") + value;
+        }
+        if (typeof padding === "string") {
+            return padding + value;
+        }
+        throw new Error("Expected string or number, got '" + typeof padding + "'.");
+    }
     // Union Exhaustiveness checking
     // Intersection Types
 })(demo_05_01 || (demo_05_01 = {}));
