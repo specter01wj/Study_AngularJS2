@@ -80,6 +80,30 @@ namespace demo_05_01 {
 	  | NetworkSuccessState;
 
 
+	function logger(state: NetworkState): string {
+		// state.code;
+
+		switch (state.state) {
+	    case "loading":
+	      return "Downloading...";
+	    case "failed":
+	      return `Error ${state.code} downloading`;
+	    case "success":
+	      // return `Downloaded ${state.response.title} - ${state.response.summary}`;
+	      return `Downloaded ${state.response.title} - ${state.response.summary} - time: ${state.response.duration}`;
+	  }
+	}
+
+	let net1: NetworkSuccessState = {
+		state: "success",
+	  response: {
+	    title: 'ED-01',
+	    duration: 24,
+	    summary: 'success-101'
+	  }
+	};
+
+	console.log(logger(net1));
 
 	// Union Exhaustiveness checking
 
