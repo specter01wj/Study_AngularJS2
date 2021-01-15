@@ -47,6 +47,33 @@ var demo_05_01;
         }
     };
     console.log(logger(net1));
-    // Union Exhaustiveness checking
-    // Intersection Types
+    function logger2(s) {
+        switch (s.state) {
+            case "loading":
+                return "loading request";
+            case "failed":
+                return "failed with code " + s.code;
+            case "success":
+                return "got response";
+        }
+    }
+    var handleArtistsResponse = function (response) {
+        if (response.error) {
+            console.error(response.error.message);
+            return;
+        }
+        console.log(response.artists);
+    };
+    var handleArtworkResponse = function (response) {
+        if (response.error) {
+            console.error(response.error.message);
+            return;
+        }
+        console.log(response.artworks);
+    };
+    var artworksResponse = {
+        artworks: [{ title: 'Toy' }, { title: 'China' }],
+        success: true
+    };
+    handleArtworkResponse(artworksResponse);
 })(demo_05_01 || (demo_05_01 = {}));
