@@ -247,16 +247,43 @@ namespace demo_06_01 {
 
 
 
-
-
-
-
-
 	// Accessors
+	class Employee4 {
+	  fullName: string;
+	}
+
+	let employee4 = new Employee4();
+	employee4.fullName = "Bob Smith";
+
+	if (employee4.fullName) {
+	  console.log(employee4.fullName);
+	}
 
 
+	const fullNameMaxLength = 10;
 
+	class Employee5 {
+		private _fullNmae: string = '';
 
+		public get fullName() : string {
+			return this._fullNmae;
+		}
+
+		public set fullName(newName : string) {
+			if (newName && newName.length > fullNameMaxLength) {
+	      throw new Error("fullName has a max length of " + fullNameMaxLength);
+	    }
+			this._fullNmae = newName;
+		}
+
+	}
+
+	let employee5 = new Employee5();
+	employee5.fullName = 'James Wang';
+
+	if (employee5.fullName) {
+	  console.log(employee5.fullName);
+	}
 
 
 

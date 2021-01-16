@@ -176,6 +176,33 @@ var demo_06_01;
     let dad2 = new Octopus2("Man with the 8 strong legs_2");
     console.log(dad2.name);
     // Accessors
+    class Employee4 {
+    }
+    let employee4 = new Employee4();
+    employee4.fullName = "Bob Smith";
+    if (employee4.fullName) {
+        console.log(employee4.fullName);
+    }
+    const fullNameMaxLength = 10;
+    class Employee5 {
+        constructor() {
+            this._fullNmae = '';
+        }
+        get fullName() {
+            return this._fullNmae;
+        }
+        set fullName(newName) {
+            if (newName && newName.length > fullNameMaxLength) {
+                throw new Error("fullName has a max length of " + fullNameMaxLength);
+            }
+            this._fullNmae = newName;
+        }
+    }
+    let employee5 = new Employee5();
+    employee5.fullName = 'James Wang';
+    if (employee5.fullName) {
+        console.log(employee5.fullName);
+    }
     // Static Properties
     // Abstract Classes
     // Advanced Techniques
