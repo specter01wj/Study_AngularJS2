@@ -361,9 +361,21 @@ namespace demo_06_01 {
 
 	// Advanced Techniques
 	// Constructor functions
-	
+	class Greeter2 {
+		greeting: string;
 
+		constructor(message: string) {
+			this.greeting = message;
+		}
 
+		greet() {
+			return "Hello, " + this.greeting;
+		}
+
+	}
+
+	let greeter2: Greeter2 = new Greeter2("world");
+	console.log(greeter.greet());
 
 
 

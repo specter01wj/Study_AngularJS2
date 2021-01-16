@@ -255,5 +255,15 @@ var demo_06_01;
     // department.generateReports();
     // Advanced Techniques
     // Constructor functions
+    class Greeter2 {
+        constructor(message) {
+            this.greeting = message;
+        }
+        greet() {
+            return "Hello, " + this.greeting;
+        }
+    }
+    let greeter2 = new Greeter2("world");
+    console.log(greeter.greet());
     // Using a class as an interface
 })(demo_06_01 || (demo_06_01 = {}));
