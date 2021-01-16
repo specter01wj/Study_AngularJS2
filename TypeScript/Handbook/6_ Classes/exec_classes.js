@@ -157,6 +157,15 @@ var demo_06_01;
     // let john = new Person2("John");
     console.log(howard2.getElevatorPitch());
     // Readonly modifier
+    class Octopus {
+        constructor(theName) {
+            this.numberOfLegs = 8;
+            this.name = theName;
+        }
+    }
+    let dad = new Octopus("Man with the 8 strong legs");
+    console.log(dad.name);
+    // dad.name = "Man with the 3-piece suit";
     // Parameter properties
     // Accessors
     // Static Properties
