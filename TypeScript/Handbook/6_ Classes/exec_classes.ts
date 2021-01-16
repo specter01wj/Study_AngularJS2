@@ -378,12 +378,45 @@ namespace demo_06_01 {
 	console.log(greeter.greet());
 
 
+	class Greeter3 {
+	  static standardGreeting = "Hello, there";
+	  greeting: string;
+	  greet() {
+	    if (this.greeting) {
+	      return "Helloha, " + this.greeting;
+	    } else {
+	      return Greeter3.standardGreeting;
+	    }
+	  }
+	}
 
+	let greeter3: Greeter3;
+	greeter3 = new Greeter3();
+	console.log(greeter3.greet()); // "Hello, there"
+
+	let greeterMaker: typeof Greeter3 = Greeter3;
+	greeterMaker.standardGreeting = "Hey there!";
+
+	let greeter4: Greeter3 = new greeterMaker();
+	console.log(greeter4.greet()); // "Hey there!"
+
+	let greeter5: Greeter3;
+	greeter5 = new Greeter3();
+	console.log(greeter5.greet()); // "Hey there!"
 
 
 	// Using a class as an interface
+	class Point {
+	  x: number;
+	  y: number;
+	}
 
+	interface Point3d extends Point {
+	  z: number;
+	}
 
+	let point3d: Point3d = { x: 1, y: 2, z: 3 };
+	console.log(point3d);
 
 
 

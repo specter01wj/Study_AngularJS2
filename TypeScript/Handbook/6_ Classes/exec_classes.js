@@ -265,5 +265,30 @@ var demo_06_01;
     }
     let greeter2 = new Greeter2("world");
     console.log(greeter.greet());
+    class Greeter3 {
+        greet() {
+            if (this.greeting) {
+                return "Helloha, " + this.greeting;
+            }
+            else {
+                return Greeter3.standardGreeting;
+            }
+        }
+    }
+    Greeter3.standardGreeting = "Hello, there";
+    let greeter3;
+    greeter3 = new Greeter3();
+    console.log(greeter3.greet()); // "Hello, there"
+    let greeterMaker = Greeter3;
+    greeterMaker.standardGreeting = "Hey there!";
+    let greeter4 = new greeterMaker();
+    console.log(greeter4.greet()); // "Hey there!"
+    let greeter5;
+    greeter5 = new Greeter3();
+    console.log(greeter5.greet()); // "Hey there!"
     // Using a class as an interface
+    class Point {
+    }
+    let point3d = { x: 1, y: 2, z: 3 };
+    console.log(point3d);
 })(demo_06_01 || (demo_06_01 = {}));
