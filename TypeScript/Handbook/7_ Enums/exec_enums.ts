@@ -31,6 +31,7 @@ namespace demo_07_01 {
 	function getSomeValue(): number {return 100;};
 
 
+	
 	// String enums
 	enum Direction2 {
 	  Up = "UP",
@@ -42,12 +43,15 @@ namespace demo_07_01 {
 
 
 	// Heterogeneous enums
-
+	enum BooleanLikeHeterogeneousEnum {
+	  No = 0,
+	  Yes = "YES",
+	}
 
 
 
 	// Computed and constant members
-
+	
 
 
 
