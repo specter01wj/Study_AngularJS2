@@ -138,6 +138,24 @@ var demo_06_01;
     howard.value = 'Engineer';
     console.log(howard.value);
     // console.log(howard.name);
+    class Person2 {
+        constructor(theName) {
+            this.name = theName;
+        }
+    }
+    // Employee can extend Person
+    class Employee3 extends Person2 {
+        constructor(name, department) {
+            super(name);
+            this.department = department;
+        }
+        getElevatorPitch() {
+            return `Hello, my name is ${this.name} and I work in ${this.department}.`;
+        }
+    }
+    let howard2 = new Employee3("Howard", "Sales");
+    // let john = new Person2("John");
+    console.log(howard2.getElevatorPitch());
     // Readonly modifier
     // Parameter properties
     // Accessors
