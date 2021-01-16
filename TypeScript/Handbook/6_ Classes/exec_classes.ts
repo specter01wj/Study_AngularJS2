@@ -109,15 +109,49 @@ namespace demo_06_01 {
 	}
 
 	// new Animal4("Cat").#name;
-	
+
 
 
 	// Understanding TypeScript’s private
-	
+	class Animal5 {
+	  private name: string;
+
+	  constructor(theName: string) {
+	    this.name = theName;
+	  }
+	}
+
+	// new Animal5("Cat").name;
 
 
+	class Animal6 {
+	  private name: string;
+	  constructor(theName: string) {
+	    this.name = theName;
+	  }
+	}
 
+	class Rhino extends Animal6 {
+	  constructor() {
+	    super("Rhino");
+	  }
+	}
 
+	class Employee {
+	  private name: string;
+	  constructor(theName: string) {
+	    this.name = theName;
+	  }
+	}
+
+	let animal = new Animal6("Goat");
+	console.log(animal);
+	let rhino = new Rhino();
+	let employee = new Employee("Bob");
+
+	animal = rhino;
+	console.log(animal);
+	// animal = employee;
 
 	// Understanding protected
 

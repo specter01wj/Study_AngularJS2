@@ -1,95 +1,116 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (receiver, privateMap, value) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+    }
+    privateMap.set(receiver, value);
+    return value;
+};
 var demo_06_01;
 (function (demo_06_01) {
+    var _name;
     // Classes
-    var Greeter = /** @class */ (function () {
-        function Greeter(message) {
+    class Greeter {
+        constructor(message) {
             this.greeting = message;
         }
-        Greeter.prototype.greet = function () {
+        greet() {
             return 'Hello, ' + this.greeting;
-        };
-        return Greeter;
-    }());
-    var greeter = new Greeter('world');
+        }
+    }
+    let greeter = new Greeter('world');
     console.log(greeter.greet());
     // Inheritance
-    var Animal = /** @class */ (function () {
-        function Animal() {
+    class Animal {
+        move(distanceInMeters = 0) {
+            console.log(`Animal moved ${distanceInMeters}m.`);
         }
-        Animal.prototype.move = function (distanceInMeters) {
-            if (distanceInMeters === void 0) { distanceInMeters = 0; }
-            console.log("Animal moved " + distanceInMeters + "m.");
-        };
-        return Animal;
-    }());
-    var Dog = /** @class */ (function (_super) {
-        __extends(Dog, _super);
-        function Dog() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        Dog.prototype.bark = function () {
+    }
+    class Dog extends Animal {
+        bark() {
             console.log("Woof! Woof!");
-        };
-        return Dog;
-    }(Animal));
-    var dog = new Dog();
+        }
+    }
+    const dog = new Dog();
     dog.bark();
     dog.move(10);
     dog.bark();
-    var Animal2 = /** @class */ (function () {
-        function Animal2(theName) {
+    class Animal2 {
+        constructor(theName) {
             this.name = theName;
         }
-        Animal2.prototype.move = function (distanceInMeters) {
-            if (distanceInMeters === void 0) { distanceInMeters = 0; }
-            console.log(this.name + " moved " + distanceInMeters + "m.");
-        };
-        return Animal2;
-    }());
-    var Snake = /** @class */ (function (_super) {
-        __extends(Snake, _super);
-        function Snake(name) {
-            return _super.call(this, name) || this;
+        move(distanceInMeters = 0) {
+            console.log(`${this.name} moved ${distanceInMeters}m.`);
         }
-        Snake.prototype.move = function (distanceInMeters) {
-            if (distanceInMeters === void 0) { distanceInMeters = 5; }
+    }
+    class Snake extends Animal2 {
+        constructor(name) {
+            super(name);
+        }
+        move(distanceInMeters = 5) {
             console.log("Slithering...");
-            _super.prototype.move.call(this, distanceInMeters);
-        };
-        return Snake;
-    }(Animal2));
-    var Horse = /** @class */ (function (_super) {
-        __extends(Horse, _super);
-        function Horse(name) {
-            return _super.call(this, name) || this;
+            super.move(distanceInMeters);
         }
-        Horse.prototype.move = function (distanceInMeters) {
-            if (distanceInMeters === void 0) { distanceInMeters = 45; }
+    }
+    class Horse extends Animal2 {
+        constructor(name) {
+            super(name);
+        }
+        move(distanceInMeters = 45) {
             console.log("Galloping...");
-            _super.prototype.move.call(this, distanceInMeters);
-        };
-        return Horse;
-    }(Animal2));
-    var sam = new Snake("Sammy the Python");
-    var tom = new Horse("Tommy the Palomino");
+            super.move(distanceInMeters);
+        }
+    }
+    let sam = new Snake("Sammy the Python");
+    let tom = new Horse("Tommy the Palomino");
     sam.move();
     tom.move(34);
     // Public by default
+    class Animal3 {
+        constructor(theName) {
+            this.name = theName;
+        }
+        move(distanceInMeters) {
+            console.log(`${this.name} moved ${distanceInMeters}m.`);
+        }
+    }
     // ECMAScript Private Fields
+    class Animal4 {
+        constructor(theName) {
+            _name.set(this, void 0); // private
+            __classPrivateFieldSet(this, _name, theName);
+        }
+    }
+    _name = new WeakMap();
+    // new Animal4("Cat").#name;
     // Understanding TypeScript’s private
+    class Animal5 {
+        constructor(theName) {
+            this.name = theName;
+        }
+    }
+    // new Animal5("Cat").name;
+    class Animal6 {
+        constructor(theName) {
+            this.name = theName;
+        }
+    }
+    class Rhino extends Animal6 {
+        constructor() {
+            super("Rhino");
+        }
+    }
+    class Employee {
+        constructor(theName) {
+            this.name = theName;
+        }
+    }
+    let animal = new Animal6("Goat");
+    console.log(animal);
+    let rhino = new Rhino();
+    let employee = new Employee("Bob");
+    animal = rhino;
+    console.log(animal);
+    // animal = employee;
     // Understanding protected
     // Readonly modifier
     // Parameter properties
