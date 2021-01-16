@@ -315,7 +315,13 @@ namespace demo_06_01 {
 
 
 	// Abstract Classes
-
+	abstract class Animal7 {
+		abstract makeSound(): void;
+		
+		move(): void {
+			console.log("roaming the earth...");
+		}
+	}
 
 
 
