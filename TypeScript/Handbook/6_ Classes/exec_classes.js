@@ -49,6 +49,44 @@ var demo_06_01;
     dog.bark();
     dog.move(10);
     dog.bark();
+    var Animal2 = /** @class */ (function () {
+        function Animal2(theName) {
+            this.name = theName;
+        }
+        Animal2.prototype.move = function (distanceInMeters) {
+            if (distanceInMeters === void 0) { distanceInMeters = 0; }
+            console.log(this.name + " moved " + distanceInMeters + "m.");
+        };
+        return Animal2;
+    }());
+    var Snake = /** @class */ (function (_super) {
+        __extends(Snake, _super);
+        function Snake(name) {
+            return _super.call(this, name) || this;
+        }
+        Snake.prototype.move = function (distanceInMeters) {
+            if (distanceInMeters === void 0) { distanceInMeters = 5; }
+            console.log("Slithering...");
+            _super.prototype.move.call(this, distanceInMeters);
+        };
+        return Snake;
+    }(Animal2));
+    var Horse = /** @class */ (function (_super) {
+        __extends(Horse, _super);
+        function Horse(name) {
+            return _super.call(this, name) || this;
+        }
+        Horse.prototype.move = function (distanceInMeters) {
+            if (distanceInMeters === void 0) { distanceInMeters = 45; }
+            console.log("Galloping...");
+            _super.prototype.move.call(this, distanceInMeters);
+        };
+        return Horse;
+    }(Animal2));
+    var sam = new Snake("Sammy the Python");
+    var tom = new Horse("Tommy the Palomino");
+    sam.move();
+    tom.move(34);
     // Public by default
     // ECMAScript Private Fields
     // Understanding TypeScript’s private
