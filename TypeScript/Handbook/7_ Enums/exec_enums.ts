@@ -23,8 +23,21 @@ namespace demo_07_01 {
 	respond("Princess Caroline", UserResponse.Yes);
 
 
-	// String enums
+	enum E {
+	  A = getSomeValue(),
+	  B = getSomeValue(),
+	}
 
+	function getSomeValue(): number {return 100;};
+
+
+	// String enums
+	enum Direction2 {
+	  Up = "UP",
+	  Down = "DOWN",
+	  Left = "LEFT",
+	  Right = "RIGHT",
+	}
 
 
 
