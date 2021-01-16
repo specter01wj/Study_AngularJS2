@@ -97,17 +97,23 @@ namespace demo_06_01 {
 	    console.log(`${this.name} moved ${distanceInMeters}m.`);
 	  }
 	}
-	
 
-	
+
+
 	// ECMAScript Private Fields
+	class Animal4 {
+	  #name: string; // private
+	  constructor(theName: string) {
+	    this.#name = theName;
+	  }
+	}
+
+	// new Animal4("Cat").#name;
 	
-
-
 
 
 	// Understanding TypeScript’s private
-
+	
 
 
 
