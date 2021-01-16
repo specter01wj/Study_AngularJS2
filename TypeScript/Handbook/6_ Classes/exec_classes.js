@@ -122,12 +122,21 @@ var demo_06_01;
             super(name);
             this.department = department;
         }
+        get value() {
+            return this.department;
+        }
+        set value(v) {
+            this.department = v;
+        }
         getElevatorPitch() {
             return `Hello, my name is ${this.name} and I work in ${this.department}.`;
         }
     }
     let howard = new Employee2("Howard", "Sales");
     console.log(howard.getElevatorPitch());
+    console.log(howard.value);
+    howard.value = 'Engineer';
+    console.log(howard.value);
     // console.log(howard.name);
     // Readonly modifier
     // Parameter properties

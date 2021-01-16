@@ -172,6 +172,14 @@ namespace demo_06_01 {
     	this.department = department;
 		}
 
+		public get value() : string {
+			return this.department;
+		}
+
+		public set value(v : string) {
+			this.department = v;
+		}
+
 		public getElevatorPitch() {
 	    return `Hello, my name is ${this.name} and I work in ${this.department}.`;
 	  }
@@ -179,6 +187,9 @@ namespace demo_06_01 {
 
 	let howard = new Employee2("Howard", "Sales");
 	console.log(howard.getElevatorPitch());
+	console.log(howard.value);
+	howard.value = 'Engineer';
+	console.log(howard.value);
 	// console.log(howard.name);
 
 
