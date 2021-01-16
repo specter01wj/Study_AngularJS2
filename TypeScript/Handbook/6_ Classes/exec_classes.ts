@@ -236,11 +236,14 @@ namespace demo_06_01 {
 
 
 
-
-
-
 	// Parameter properties
+	class Octopus2 {
+	  readonly numberOfLegs: number = 8;
+	  constructor(readonly name: string) {}
+	}
 
+	let dad2 = new Octopus2("Man with the 8 strong legs_2");
+	console.log(dad2.name);
 
 
 

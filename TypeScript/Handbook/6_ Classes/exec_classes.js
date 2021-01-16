@@ -167,6 +167,14 @@ var demo_06_01;
     console.log(dad.name);
     // dad.name = "Man with the 3-piece suit";
     // Parameter properties
+    class Octopus2 {
+        constructor(name) {
+            this.name = name;
+            this.numberOfLegs = 8;
+        }
+    }
+    let dad2 = new Octopus2("Man with the 8 strong legs_2");
+    console.log(dad2.name);
     // Accessors
     // Static Properties
     // Abstract Classes
