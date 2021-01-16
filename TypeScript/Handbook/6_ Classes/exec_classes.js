@@ -223,6 +223,36 @@ var demo_06_01;
     console.log(grid1.calculateDistanceFromOrigin({ x: 10, y: 10 }));
     console.log(grid2.calculateDistanceFromOrigin({ x: 20, y: 30 }));
     // Abstract Classes
+    class Animal7 {
+        move() {
+            console.log("roaming the earth...");
+        }
+    }
+    class Department {
+        constructor(name) {
+            this.name = name;
+        }
+        printName() {
+            console.log("Department name: " + this.name);
+        }
+    }
+    class AccountingDepartment extends Department {
+        constructor() {
+            super("Accounting and Auditing");
+        }
+        printMeeting() {
+            console.log("The Accounting Department meets each Monday at 10am.");
+        }
+        generateReports() {
+            console.log("Generating accounting reports...");
+        }
+    }
+    let department;
+    // department = new Department();
+    department = new AccountingDepartment();
+    department.printName();
+    department.printMeeting();
+    // department.generateReports();
     // Advanced Techniques
     // Constructor functions
     // Using a class as an interface
