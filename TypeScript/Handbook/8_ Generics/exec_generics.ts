@@ -15,8 +15,13 @@ namespace demo_08_01 {
 
 
 	// Working with Generic Type Variables
+	function loggingIdentity<T>(arg: T[]): T[] {
+	  console.log(arg.length);
+	  return arg;
+	}
 
-
+	let output3 = loggingIdentity(['myStr1', 'myStr2']);
+	console.log(output3);
 
 
 
