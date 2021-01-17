@@ -24,11 +24,21 @@ namespace demo_08_01 {
 	console.log(output3);
 
 
+	function loggingIdentity2<T>(arg: Array<T>): Array<T> {
+	  console.log(arg.length);
+	  return arg;
+	}
+
+
 
 	// Generic Types
+	function identity2<T>(arg: T): T {
+	  return arg;
+	}
 
+	let myIdentity: <T>(arg: T) => T = identity2;
 
-
+	let myIdentity2: <U>(arg: U) => U = identity2;
 
 
 	// Generic Classes
