@@ -121,5 +121,11 @@ var demo_07_01;
     console.log(a);
     let nameOfA = Enum[a];
     console.log(nameOfA);
+    let directions = [
+        0 /* Up */,
+        1 /* Down */,
+        2 /* Left */,
+        3 /* Right */,
+    ];
     // Ambient enums
 })(demo_07_01 || (demo_07_01 = {}));

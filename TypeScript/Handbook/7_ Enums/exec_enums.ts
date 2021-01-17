@@ -161,6 +161,29 @@ namespace demo_07_01 {
 	let nameOfA = Enum[a];
 	console.log(nameOfA);
 
+
+	const enum Enum2 {
+	  A = 1,
+	  B = A * 2,
+	}
+
+
+	const enum Direction3 {
+	  Up,
+	  Down,
+	  Left,
+	  Right,
+	}
+
+	let directions = [
+	  Direction3.Up,
+	  Direction3.Down,
+	  Direction3.Left,
+	  Direction3.Right,
+	];
+
+	
+
 	// Ambient enums
 
 
