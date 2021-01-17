@@ -39,6 +39,7 @@ namespace demo_07_01 {
 	  Left = "LEFT",
 
 
+
 	  
 	  Right = "RIGHT",
 	}
