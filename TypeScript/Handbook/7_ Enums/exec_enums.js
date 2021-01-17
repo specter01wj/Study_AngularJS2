@@ -113,5 +113,13 @@ var demo_07_01;
     printImportant("ERROR", "This is a message");
     printImportant("WARN", "This is a message");
     printImportant("DEBUG", "This is a message");
+    let Enum;
+    (function (Enum) {
+        Enum[Enum["A"] = 0] = "A";
+    })(Enum || (Enum = {}));
+    let a = Enum.A;
+    console.log(a);
+    let nameOfA = Enum[a];
+    console.log(nameOfA);
     // Ambient enums
 })(demo_07_01 || (demo_07_01 = {}));

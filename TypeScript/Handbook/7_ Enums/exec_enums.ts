@@ -136,7 +136,7 @@ namespace demo_07_01 {
 	  INFO,
 	  DEBUG,
 	}
-	
+
 	type LogLevelStrings = keyof typeof LogLevel;
 
 	function printImportant(key: LogLevelStrings, message: string) {
@@ -152,7 +152,14 @@ namespace demo_07_01 {
 	printImportant("DEBUG", "This is a message");
 
 
+	enum Enum {
+	  A,
+	}
 
+	let a = Enum.A;
+	console.log(a);
+	let nameOfA = Enum[a];
+	console.log(nameOfA);
 
 	// Ambient enums
 
