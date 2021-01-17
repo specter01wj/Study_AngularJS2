@@ -40,7 +40,37 @@ namespace demo_08_01 {
 
 	let myIdentity2: <U>(arg: U) => U = identity2;
 
+	let myIdentity3: { <T>(arg: T): T } = identity2;
 
+
+	interface GenericIdentityFn {
+	  <T>(arg: T): T;
+	}
+
+	function identity4<T>(arg: T): T {
+	  return arg;
+	}
+
+	let myIdentity4: GenericIdentityFn = identity4;
+	console.log(myIdentity4('James'));
+
+
+	interface GenericIdentityFn2<T> {
+	  (arg: T): T;
+	}
+
+	function identity5<T>(arg: T): T {
+	  return arg;
+	}
+
+	let myIdentity5: GenericIdentityFn2<number> = identity5;
+	console.log(myIdentity5(202));
+
+	let myIdentity6: GenericIdentityFn2<string[]> = identity5;
+	console.log(myIdentity6(['Jim', 'King', 'Mike']));
+
+
+	
 	// Generic Classes
 
 

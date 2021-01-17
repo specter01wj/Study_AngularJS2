@@ -15,7 +15,29 @@ var demo_08_01;
     }
     let output3 = loggingIdentity(['myStr1', 'myStr2']);
     console.log(output3);
+    function loggingIdentity2(arg) {
+        console.log(arg.length);
+        return arg;
+    }
     // Generic Types
+    function identity2(arg) {
+        return arg;
+    }
+    let myIdentity = identity2;
+    let myIdentity2 = identity2;
+    let myIdentity3 = identity2;
+    function identity4(arg) {
+        return arg;
+    }
+    let myIdentity4 = identity4;
+    console.log(myIdentity4('James'));
+    function identity5(arg) {
+        return arg;
+    }
+    let myIdentity5 = identity5;
+    console.log(myIdentity5(202));
+    let myIdentity6 = identity5;
+    console.log(myIdentity6(['Jim', 'King', 'Mike']));
     // Generic Classes
     // Generic Constraints
     // Using Type Parameters in Generic Constraints
