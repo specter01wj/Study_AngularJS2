@@ -182,10 +182,14 @@ namespace demo_07_01 {
 	  Direction3.Right,
 	];
 
-	
+
 
 	// Ambient enums
-
+	declare enum Enum3 {
+	  A = 1,
+	  B,
+	  C = 2,
+	}
 
 
 

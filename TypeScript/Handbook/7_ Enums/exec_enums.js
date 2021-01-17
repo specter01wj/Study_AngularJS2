@@ -127,5 +127,4 @@ var demo_07_01;
         2 /* Left */,
         3 /* Right */,
     ];
-    // Ambient enums
 })(demo_07_01 || (demo_07_01 = {}));
