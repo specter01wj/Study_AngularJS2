@@ -39,6 +39,18 @@ var demo_08_01;
     let myIdentity6 = identity5;
     console.log(myIdentity6(['Jim', 'King', 'Mike']));
     // Generic Classes
+    class GenericNumber {
+    }
+    let myGenericNumber = new GenericNumber();
+    myGenericNumber.zeroValue = 0;
+    /*myGenericNumber.add = function (x, y) {
+      return x + y;
+    };*/
+    myGenericNumber.add = (x, y) => {
+        return x + y;
+    };
+    console.log(myGenericNumber.zeroValue);
+    console.log(myGenericNumber.add(8, 10));
     // Generic Constraints
     // Using Type Parameters in Generic Constraints
     // Using Class Types in Generics

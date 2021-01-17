@@ -70,9 +70,23 @@ namespace demo_08_01 {
 	console.log(myIdentity6(['Jim', 'King', 'Mike']));
 
 
-	
-	// Generic Classes
 
+	// Generic Classes
+	class GenericNumber<T> {
+		zeroValue: T;
+		add: (x: T, y: T) => T;
+	}
+
+	let myGenericNumber = new GenericNumber<number>();
+	myGenericNumber.zeroValue = 0;
+	/*myGenericNumber.add = function (x, y) {
+	  return x + y;
+	};*/
+	myGenericNumber.add = (x, y) => {
+	  return x + y;
+	};
+	console.log(myGenericNumber.zeroValue);
+	console.log(myGenericNumber.add(8, 10));
 
 
 
