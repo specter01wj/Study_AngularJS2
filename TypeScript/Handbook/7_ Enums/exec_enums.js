@@ -63,7 +63,37 @@ var demo_07_01;
         FileAccess[FileAccess["G"] = "123".length] = "G";
     })(FileAccess || (FileAccess = {}));
     // Union enums and enum member types
+    let ShapeKind;
+    (function (ShapeKind) {
+        ShapeKind[ShapeKind["Circle"] = 0] = "Circle";
+        ShapeKind[ShapeKind["Square"] = 1] = "Square";
+    })(ShapeKind || (ShapeKind = {}));
+    let c = {
+        // kind: ShapeKind.Square,
+        kind: ShapeKind.Circle,
+        radius: 100,
+    };
+    console.log(c);
+    (function (E2) {
+        E2[E2["Foo"] = 0] = "Foo";
+        E2[E2["Bar"] = 1] = "Bar";
+    })(E2 || (E2 = {}));
+    function f(x) {
+        // if (x !== E2.Foo || x !== E2.Bar) {
+        if (x !== E2.Foo && x !== E2.Bar) {
+        }
+    }
     // Enums at runtime
+    let E3;
+    (function (E3) {
+        E3[E3["X"] = 0] = "X";
+        E3[E3["Y"] = 1] = "Y";
+        E3[E3["Z"] = 2] = "Z";
+    })(E3 || (E3 = {}));
+    function f3(obj) {
+        return obj.X;
+    }
+    console.log(f3(E3));
     // Enums at compile time
     // Ambient enums
 })(demo_07_01 || (demo_07_01 = {}));

@@ -76,17 +76,56 @@ namespace demo_07_01 {
 	  G = "123".length,
 	}
 
-	
+
 
 	// Union enums and enum member types
-	
+	enum ShapeKind {
+	  Circle,
+	  Square,
+	}
+
+	interface Circle {
+	  kind: ShapeKind.Circle;
+	  radius: number;
+	}
+
+	interface Square {
+	  kind: ShapeKind.Square;
+	  sideLength: number;
+	}
+
+	let c: Circle = {
+	  // kind: ShapeKind.Square,
+	  kind: ShapeKind.Circle,
+	  radius: 100,
+	};
+	console.log(c);
 
 
+	enum E2 {
+	  Foo,
+	  Bar,
+	}
 
+	function f(x: E2) {
+	  // if (x !== E2.Foo || x !== E2.Bar) {
+	  if (x !== E2.Foo && x !== E2.Bar) {
+	  }
+	}
 
 
 	// Enums at runtime
+	enum E3 {
+	  X,
+	  Y,
+	  Z,
+	}
 
+	function f3(obj: { X: number }) {
+	  return obj.X;
+	}
+
+	console.log(f3(E3));
 
 
 
