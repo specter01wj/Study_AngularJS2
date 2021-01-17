@@ -37,6 +37,7 @@ namespace demo_07_01 {
 	  Up = "UP",
 	  Down = "DOWN",
 	  Left = "LEFT",
+	  
 	  Right = "RIGHT",
 	}
 
