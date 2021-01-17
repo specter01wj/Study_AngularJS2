@@ -31,7 +31,7 @@ namespace demo_07_01 {
 	function getSomeValue(): number {return 100;};
 
 
-	
+
 	// String enums
 	enum Direction2 {
 	  Up = "UP",
@@ -51,7 +51,21 @@ namespace demo_07_01 {
 
 
 	// Computed and constant members
-	
+	enum E {
+		X,
+	}
+
+	enum E1 {
+		X,
+		Y,
+		Z,
+	}
+
+	enum E2 {
+		A = 1,
+		B,
+		C,
+	}
 
 
 
