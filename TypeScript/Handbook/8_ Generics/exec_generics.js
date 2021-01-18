@@ -65,5 +65,11 @@ var demo_08_01;
     let output4 = loggingIdentity3({ length: 100, value: 13 });
     console.log(output4);
     // Using Type Parameters in Generic Constraints
+    function getProperty(obj, key) {
+        return obj[key];
+    }
+    let x = { a: 1, b: 2, c: 3, d: 4 };
+    console.log(getProperty(x, "a"));
+    // getProperty(x, "m");
     // Using Class Types in Generics
 })(demo_08_01 || (demo_08_01 = {}));
