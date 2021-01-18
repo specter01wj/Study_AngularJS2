@@ -51,7 +51,19 @@ var demo_08_01;
     };
     console.log(myGenericNumber.zeroValue);
     console.log(myGenericNumber.add(8, 10));
-    // Generic Constraints
+    let stringNumeric = new GenericNumber();
+    stringNumeric.zeroValue = "V1";
+    stringNumeric.add = function (x, y) {
+        return x + y;
+    };
+    console.log(stringNumeric.add(stringNumeric.zeroValue, "test"));
+    function loggingIdentity3(arg) {
+        console.log(arg.length);
+        return arg;
+    }
+    // let output4 = loggingIdentity3(1001);
+    let output4 = loggingIdentity3({ length: 100, value: 13 });
+    console.log(output4);
     // Using Type Parameters in Generic Constraints
     // Using Class Types in Generics
 })(demo_08_01 || (demo_08_01 = {}));

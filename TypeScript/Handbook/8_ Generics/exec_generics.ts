@@ -89,15 +89,33 @@ namespace demo_08_01 {
 	console.log(myGenericNumber.add(8, 10));
 
 
+	let stringNumeric = new GenericNumber<string>();
+	stringNumeric.zeroValue = "V1";
+	stringNumeric.add = function (x, y) {
+	  return x + y;
+	};
+	console.log(stringNumeric.add(stringNumeric.zeroValue, "test"));
+
+
 
 	// Generic Constraints
+	interface Lengthwise {
+	  length: number;
+	}
 
+	function loggingIdentity3<T extends Lengthwise>(arg: T): T {
+	  console.log(arg.length);
+	  return arg;
+	}
 
-
+	// let output4 = loggingIdentity3(1001);
+	let output4 = loggingIdentity3({length: 100, value: 13});
+	console.log(output4);
+	
 
 
 	// Using Type Parameters in Generic Constraints
-
+	
 
 
 
