@@ -124,10 +124,42 @@ namespace demo_08_01 {
 	console.log(getProperty(x, "a"));
 	// getProperty(x, "m");
 
+
+
 	// Using Class Types in Generics
+	function create<T>(c: { new (): T }): T {
+	  return new c();
+	}
 
 
+	class BeeKeeper {
+	  hasMask: boolean;
+	}
 
+	class ZooKeeper {
+	  nametag: string;
+	}
+
+	class Animal {
+	  numLegs: number;
+	}
+
+	class Bee extends Animal {
+	  keeper: BeeKeeper;
+	}
+
+	class Lion extends Animal {
+	  keeper: ZooKeeper;
+	}
+
+	function createInstance<A extends Animal>(c: new () => A): A {
+	  return new c();
+	}
+
+	// createInstance(Lion).keeper.nametag;
+	console.log(createInstance(Lion));
+	// createInstance(Bee).keeper.hasMask;
+	console.log(createInstance(Bee).keeper);
 
 
 

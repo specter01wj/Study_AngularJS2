@@ -72,4 +72,24 @@ var demo_08_01;
     console.log(getProperty(x, "a"));
     // getProperty(x, "m");
     // Using Class Types in Generics
+    function create(c) {
+        return new c();
+    }
+    class BeeKeeper {
+    }
+    class ZooKeeper {
+    }
+    class Animal {
+    }
+    class Bee extends Animal {
+    }
+    class Lion extends Animal {
+    }
+    function createInstance(c) {
+        return new c();
+    }
+    // createInstance(Lion).keeper.nametag;
+    console.log(createInstance(Lion));
+    // createInstance(Bee).keeper.hasMask;
+    console.log(createInstance(Bee).keeper);
 })(demo_08_01 || (demo_08_01 = {}));
