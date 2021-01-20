@@ -18,6 +18,7 @@ namespace demo_01_01 {
 	let fishPet = pet2 as Fish;
 
 
+
 	
 	let birdPet = pet2 as Bird;
 
