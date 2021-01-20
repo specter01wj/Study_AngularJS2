@@ -19,6 +19,7 @@ namespace demo_01_01 {
 
 
 
+
 	
 	let birdPet = pet2 as Bird;
 
