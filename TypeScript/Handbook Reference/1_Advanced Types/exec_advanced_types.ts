@@ -16,24 +16,6 @@ namespace demo_01_01 {
 
 	let pet2 = getSmallPet();
 	let fishPet = pet2 as Fish;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 	let birdPet = pet2 as Bird;
 
 	if (fishPet.swim) {
