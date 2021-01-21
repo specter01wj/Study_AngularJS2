@@ -130,9 +130,28 @@ namespace demo_01_01 {
 
 
 	// Nullable types
+	let exampleString = "foo";
+	exampleString = null;
+
+	let stringOrNull: string | null = "bar";
+	stringOrNull = null;
+
+	stringOrNull = undefined;
+
+
+	function f(x: number, y?: number) {
+	  return x + (y ?? 0);
+	}
+
+	f(1, 2);
+	f(1);
+	f(1, undefined);
+	f(1, null);
 
 
 
+
+	
 
 	// Type Aliases
 
