@@ -173,6 +173,27 @@ namespace demo_01_01 {
 	}
 
 
+	function f(stringOrNull: string | null): string {
+	  return stringOrNull ?? "default";
+	}
+
+
+	interface UserAccount {
+	  id: number;
+	  email?: string;
+	}
+
+	const user = getUser("admin");
+	user.id;
+
+	if (user) {
+	  user.email.length;
+	}
+
+	user!.email!.length;
+
+
+	
 	// Type Aliases
 
 	
