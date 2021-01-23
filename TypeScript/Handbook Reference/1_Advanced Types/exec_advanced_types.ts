@@ -195,7 +195,22 @@ namespace demo_01_01 {
 
 	
 	// Type Aliases
+	type Second = number;
 
+	let timeInSecond: number = 10;
+	let time: Second = 10;
+
+
+
+
+
+
+
+
+
+
+
+	
 	
 
 
