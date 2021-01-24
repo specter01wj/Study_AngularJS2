@@ -201,16 +201,33 @@ namespace demo_01_01 {
 	let time: Second = 10;
 
 
+	type Container<T> = { value: T };
+
+	type Tree<T> = {
+	  value: T;
+	  left?: Tree<T>;
+	  right?: Tree<T>;
+	};
+
+	type LinkedList<Type> = Type & { next: LinkedList<Type> };
+
+	interface Person {
+	  name: string;
+	}
+
+	let people = getDriversLicenseQueue();
+	people.name;
+	people.next.name;
+	people.next.next.name;
+	people.next.next.next.name;
 
 
 
-
-
-
-
-
-
+	// Interfaces vs. Type Aliases
 	
+
+
+
 	
 
 
