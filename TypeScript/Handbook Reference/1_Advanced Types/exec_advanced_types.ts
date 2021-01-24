@@ -247,6 +247,32 @@ namespace demo_01_01 {
 	let v = new BasicCalculator(2).multiply(5).add(1).currentValue();
 	
 
+	class ScientificCalculator extends BasicCalculator {
+	  public constructor(value = 0) {
+	    super(value);
+	  }
+	  public sin() {
+	    this.value = Math.sin(this.value);
+	    return this;
+	  }
+	  // ... other operations go here ...
+	}
+
+	let v2 = new ScientificCalculator(2).multiply(5).sin().add(1).currentValue();Try
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
