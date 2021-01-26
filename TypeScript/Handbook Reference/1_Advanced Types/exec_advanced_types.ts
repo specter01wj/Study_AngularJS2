@@ -384,6 +384,7 @@ namespace demo_01_01 {
 
 
 
+	// Inference from mapped types
 
 
 
@@ -391,7 +392,7 @@ namespace demo_01_01 {
 
 
 
-	
+
 
 
 }
