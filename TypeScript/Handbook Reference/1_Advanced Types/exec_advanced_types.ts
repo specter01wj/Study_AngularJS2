@@ -343,6 +343,10 @@ namespace demo_01_01 {
 	  newMember: boolean; }*/
 
 
+	type Flags = {
+	  option1: boolean;
+	  option2: boolean;
+	};
 
 
 
