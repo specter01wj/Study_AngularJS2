@@ -334,9 +334,13 @@ namespace demo_01_01 {
 	type ReadonlyPerson = Readonly<Person>;
 
 
-	
+	type PartialWithNewMember<T> = {
+	  [P in keyof T]?: T[P];
+	} & { newMember: boolean };
 
-
+	/*type WrongPartialWithNewMember<T> = {
+	  [P in keyof T]?: T[P];
+	  newMember: boolean; }*/
 
 
 
