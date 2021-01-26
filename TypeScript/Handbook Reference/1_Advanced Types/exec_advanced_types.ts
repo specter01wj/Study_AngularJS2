@@ -349,7 +349,49 @@ namespace demo_01_01 {
 	};
 
 
+	type NullablePerson = { [P in keyof Person]: Person[P] | null };
+	type PartialPerson = { [P in keyof Person]?: Person[P] };
 
+
+	type Nullable<T> = { [P in keyof T]: T[P] | null };
+	type Partial<T> = { [P in keyof T]?: T[P] };
+
+
+	type Proxy<T> = {
+	  get(): T;
+	  set(value: T): void;
+	};
+
+	type Proxify<T> = {
+	  [P in keyof T]: Proxy<T[P]>;
+	};
+
+	function proxify<T>(o: T): Proxify<T> {
+	  // ... wrap proxies ...
+	}
+
+	let props = { rooms: 4 };
+	let proxyProps = proxify(props);
+
+
+	type Pick<T, K extends keyof T> = {
+	  [P in K]: T[P];
+	};
+
+	type Record<K extends keyof any, T> = {
+	  [P in K]: T;
+	};
+
+
+
+
+
+
+
+
+
+
+	
 
 
 }
