@@ -262,6 +262,66 @@ namespace demo_01_01 {
 
 
 
+	// Index types
+	function pluck_1(o, propertyNames) {
+	  return propertyNames.map((n) => o[n]);
+	}
+
+
+	function pluck<T, K extends keyof T>(o: T, propertyNames: K[]): T[K][] {
+	  return propertyNames.map((n) => o[n]);
+	}
+
+	interface Car {
+	  manufacturer: string;
+	  model: string;
+	  year: number;
+	}
+
+	let taxi: Car = {
+	  manufacturer: "Toyota",
+	  model: "Camry",
+	  year: 2014,
+	};
+
+	let makeAndModel: string[] = pluck(taxi, ["manufacturer", "model"]);
+
+	let modelYear = pluck(taxi, ["model", "year"]);
+
+
+
+	// Index types and index signatures
+	interface Dictionary<T> {
+	  [key: string]: T;
+	}
+	let keys: keyof Dictionary<number>;
+	let value: Dictionary<number>["foo"];
+
+
+
+	interface Dictionary2<T> {
+	  [key: number]: T;
+	}
+
+	let keys2: keyof Dictionary2<number>;
+	let numberValue: Dictionary2<number>[42];
+	// let value: Dictionary2<number>["foo"];
+
+
+
+	// Mapped types
+	interface PersonSubset {
+	  name?: string;
+	  age?: number;
+	}
+
+	interface PersonReadonly {
+	  readonly name: string;
+	  readonly age: number;
+	}
+
+
+
 
 
 
