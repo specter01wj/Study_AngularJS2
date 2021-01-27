@@ -8,34 +8,22 @@ import { allBooks, allReaders } from './data';
 
 
 
-/*fromEvent(document, 'click').subscribe(
-	() => console.log('Clicked!'),
-);*/
 
-
-/*fromEvent(document, 'click')
-  .pipe(scan(count => count + 1, 0))
-  .subscribe(count => console.log(`Clicked ${count} times`));*/
-
-
-
-/*fromEvent(document, 'click')
-  .pipe(
-    throttleTime(1000),
-    scan(count => count + 1, 0)
-  )
-  .subscribe(count => console.log(`Clicked ${count} times`));*/
+const observable$ = new Observable(subscriber => {
+  subscriber.next(1);
+  subscriber.next(2);
+  subscriber.next(3);
+  setTimeout(() => {
+    subscriber.next(4);
+    subscriber.complete();
+  }, 1000);
+});
 
 
 
 
-fromEvent(document, 'click')
-  .pipe(
-    throttleTime(1000),
-    map(event => event.clientX),
-    scan((count, clientX) => count + clientX, 0)
-  )
-  .subscribe(count => console.log(count));
+
+
 
 
 
