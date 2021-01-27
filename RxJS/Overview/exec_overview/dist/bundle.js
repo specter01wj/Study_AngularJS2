@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nconsole.log('Start script.');\nvar queue$ = rxjs_1.of('QueueScheduler (synchronous)', rxjs_1.queueScheduler);\nvar asap$ = rxjs_1.of('AsapScheduler (async micro task)', rxjs_1.asapScheduler);\nvar async$ = rxjs_1.of('AsyncScheduler (async task)', rxjs_1.asyncScheduler);\nrxjs_1.merge(async$, asap$, queue$)\n    .subscribe(function (value) { return console.log(value); });\nconsole.log('End script.');\n\n\n//# sourceURL=webpack:///./index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nrxjs_1.fromEvent(document, 'click').subscribe(function () { return console.log('Clicked!'); });\n\n\n//# sourceURL=webpack:///./index.ts?");
 
 /***/ }),
 
