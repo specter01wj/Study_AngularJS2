@@ -427,14 +427,33 @@ namespace demo_01_01 {
 	//   ^ = type T4 = "object"
 
 
+	interface Foo {
+	  propA: boolean;
+	  propB: boolean;
+	}
+
+	declare function f<T>(x: T): T extends Foo ? string : number;
+
+	function foo<U>(x: U) {
+	  let a = f(x);
+	  let b: string | number = a;
+	}
+
+
+
+	// Distributive conditional types
+	type T5 = TypeName<string | (() => void)>;
+	//   ^ = type T5 = "string" | "function"
+	type T6 = TypeName<string | string[] | undefined>;
+	//   ^ = type T6 = "string" | "undefined" | "object"
+	type T7 = TypeName<string[] | number[]>;
+	//   ^ = type T7 = "object"
+
+
 	
 
 
 
-
-
-
-	
 
 
 }
