@@ -7,17 +7,21 @@ import { ajax } from 'rxjs/ajax';
 import { allBooks, allReaders } from './data';
 
 
+// First examples
 
 /*fromEvent(document, 'click').subscribe(
 	() => console.log('Clicked!'),
 );*/
 
 
+// Purity
+
 /*fromEvent(document, 'click')
   .pipe(scan(count => count + 1, 0))
   .subscribe(count => console.log(`Clicked ${count} times`));*/
 
 
+// Flow
 
 /*fromEvent(document, 'click')
   .pipe(
@@ -28,6 +32,7 @@ import { allBooks, allReaders } from './data';
 
 
 
+// Values
 
 fromEvent(document, 'click')
   .pipe(
