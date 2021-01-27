@@ -535,13 +535,69 @@ namespace demo_01_01 {
 
 
 
+	// Type inference in conditional types
+	type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
+
+
+	type Unpacked<T> = T extends (infer U)[]
+	  ? U
+	  : T extends (...args: any[]) => infer U
+	  ? U
+	  : T extends Promise<infer U>
+	  ? U
+	  : T;
+
+	type T0 = Unpacked<string>;
+	//   ^ = type T0 = string
+	type T1 = Unpacked<string[]>;
+	//   ^ = type T1 = string
+	type T2 = Unpacked<() => string>;
+	//   ^ = type T2 = string
+	type T3 = Unpacked<Promise<string>>;
+	//   ^ = type T3 = string
+	type T4 = Unpacked<Promise<string>[]>;
+	//   ^ = type T4 = Promise
+	type T5 = Unpacked<Unpacked<Promise<string>[]>>;
+	//   ^ = type T5 = string
+
+
+	type Foo<T> = T extends { a: infer U; b: infer U } ? U : never;
+
+	type T1 = Foo<{ a: string; b: string }>;
+	//   ^ = type T1 = string
+	type T2 = Foo<{ a: string; b: number }>;
+	//   ^ = type T2 = string | number
+
+
+	type Bar<T> = T extends { a: (x: infer U) => void; b: (x: infer U) => void }
+	  ? U
+	  : never;
+
+	type T1 = Bar<{ a: (x: string) => void; b: (x: string) => void }>;
+	//   ^ = type T1 = string
+	type T2 = Bar<{ a: (x: string) => void; b: (x: number) => void }>;
+	//   ^ = type T2 = never
+
+
+	declare function foo(x: string): number;
+	declare function foo(x: number): string;
+	declare function foo(x: string | number): string | number;
+
+	type T1 = ReturnType<typeof foo>;
+	//   ^ = type T1 = string | number
+
+
+	type ReturnedType<T extends (...args: any[]) => infer R> = R;
+
+
+	type AnyFunction = (...args: any[]) => any;
+	type ReturnType<T extends AnyFunction> = T extends (...args: any[]) => infer R
+	  ? R
+	  : any;
 
 
 
-
-	
-
-
+	// Predefined conditional types
 
 }
 
