@@ -450,9 +450,66 @@ namespace demo_01_01 {
 	//   ^ = type T7 = "object"
 
 
+	type BoxedValue<T> = { value: T };
+	type BoxedArray<T> = { array: T[] };
+	type Boxed<T> = T extends any[] ? BoxedArray<T[number]> : BoxedValue<T>;
+
+	type T1 = Boxed<string>;
+	//   ^ = type T1 = {
+	//       value: string;
+	//   }
+	type T2 = Boxed<number[]>;
+	//   ^ = type T2 = {
+	//       array: number[];
+	//   }
+	type T3 = Boxed<string | number[]>;
+	//   ^ = type T3 = BoxedValue | BoxedArray
+
+
+	// Remove types from T that are assignable to U
+	type Diff<T, U> = T extends U ? never : T;
+	// Remove types from T that are not assignable to U
+	type Filter<T, U> = T extends U ? T : never;
+
+	type T1 = Diff<"a" | "b" | "c" | "d", "a" | "c" | "f">;
+	//   ^ = type T1 = "b" | "d"
+	type T2 = Filter<"a" | "b" | "c" | "d", "a" | "c" | "f">; // "a" | "c"
+	//   ^ = type T2 = "a" | "c"
+	type T3 = Diff<string | number | (() => void), Function>; // string | number
+	//   ^ = type T3 = string | number
+	type T4 = Filter<string | number | (() => void), Function>; // () => void
+	//   ^ = type T4 = () => void
+
+	// Remove null and undefined from T
+	type NotNullable<T> = Diff<T, null | undefined>;
+
+	type T5 = NotNullable<string | number | undefined>;
+	//   ^ = type T5 = string | number
+	type T6 = NotNullable<string | string[] | null | undefined>;
+	//   ^ = type T6 = string | string[]
+
+	function f1<T>(x: T, y: NotNullable<T>) {
+	  x = y;
+	  y = x;
+	}
+
+	function f2<T extends string | undefined>(x: T, y: NotNullable<T>) {
+	  x = y;
+	  y = x;
+	  let s1: string = x;
+	  let s2: string = y;
+	}
+
+
 	
 
 
+
+
+
+
+
+	
 
 
 
