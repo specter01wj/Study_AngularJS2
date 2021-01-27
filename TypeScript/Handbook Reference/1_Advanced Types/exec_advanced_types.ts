@@ -385,12 +385,22 @@ namespace demo_01_01 {
 
 
 	// Inference from mapped types
+	function unproxify<T>(t: Proxify<T>): T {
+	  let result = {} as T;
+	  for (const k in t) {
+	    result[k] = t[k].get();
+	  }
+	  return result;
+	}
+
+	let originalProps = unproxify(proxyProps);
 
 
 
-
-
-
+	// Conditional Types
+	declare function f<T extends boolean>(x: T): T extends true ? string : number;
+	
+	let x = f(Math.random() < 0.5);
 
 
 
