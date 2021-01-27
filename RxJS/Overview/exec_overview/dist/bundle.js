@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar operators_1 = __webpack_require__(/*! rxjs/operators */ \"./node_modules/rxjs/_esm5/operators/index.js\");\n/*fromEvent(document, 'click').subscribe(\n    () => console.log('Clicked!'),\n);*/\nrxjs_1.fromEvent(document, 'click')\n    .pipe(operators_1.scan(function (count) { return count + 1; }, 0))\n    .subscribe(function (count) { return console.log(\"Clicked \" + count + \" times\"); });\n\n\n//# sourceURL=webpack:///./index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar operators_1 = __webpack_require__(/*! rxjs/operators */ \"./node_modules/rxjs/_esm5/operators/index.js\");\n/*fromEvent(document, 'click').subscribe(\n    () => console.log('Clicked!'),\n);*/\n/*fromEvent(document, 'click')\n  .pipe(scan(count => count + 1, 0))\n  .subscribe(count => console.log(`Clicked ${count} times`));*/\n/*fromEvent(document, 'click')\n  .pipe(\n    throttleTime(1000),\n    scan(count => count + 1, 0)\n  )\n  .subscribe(count => console.log(`Clicked ${count} times`));*/\nrxjs_1.fromEvent(document, 'click')\n    .pipe(operators_1.throttleTime(1000), operators_1.map(function (event) { return event.clientX; }), operators_1.scan(function (count, clientX) { return count + clientX; }, 0))\n    .subscribe(function (count) { return console.log(count); });\n\n\n//# sourceURL=webpack:///./index.ts?");
 
 /***/ }),
 
