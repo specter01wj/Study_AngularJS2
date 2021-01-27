@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar observable$ = new rxjs_1.Observable(function (subscriber) {\n    subscriber.next(1);\n    subscriber.next(2);\n    subscriber.next(3);\n    setTimeout(function () {\n        subscriber.next(4);\n        subscriber.complete();\n    }, 1000);\n});\nconsole.log('just before subscribe');\nobservable$.subscribe({\n    next: function (x) { console.log(\"got value \" + x); },\n    error: function (err) { console.error(\"something wrong occurred: + \" + err); },\n    complete: function () { console.log('done'); }\n});\nconsole.log('just after subscribe');\n\n\n//# sourceURL=webpack:///./index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar rxjs_1 = __webpack_require__(/*! rxjs */ \"./node_modules/rxjs/_esm5/index.js\");\nvar observable$ = new rxjs_1.Observable(function (subscriber) {\n    subscriber.next(1);\n    subscriber.next(2);\n    subscriber.next(3);\n    setTimeout(function () {\n        subscriber.next(4);\n        subscriber.complete();\n    }, 1000);\n});\nconsole.log('just before subscribe');\nobservable$.subscribe({\n    next: function (x) { console.log(\"got value \" + x); },\n    error: function (err) { console.error(\"something wrong occurred: + \" + err); },\n    complete: function () { console.log('done'); }\n});\nconsole.log('just after subscribe');\n// Pull versus Push\n// Observables as generalizations of functions\n// Anatomy of an Observable\n\n\n//# sourceURL=webpack:///./index.ts?");
 
 /***/ }),
 
