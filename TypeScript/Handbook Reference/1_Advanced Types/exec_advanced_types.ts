@@ -501,7 +501,37 @@ namespace demo_01_01 {
 	}
 
 
-	
+	type FunctionPropertyNames<T> = {
+	  [K in keyof T]: T[K] extends Function ? K : never;
+	}[keyof T];
+	type FunctionProperties<T> = Pick<T, FunctionPropertyNames<T>>;
+
+	type NonFunctionPropertyNames<T> = {
+	  [K in keyof T]: T[K] extends Function ? never : K;
+	}[keyof T];
+	type NonFunctionProperties<T> = Pick<T, NonFunctionPropertyNames<T>>;
+
+	interface Part {
+	  id: number;
+	  name: string;
+	  subparts: Part[];
+	  updatePart(newName: string): void;
+	}
+
+	type T1 = FunctionPropertyNames<Part>;
+	//   ^ = type T1 = "updatePart"
+	type T2 = NonFunctionPropertyNames<Part>;
+	//   ^ = type T2 = "id" | "name" | "subparts"
+	type T3 = FunctionProperties<Part>;
+	//   ^ = type T3 = {
+	//       updatePart: (newName: string) => void;
+	//   }
+	type T4 = NonFunctionProperties<Part>;
+	//   ^ = type T4 = {
+	//       id: number;
+	//       name: string;
+	//       subparts: Part[];
+	//   }
 
 
 
