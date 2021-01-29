@@ -37,7 +37,11 @@ var demo_02_01;
         completed: false
     };
     console.log(todo4);
-    // Omit<Type, Keys>
+    var todo5 = {
+        title: "Clean room2",
+        completed: false
+    };
+    console.log(todo5);
     // Exclude<Type, ExcludedUnion>
     // Extract<Type, Union>
     // NonNullable<Type>

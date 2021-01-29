@@ -75,7 +75,20 @@ namespace demo_02_01 {
 
 
 	// Omit<Type, Keys>
+	interface Todo4 {
+	  title: string;
+	  description: string;
+	  completed: boolean;
+	}
 
+	type TodoPreview2 = Omit<Todo4, "description">;
+
+	const todo5: TodoPreview2 = {
+	  title: "Clean room2",
+	  completed: false,
+	};
+
+	console.log(todo5);
 
 
 
