@@ -27,18 +27,50 @@ namespace demo_02_01 {
 
 
 	// Readonly<Type>
+	interface Todo2 {
+	  title: string;
+	}
 
+	const todo3: Readonly<Todo2> = {
+	  title: "Delete inactive users",
+	};
+
+	// todo3.title = "Hello";
 
 
 
 	// Record<Keys,Type>
+	interface PageInfo {
+	  title: string;
+	}
 
+	type Page = "home" | "about" | "contact";
 
+	const nav: Record<Page, PageInfo> = {
+	  about: { title: "about" },
+	  contact: { title: "contact" },
+	  home: { title: "home" },
+	};
+
+	console.log(nav.about);
 
 
 
 	// Pick<Type, Keys>
+	interface Todo3 {
+	  title: string;
+	  description: string;
+	  completed: boolean;
+	}
 
+	type TodoPreview = Pick<Todo3, "title" | "completed">;
+
+	const todo4: TodoPreview = {
+	  title: "Clean room",
+	  completed: false,
+	};
+
+	console.log(todo4);
 
 
 

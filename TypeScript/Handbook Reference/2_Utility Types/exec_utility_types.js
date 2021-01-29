@@ -23,9 +23,20 @@ var demo_02_01;
     });
     console.log(todo1);
     console.log(todo2);
-    // Readonly<Type>
-    // Record<Keys,Type>
-    // Pick<Type, Keys>
+    var todo3 = {
+        title: "Delete inactive users"
+    };
+    var nav = {
+        about: { title: "about" },
+        contact: { title: "contact" },
+        home: { title: "home" }
+    };
+    console.log(nav.about);
+    var todo4 = {
+        title: "Clean room",
+        completed: false
+    };
+    console.log(todo4);
     // Omit<Type, Keys>
     // Exclude<Type, ExcludedUnion>
     // Extract<Type, Union>
