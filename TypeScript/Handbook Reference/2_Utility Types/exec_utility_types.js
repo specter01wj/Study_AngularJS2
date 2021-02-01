@@ -42,7 +42,6 @@ var demo_02_01;
         completed: false
     };
     console.log(todo5);
-    // Exclude<Type, ExcludedUnion>
     // Extract<Type, Union>
     // NonNullable<Type>
     // Parameters<Type>

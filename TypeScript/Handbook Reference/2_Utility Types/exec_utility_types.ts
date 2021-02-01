@@ -93,14 +93,19 @@ namespace demo_02_01 {
 
 
 	// Exclude<Type, ExcludedUnion>
-
+	type T0 = Exclude<"a" | "b" | "c", "a">;
+	
+	type T1 = Exclude<"a" | "b" | "c", "a" | "b">;
+	
+	type T2 = Exclude<string | number | (() => void), Function>;
 
 
 
 	// Extract<Type, Union>
-
-
-
+	type T3 = Extract<"a" | "b" | "c", "a" | "f">;
+	
+	type T4 = Extract<string | number | (() => void), Function>;
+	
 
 
 	// NonNullable<Type>
