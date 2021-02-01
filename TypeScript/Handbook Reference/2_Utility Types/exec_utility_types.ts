@@ -200,16 +200,21 @@ namespace demo_02_01 {
 
 	// const obj2: Required<Props> = { a: 5 };
 
-	
+
 
 	// ThisParameterType<Type>
+	function toHex(this: Number) {
+	  return this.toString(16);
+	}
+
+	function numberToString(n: ThisParameterType<typeof toHex>) {
+	  return toHex.apply(n);
+	}
+
+
 	
-
-
-
-
 	// OmitThisParameter<Type>
-
+	
 
 
 
