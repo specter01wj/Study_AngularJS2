@@ -105,17 +105,18 @@ namespace demo_02_01 {
 	type T3 = Extract<"a" | "b" | "c", "a" | "f">;
 	
 	type T4 = Extract<string | number | (() => void), Function>;
-	
+
 
 
 	// NonNullable<Type>
-
-
+	type T5 = NonNullable<string | number | undefined>;
+	
+	type T6 = NonNullable<string[] | null | undefined>;
 
 
 
 	// Parameters<Type>
-
+	
 
 
 
