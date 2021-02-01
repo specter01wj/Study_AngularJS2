@@ -137,15 +137,20 @@ namespace demo_02_01 {
 
 
 	// ConstructorParameters<Type>
+	type T13 = ConstructorParameters<ErrorConstructor>;
+	
+	type T14 = ConstructorParameters<FunctionConstructor>;
+	
+	type T15 = ConstructorParameters<RegExpConstructor>;
+	
+	type T16 = ConstructorParameters<any>;
 
-
-
-
-
+	// type T4 = ConstructorParameters<Function>;
+	
 
 
 	// ReturnType<Type>
-
+	
 
 
 
