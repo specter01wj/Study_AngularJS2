@@ -173,13 +173,25 @@ namespace demo_02_01 {
 
 
 	// InstanceType<Type>
+	class C {
+	  x = 0;
+	  y = 0;
+	}
+
+	type T24 = InstanceType<typeof C>;
+	
+	type T25 = InstanceType<any>;
+	
+	type T26 = InstanceType<never>;
+	
+	// type T27 = InstanceType<string>;
+
+	// type T28 = InstanceType<Function>;
+
 	
 
-
-
-
 	// Required<Type>
-
+	
 
 
 
