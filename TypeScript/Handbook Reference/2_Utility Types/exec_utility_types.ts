@@ -146,18 +146,34 @@ namespace demo_02_01 {
 	type T16 = ConstructorParameters<any>;
 
 	// type T4 = ConstructorParameters<Function>;
-	
+
 
 
 	// ReturnType<Type>
+	declare function f1(): { a: number; b: string };
+
+	type T17 = ReturnType<() => string>;
 	
+	type T18 = ReturnType<(s: string) => void>;
+	
+	type T19 = ReturnType<<T>() => T>;
+	
+	type T20 = ReturnType<<T extends U, U extends number[]>() => T>;
+	
+	type T21 = ReturnType<typeof f1>;
 
-
+	type T22 = ReturnType<any>;
+	
+	type T23 = ReturnType<never>;
+	
+	// type T24 = ReturnType<string>;
+	
+	// type T25 = ReturnType<Function>;
 
 
 
 	// InstanceType<Type>
-
+	
 
 
 
