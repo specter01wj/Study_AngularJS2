@@ -42,14 +42,46 @@ var demo_02_01;
         completed: false
     };
     console.log(todo5);
-    // Extract<Type, Union>
-    // NonNullable<Type>
-    // Parameters<Type>
-    // ConstructorParameters<Type>
-    // ReturnType<Type>
+    // type T24 = ReturnType<string>;
+    // type T25 = ReturnType<Function>;
     // InstanceType<Type>
-    // Required<Type>
+    var C = /** @class */ (function () {
+        function C() {
+            this.x = 0;
+            this.y = 0;
+        }
+        return C;
+    }());
+    var obj = { a: 5 };
+    // const obj2: Required<Props> = { a: 5 };
     // ThisParameterType<Type>
+    function toHex() {
+        return this.toString(16);
+    }
+    function numberToString(n) {
+        return toHex.apply(n);
+    }
     // OmitThisParameter<Type>
-    // ThisType<Type>
+    function toHex2() {
+        return this.toString(16);
+    }
+    var fiveToHex = toHex.bind(5);
+    console.log(fiveToHex());
+    function makeObject(desc) {
+        var data = desc.data || {};
+        var methods = desc.methods || {};
+        return __assign(__assign({}, data), methods);
+    }
+    var obj2 = makeObject({
+        data: { x: 0, y: 0 },
+        methods: {
+            moveBy: function (dx, dy) {
+                this.x += dx; // Strongly typed this
+                this.y += dy; // Strongly typed this
+            }
+        }
+    });
+    obj2.x = 10;
+    obj2.y = 20;
+    obj2.moveBy(5, 5);
 })(demo_02_01 || (demo_02_01 = {}));
