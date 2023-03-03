@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Product } from '../products';
 
 @Component({
   selector: 'app-product-alerts',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-alerts.component.scss']
 })
 export class ProductAlertsComponent {
+  @Input() product!: Product;
 
 }
