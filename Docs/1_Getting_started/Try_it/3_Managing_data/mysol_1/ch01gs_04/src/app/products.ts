@@ -5,6 +5,11 @@ export interface Product {
   description: string;
 }
 
+export interface Price {
+  type: string; 
+  price: number;
+}
+
 export const products = [
   {
     id: 1,
