@@ -13,6 +13,7 @@ export class CartService {
   addToCart(product: Product) {
     this.items.push(product);
 
+
     
   }
 
