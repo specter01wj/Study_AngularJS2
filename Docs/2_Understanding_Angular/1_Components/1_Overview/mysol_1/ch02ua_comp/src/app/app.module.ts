@@ -15,11 +15,6 @@ import { ComponentOverviewComponent } from './component-overview/component-overv
     AppRoutingModule
   ],
   providers: [],
-
-
-
-
-  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
