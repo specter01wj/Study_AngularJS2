@@ -16,7 +16,5 @@ import { ComponentOverviewComponent } from './component-overview/component-overv
   ],
   providers: [],
   bootstrap: [AppComponent]
-
-  
 })
 export class AppModule { }
