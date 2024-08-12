@@ -9,6 +9,7 @@ import { ComponentOverviewComponent } from './component-overview/component-overv
   declarations: [
     AppComponent,
 
+
     
     ComponentOverviewComponent
   ],
