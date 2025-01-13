@@ -8,6 +8,7 @@ import { ComponentOverviewComponent } from './component-overview/component-overv
 @NgModule({
   declarations: [
     AppComponent,
+
     
     ComponentOverviewComponent
   ],
